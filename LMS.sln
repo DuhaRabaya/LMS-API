@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36401.2 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LMS.PL", "LMS.PL\LMS.PL.csproj", "{D7A59DB1-3443-4BCF-B0AC-9E200140CFAB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LMS.BLL", "LMS.BLL\LMS.BLL.csproj", "{5B5141DE-FC3D-4B4A-AF80-8FBF09C3FCC0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LMS.DAL", "LMS.DAL\LMS.DAL.csproj", "{2E6062C2-3ED7-4AB0-B92C-65F0D7D01AF9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D7A59DB1-3443-4BCF-B0AC-9E200140CFAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7A59DB1-3443-4BCF-B0AC-9E200140CFAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7A59DB1-3443-4BCF-B0AC-9E200140CFAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7A59DB1-3443-4BCF-B0AC-9E200140CFAB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B5141DE-FC3D-4B4A-AF80-8FBF09C3FCC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B5141DE-FC3D-4B4A-AF80-8FBF09C3FCC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B5141DE-FC3D-4B4A-AF80-8FBF09C3FCC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B5141DE-FC3D-4B4A-AF80-8FBF09C3FCC0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E6062C2-3ED7-4AB0-B92C-65F0D7D01AF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E6062C2-3ED7-4AB0-B92C-65F0D7D01AF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E6062C2-3ED7-4AB0-B92C-65F0D7D01AF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E6062C2-3ED7-4AB0-B92C-65F0D7D01AF9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7B5C74CF-A350-45E7-83BE-379AE90B50BA}
+	EndGlobalSection
+EndGlobal

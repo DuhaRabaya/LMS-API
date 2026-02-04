@@ -1,0 +1,14 @@
+C:\Users\msii\OneDrive\Desktop\asp\c#\LMS\LMS.DAL\bin\Debug\net9.0\LMS.DAL.deps.json
+C:\Users\msii\OneDrive\Desktop\asp\c#\LMS\LMS.DAL\bin\Debug\net9.0\LMS.DAL.runtimeconfig.json
+C:\Users\msii\OneDrive\Desktop\asp\c#\LMS\LMS.DAL\bin\Debug\net9.0\LMS.DAL.dll
+C:\Users\msii\OneDrive\Desktop\asp\c#\LMS\LMS.DAL\bin\Debug\net9.0\LMS.DAL.pdb
+C:\Users\msii\OneDrive\Desktop\asp\c#\LMS\LMS.DAL\obj\Debug\net9.0\LMS.DAL.csproj.AssemblyReference.cache
+C:\Users\msii\OneDrive\Desktop\asp\c#\LMS\LMS.DAL\obj\Debug\net9.0\LMS.DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\msii\OneDrive\Desktop\asp\c#\LMS\LMS.DAL\obj\Debug\net9.0\LMS.DAL.AssemblyInfoInputs.cache
+C:\Users\msii\OneDrive\Desktop\asp\c#\LMS\LMS.DAL\obj\Debug\net9.0\LMS.DAL.AssemblyInfo.cs
+C:\Users\msii\OneDrive\Desktop\asp\c#\LMS\LMS.DAL\obj\Debug\net9.0\LMS.DAL.csproj.CoreCompileInputs.cache
+C:\Users\msii\OneDrive\Desktop\asp\c#\LMS\LMS.DAL\obj\Debug\net9.0\LMS.DAL.dll
+C:\Users\msii\OneDrive\Desktop\asp\c#\LMS\LMS.DAL\obj\Debug\net9.0\refint\LMS.DAL.dll
+C:\Users\msii\OneDrive\Desktop\asp\c#\LMS\LMS.DAL\obj\Debug\net9.0\LMS.DAL.pdb
+C:\Users\msii\OneDrive\Desktop\asp\c#\LMS\LMS.DAL\obj\Debug\net9.0\LMS.DAL.genruntimeconfig.cache
+C:\Users\msii\OneDrive\Desktop\asp\c#\LMS\LMS.DAL\obj\Debug\net9.0\ref\LMS.DAL.dll

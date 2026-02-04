@@ -1,0 +1,12 @@
+[
+  {
+    "ContainingType": "LMS.PL.Controllers.TestController",
+    "Method": "Index",
+    "RelativePath": "api/Test",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]
