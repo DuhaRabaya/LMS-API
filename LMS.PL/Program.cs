@@ -1,12 +1,14 @@
+using LMS.DAL.Utils;
 using LMS.PL.AppConfigurations;
 using LMS.PL.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
+using System.Threading.Tasks;
 namespace LMS.PL
 {
     public class Program
     {
-        public static void Main(string[] args)
+        public static async Task Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
             AppConfiguration.Config(builder.Services); 
@@ -20,6 +22,7 @@ namespace LMS.PL
             //localization 
             app.UseRequestLocalization(app.Services.GetRequiredService<IOptions<RequestLocalizationOptions>>().Value);
 
+            
             if (app.Environment.IsDevelopment())
             {
                 app.MapOpenApi();
@@ -29,6 +32,18 @@ namespace LMS.PL
             app.UseExceptionHandler();
             app.UseAuthorization();
             app.MapControllers();
+
+            //seed data 
+            using (var scope = app.Services.CreateScope())
+            {
+                var services = scope.ServiceProvider;
+                var seeders = services.GetServices<ISeedData>();
+
+                foreach (var seeder in seeders)
+                {
+                    await seeder.DataSeed();
+                }
+            }
 
             app.Run();
         }

@@ -1,4 +1,5 @@
 ﻿using LMS.DAL.Models;
+using LMS.DAL.Utils;
 using LMS.PL.Data;
 using Microsoft.AspNetCore.Identity;
 
@@ -18,8 +19,15 @@ namespace LMS.PL.AppConfigurations
             //identity configuration
             services.AddIdentity<ApplicationUser, IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>()
-                .AddDefaultTokenProviders(); 
-       
+                .AddDefaultTokenProviders();
+
+            //seed data
+            services.AddScoped<ISeedData, RoleSeedData>();
+            services.AddScoped<ISeedData, UserSeedData>();
+
+            
+
+
 
         }
     }
