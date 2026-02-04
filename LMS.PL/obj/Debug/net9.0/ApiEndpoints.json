@@ -1,6 +1,6 @@
 [
   {
-    "ContainingType": "LMS.PL.Controllers.TestController",
+    "ContainingType": "LMS.PL.Areas.Student.TestController",
     "Method": "Index",
     "RelativePath": "api/Test",
     "HttpMethod": "GET",

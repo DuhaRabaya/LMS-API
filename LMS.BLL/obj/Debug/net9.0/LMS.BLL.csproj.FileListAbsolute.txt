@@ -13,3 +13,4 @@ C:\Users\msii\OneDrive\Desktop\asp\c#\LMS\LMS.BLL\obj\Debug\net9.0\LMS.BLL.dll
 C:\Users\msii\OneDrive\Desktop\asp\c#\LMS\LMS.BLL\obj\Debug\net9.0\refint\LMS.BLL.dll
 C:\Users\msii\OneDrive\Desktop\asp\c#\LMS\LMS.BLL\obj\Debug\net9.0\LMS.BLL.pdb
 C:\Users\msii\OneDrive\Desktop\asp\c#\LMS\LMS.BLL\obj\Debug\net9.0\ref\LMS.BLL.dll
+C:\Users\msii\OneDrive\Desktop\asp\c#\LMS\LMS.BLL\obj\Debug\net9.0\LMS.BLL.sourcelink.json

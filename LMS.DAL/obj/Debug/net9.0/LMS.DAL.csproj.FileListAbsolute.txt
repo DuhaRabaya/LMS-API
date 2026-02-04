@@ -12,3 +12,4 @@ C:\Users\msii\OneDrive\Desktop\asp\c#\LMS\LMS.DAL\obj\Debug\net9.0\refint\LMS.DA
 C:\Users\msii\OneDrive\Desktop\asp\c#\LMS\LMS.DAL\obj\Debug\net9.0\LMS.DAL.pdb
 C:\Users\msii\OneDrive\Desktop\asp\c#\LMS\LMS.DAL\obj\Debug\net9.0\LMS.DAL.genruntimeconfig.cache
 C:\Users\msii\OneDrive\Desktop\asp\c#\LMS\LMS.DAL\obj\Debug\net9.0\ref\LMS.DAL.dll
+C:\Users\msii\OneDrive\Desktop\asp\c#\LMS\LMS.DAL\obj\Debug\net9.0\LMS.DAL.sourcelink.json

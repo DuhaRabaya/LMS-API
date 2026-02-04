@@ -167,3 +167,9 @@ C:\Users\msii\OneDrive\Desktop\asp\c#\LMS\LMS.PL\obj\Debug\net9.0\refint\LMS.PL.
 C:\Users\msii\OneDrive\Desktop\asp\c#\LMS\LMS.PL\obj\Debug\net9.0\LMS.PL.pdb
 C:\Users\msii\OneDrive\Desktop\asp\c#\LMS\LMS.PL\obj\Debug\net9.0\LMS.PL.genruntimeconfig.cache
 C:\Users\msii\OneDrive\Desktop\asp\c#\LMS\LMS.PL\obj\Debug\net9.0\ref\LMS.PL.dll
+C:\Users\msii\OneDrive\Desktop\asp\c#\LMS\LMS.PL\bin\Debug\net9.0\ar\LMS.PL.resources.dll
+C:\Users\msii\OneDrive\Desktop\asp\c#\LMS\LMS.PL\obj\Debug\net9.0\LMS.PL.Resources.SharedResource.resources
+C:\Users\msii\OneDrive\Desktop\asp\c#\LMS\LMS.PL\obj\Debug\net9.0\LMS.PL.Resources.SharedResource.ar.resources
+C:\Users\msii\OneDrive\Desktop\asp\c#\LMS\LMS.PL\obj\Debug\net9.0\LMS.PL.csproj.GenerateResource.cache
+C:\Users\msii\OneDrive\Desktop\asp\c#\LMS\LMS.PL\obj\Debug\net9.0\LMS.PL.sourcelink.json
+C:\Users\msii\OneDrive\Desktop\asp\c#\LMS\LMS.PL\obj\Debug\net9.0\ar\LMS.PL.resources.dll
