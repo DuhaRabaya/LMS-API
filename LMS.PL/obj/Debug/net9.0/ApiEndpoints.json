@@ -1,5 +1,37 @@
 [
   {
+    "ContainingType": "LMS.PL.Areas.Identity.AccountController",
+    "Method": "Login",
+    "RelativePath": "api/auth/Account/Login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "LMS.DAL.DTO.Request.LogInRegisterRequests.LoginRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LMS.PL.Areas.Identity.AccountController",
+    "Method": "Register",
+    "RelativePath": "api/auth/Account/Register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "LMS.DAL.DTO.Request.LogInRegisterRequests.RegisterRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "LMS.PL.Areas.Instructor.CoursesController",
     "Method": "GetCourses",
     "RelativePath": "api/Courses",

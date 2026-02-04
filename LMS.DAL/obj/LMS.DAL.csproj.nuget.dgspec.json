@@ -53,6 +53,10 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "dependencies": {
+            "Mapster": {
+              "target": "Package",
+              "version": "[7.4.0, )"
+            },
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
               "version": "[9.0.12, )"

@@ -3,47 +3,40 @@
   "WorkspaceRootPath": "C:\\Users\\msii\\OneDrive\\Desktop\\asp\\c#\\LMS\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/./LMS/True/SqlTable/dbo.Users.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2E6062C2-3ED7-4AB0-B92C-65F0D7D01AF9}|LMS.DAL\\LMS.DAL.csproj|c:\\users\\msii\\onedrive\\desktop\\asp\\c#\\lms\\lms.dal\\utils\\roleseeddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2E6062C2-3ED7-4AB0-B92C-65F0D7D01AF9}|LMS.DAL\\LMS.DAL.csproj|solutionrelative:lms.dal\\utils\\roleseeddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2E6062C2-3ED7-4AB0-B92C-65F0D7D01AF9}|LMS.DAL\\LMS.DAL.csproj|c:\\users\\msii\\onedrive\\desktop\\asp\\c#\\lms\\lms.dal\\utils\\userseeddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2E6062C2-3ED7-4AB0-B92C-65F0D7D01AF9}|LMS.DAL\\LMS.DAL.csproj|solutionrelative:lms.dal\\utils\\userseeddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D7A59DB1-3443-4BCF-B0AC-9E200140CFAB}|LMS.PL\\LMS.PL.csproj|c:\\users\\msii\\onedrive\\desktop\\asp\\c#\\lms\\lms.pl\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D7A59DB1-3443-4BCF-B0AC-9E200140CFAB}|LMS.PL\\LMS.PL.csproj|solutionrelative:lms.pl\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2E6062C2-3ED7-4AB0-B92C-65F0D7D01AF9}|LMS.DAL\\LMS.DAL.csproj|c:\\users\\msii\\onedrive\\desktop\\asp\\c#\\lms\\lms.dal\\models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2E6062C2-3ED7-4AB0-B92C-65F0D7D01AF9}|LMS.DAL\\LMS.DAL.csproj|solutionrelative:lms.dal\\models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D7A59DB1-3443-4BCF-B0AC-9E200140CFAB}|LMS.PL\\LMS.PL.csproj|c:\\users\\msii\\onedrive\\desktop\\asp\\c#\\lms\\lms.pl\\areas\\identity\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D7A59DB1-3443-4BCF-B0AC-9E200140CFAB}|LMS.PL\\LMS.PL.csproj|solutionrelative:lms.pl\\areas\\identity\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D7A59DB1-3443-4BCF-B0AC-9E200140CFAB}|LMS.PL\\LMS.PL.csproj|c:\\users\\msii\\onedrive\\desktop\\asp\\c#\\lms\\lms.pl\\appconfigurations\\appconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D7A59DB1-3443-4BCF-B0AC-9E200140CFAB}|LMS.PL\\LMS.PL.csproj|solutionrelative:lms.pl\\appconfigurations\\appconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2E6062C2-3ED7-4AB0-B92C-65F0D7D01AF9}|LMS.DAL\\LMS.DAL.csproj|c:\\users\\msii\\onedrive\\desktop\\asp\\c#\\lms\\lms.dal\\utils\\iseeddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2E6062C2-3ED7-4AB0-B92C-65F0D7D01AF9}|LMS.DAL\\LMS.DAL.csproj|solutionrelative:lms.dal\\utils\\iseeddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5B5141DE-FC3D-4B4A-AF80-8FBF09C3FCC0}|LMS.BLL\\LMS.BLL.csproj|c:\\users\\msii\\onedrive\\desktop\\asp\\c#\\lms\\lms.bll\\services\\authenticationservices\\authenticationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B5141DE-FC3D-4B4A-AF80-8FBF09C3FCC0}|LMS.BLL\\LMS.BLL.csproj|solutionrelative:lms.bll\\services\\authenticationservices\\authenticationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D7A59DB1-3443-4BCF-B0AC-9E200140CFAB}|LMS.PL\\LMS.PL.csproj|c:\\users\\msii\\onedrive\\desktop\\asp\\c#\\lms\\lms.pl\\areas\\admin\\managercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D7A59DB1-3443-4BCF-B0AC-9E200140CFAB}|LMS.PL\\LMS.PL.csproj|solutionrelative:lms.pl\\areas\\admin\\managercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2E6062C2-3ED7-4AB0-B92C-65F0D7D01AF9}|LMS.DAL\\LMS.DAL.csproj|c:\\users\\msii\\onedrive\\desktop\\asp\\c#\\lms\\lms.dal\\dto\\request\\loginregisterrequests\\loginrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2E6062C2-3ED7-4AB0-B92C-65F0D7D01AF9}|LMS.DAL\\LMS.DAL.csproj|solutionrelative:lms.dal\\dto\\request\\loginregisterrequests\\loginrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2E6062C2-3ED7-4AB0-B92C-65F0D7D01AF9}|LMS.DAL\\LMS.DAL.csproj|c:\\users\\msii\\onedrive\\desktop\\asp\\c#\\lms\\lms.dal\\dto\\request\\loginregisterrequests\\registerrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2E6062C2-3ED7-4AB0-B92C-65F0D7D01AF9}|LMS.DAL\\LMS.DAL.csproj|solutionrelative:lms.dal\\dto\\request\\loginregisterrequests\\registerrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2E6062C2-3ED7-4AB0-B92C-65F0D7D01AF9}|LMS.DAL\\LMS.DAL.csproj|c:\\users\\msii\\onedrive\\desktop\\asp\\c#\\lms\\lms.dal\\dto\\response\\baseresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2E6062C2-3ED7-4AB0-B92C-65F0D7D01AF9}|LMS.DAL\\LMS.DAL.csproj|solutionrelative:lms.dal\\dto\\response\\baseresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2E6062C2-3ED7-4AB0-B92C-65F0D7D01AF9}|LMS.DAL\\LMS.DAL.csproj|c:\\users\\msii\\onedrive\\desktop\\asp\\c#\\lms\\lms.dal\\dto\\response\\loginregisterresponses\\registerresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2E6062C2-3ED7-4AB0-B92C-65F0D7D01AF9}|LMS.DAL\\LMS.DAL.csproj|solutionrelative:lms.dal\\dto\\response\\loginregisterresponses\\registerresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2E6062C2-3ED7-4AB0-B92C-65F0D7D01AF9}|LMS.DAL\\LMS.DAL.csproj|c:\\users\\msii\\onedrive\\desktop\\asp\\c#\\lms\\lms.dal\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2E6062C2-3ED7-4AB0-B92C-65F0D7D01AF9}|LMS.DAL\\LMS.DAL.csproj|solutionrelative:lms.dal\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D7A59DB1-3443-4BCF-B0AC-9E200140CFAB}|LMS.PL\\LMS.PL.csproj|c:\\users\\msii\\onedrive\\desktop\\asp\\c#\\lms\\lms.pl\\areas\\student\\coursescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D7A59DB1-3443-4BCF-B0AC-9E200140CFAB}|LMS.PL\\LMS.PL.csproj|solutionrelative:lms.pl\\areas\\student\\coursescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D7A59DB1-3443-4BCF-B0AC-9E200140CFAB}|LMS.PL\\LMS.PL.csproj|c:\\users\\msii\\onedrive\\desktop\\asp\\c#\\lms\\lms.pl\\areas\\instructor\\coursescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D7A59DB1-3443-4BCF-B0AC-9E200140CFAB}|LMS.PL\\LMS.PL.csproj|solutionrelative:lms.pl\\areas\\instructor\\coursescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D7A59DB1-3443-4BCF-B0AC-9E200140CFAB}|LMS.PL\\LMS.PL.csproj|c:\\users\\msii\\onedrive\\desktop\\asp\\c#\\lms\\lms.pl\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D7A59DB1-3443-4BCF-B0AC-9E200140CFAB}|LMS.PL\\LMS.PL.csproj|solutionrelative:lms.pl\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -58,81 +51,97 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "dbo.Users [Data]",
-              "DocumentMoniker": "ViewDataWindow_MSSQL__/./LMS/True/SqlTable/dbo.Users.sql",
-              "ToolTip": "dbo.Users [Data]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2026-02-04T15:30:24.844Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "RoleSeedData.cs",
-              "DocumentMoniker": "C:\\Users\\msii\\OneDrive\\Desktop\\asp\\c#\\LMS\\LMS.DAL\\Utils\\RoleSeedData.cs",
-              "RelativeDocumentMoniker": "LMS.DAL\\Utils\\RoleSeedData.cs",
-              "ToolTip": "C:\\Users\\msii\\OneDrive\\Desktop\\asp\\c#\\LMS\\LMS.DAL\\Utils\\RoleSeedData.cs",
-              "RelativeToolTip": "LMS.DAL\\Utils\\RoleSeedData.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAARAAAAAAAAAA==",
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\Users\\msii\\OneDrive\\Desktop\\asp\\c#\\LMS\\LMS.PL\\Areas\\Identity\\AccountController.cs",
+              "RelativeDocumentMoniker": "LMS.PL\\Areas\\Identity\\AccountController.cs",
+              "ToolTip": "C:\\Users\\msii\\OneDrive\\Desktop\\asp\\c#\\LMS\\LMS.PL\\Areas\\Identity\\AccountController.cs",
+              "RelativeToolTip": "LMS.PL\\Areas\\Identity\\AccountController.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwBgAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-04T15:06:22.72Z",
+              "WhenOpened": "2026-02-04T18:23:32.214Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "UserSeedData.cs",
-              "DocumentMoniker": "C:\\Users\\msii\\OneDrive\\Desktop\\asp\\c#\\LMS\\LMS.DAL\\Utils\\UserSeedData.cs",
-              "RelativeDocumentMoniker": "LMS.DAL\\Utils\\UserSeedData.cs",
-              "ToolTip": "C:\\Users\\msii\\OneDrive\\Desktop\\asp\\c#\\LMS\\LMS.DAL\\Utils\\UserSeedData.cs",
-              "RelativeToolTip": "LMS.DAL\\Utils\\UserSeedData.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAAQwDcAAAAJAAAAAAAAAA==",
+              "Title": "AuthenticationService.cs",
+              "DocumentMoniker": "C:\\Users\\msii\\OneDrive\\Desktop\\asp\\c#\\LMS\\LMS.BLL\\Services\\AuthenticationServices\\AuthenticationService.cs",
+              "RelativeDocumentMoniker": "LMS.BLL\\Services\\AuthenticationServices\\AuthenticationService.cs",
+              "ToolTip": "C:\\Users\\msii\\OneDrive\\Desktop\\asp\\c#\\LMS\\LMS.BLL\\Services\\AuthenticationServices\\AuthenticationService.cs",
+              "RelativeToolTip": "LMS.BLL\\Services\\AuthenticationServices\\AuthenticationService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGIAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-04T15:05:11.733Z",
+              "WhenOpened": "2026-02-04T15:33:27.018Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ISeedData.cs",
-              "DocumentMoniker": "C:\\Users\\msii\\OneDrive\\Desktop\\asp\\c#\\LMS\\LMS.DAL\\Utils\\ISeedData.cs",
-              "RelativeDocumentMoniker": "LMS.DAL\\Utils\\ISeedData.cs",
-              "ToolTip": "C:\\Users\\msii\\OneDrive\\Desktop\\asp\\c#\\LMS\\LMS.DAL\\Utils\\ISeedData.cs",
-              "RelativeToolTip": "LMS.DAL\\Utils\\ISeedData.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "RegisterRequest.cs",
+              "DocumentMoniker": "C:\\Users\\msii\\OneDrive\\Desktop\\asp\\c#\\LMS\\LMS.DAL\\DTO\\Request\\LogInRegisterRequests\\RegisterRequest.cs",
+              "RelativeDocumentMoniker": "LMS.DAL\\DTO\\Request\\LogInRegisterRequests\\RegisterRequest.cs",
+              "ToolTip": "C:\\Users\\msii\\OneDrive\\Desktop\\asp\\c#\\LMS\\LMS.DAL\\DTO\\Request\\LogInRegisterRequests\\RegisterRequest.cs",
+              "RelativeToolTip": "LMS.DAL\\DTO\\Request\\LogInRegisterRequests\\RegisterRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-04T15:03:50.71Z",
+              "WhenOpened": "2026-02-04T15:35:22.37Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
               "Title": "AppConfiguration.cs",
               "DocumentMoniker": "C:\\Users\\msii\\OneDrive\\Desktop\\asp\\c#\\LMS\\LMS.PL\\AppConfigurations\\AppConfiguration.cs",
               "RelativeDocumentMoniker": "LMS.PL\\AppConfigurations\\AppConfiguration.cs",
               "ToolTip": "C:\\Users\\msii\\OneDrive\\Desktop\\asp\\c#\\LMS\\LMS.PL\\AppConfigurations\\AppConfiguration.cs",
               "RelativeToolTip": "LMS.PL\\AppConfigurations\\AppConfiguration.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAzwBkAAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-04T14:34:14.294Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ApplicationUser.cs",
-              "DocumentMoniker": "C:\\Users\\msii\\OneDrive\\Desktop\\asp\\c#\\LMS\\LMS.DAL\\Models\\ApplicationUser.cs",
-              "RelativeDocumentMoniker": "LMS.DAL\\Models\\ApplicationUser.cs",
-              "ToolTip": "C:\\Users\\msii\\OneDrive\\Desktop\\asp\\c#\\LMS\\LMS.DAL\\Models\\ApplicationUser.cs",
-              "RelativeToolTip": "LMS.DAL\\Models\\ApplicationUser.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAABAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "LoginRequest.cs",
+              "DocumentMoniker": "C:\\Users\\msii\\OneDrive\\Desktop\\asp\\c#\\LMS\\LMS.DAL\\DTO\\Request\\LogInRegisterRequests\\LoginRequest.cs",
+              "RelativeDocumentMoniker": "LMS.DAL\\DTO\\Request\\LogInRegisterRequests\\LoginRequest.cs",
+              "ToolTip": "C:\\Users\\msii\\OneDrive\\Desktop\\asp\\c#\\LMS\\LMS.DAL\\DTO\\Request\\LogInRegisterRequests\\LoginRequest.cs",
+              "RelativeToolTip": "LMS.DAL\\DTO\\Request\\LogInRegisterRequests\\LoginRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-04T14:26:10.483Z",
+              "WhenOpened": "2026-02-04T15:35:12.978Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
+              "Title": "BaseResponse.cs",
+              "DocumentMoniker": "C:\\Users\\msii\\OneDrive\\Desktop\\asp\\c#\\LMS\\LMS.DAL\\DTO\\Response\\BaseResponse.cs",
+              "RelativeDocumentMoniker": "LMS.DAL\\DTO\\Response\\BaseResponse.cs",
+              "ToolTip": "C:\\Users\\msii\\OneDrive\\Desktop\\asp\\c#\\LMS\\LMS.DAL\\DTO\\Response\\BaseResponse.cs",
+              "RelativeToolTip": "LMS.DAL\\DTO\\Response\\BaseResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-04T15:40:56.17Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "RegisterResponse.cs",
+              "DocumentMoniker": "C:\\Users\\msii\\OneDrive\\Desktop\\asp\\c#\\LMS\\LMS.DAL\\DTO\\Response\\LogInRegisterResponses\\RegisterResponse.cs",
+              "RelativeDocumentMoniker": "LMS.DAL\\DTO\\Response\\LogInRegisterResponses\\RegisterResponse.cs",
+              "ToolTip": "C:\\Users\\msii\\OneDrive\\Desktop\\asp\\c#\\LMS\\LMS.DAL\\DTO\\Response\\LogInRegisterResponses\\RegisterResponse.cs",
+              "RelativeToolTip": "LMS.DAL\\DTO\\Response\\LogInRegisterResponses\\RegisterResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-04T15:35:48.688Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\msii\\OneDrive\\Desktop\\asp\\c#\\LMS\\LMS.PL\\Program.cs",
               "RelativeDocumentMoniker": "LMS.PL\\Program.cs",
@@ -145,50 +154,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "CoursesController.cs",
-              "DocumentMoniker": "C:\\Users\\msii\\OneDrive\\Desktop\\asp\\c#\\LMS\\LMS.PL\\Areas\\Student\\CoursesController.cs",
-              "RelativeDocumentMoniker": "LMS.PL\\Areas\\Student\\CoursesController.cs",
-              "ToolTip": "C:\\Users\\msii\\OneDrive\\Desktop\\asp\\c#\\LMS\\LMS.PL\\Areas\\Student\\CoursesController.cs",
-              "RelativeToolTip": "LMS.PL\\Areas\\Student\\CoursesController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-04T14:58:00.455Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "ManagerController.cs",
-              "DocumentMoniker": "C:\\Users\\msii\\OneDrive\\Desktop\\asp\\c#\\LMS\\LMS.PL\\Areas\\Admin\\ManagerController.cs",
-              "RelativeDocumentMoniker": "LMS.PL\\Areas\\Admin\\ManagerController.cs",
-              "ToolTip": "C:\\Users\\msii\\OneDrive\\Desktop\\asp\\c#\\LMS\\LMS.PL\\Areas\\Admin\\ManagerController.cs",
-              "RelativeToolTip": "LMS.PL\\Areas\\Admin\\ManagerController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-04T14:07:15.912Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "CoursesController.cs",
-              "DocumentMoniker": "C:\\Users\\msii\\OneDrive\\Desktop\\asp\\c#\\LMS\\LMS.PL\\Areas\\Instructor\\CoursesController.cs",
-              "RelativeDocumentMoniker": "LMS.PL\\Areas\\Instructor\\CoursesController.cs",
-              "ToolTip": "C:\\Users\\msii\\OneDrive\\Desktop\\asp\\c#\\LMS\\LMS.PL\\Areas\\Instructor\\CoursesController.cs",
-              "RelativeToolTip": "LMS.PL\\Areas\\Instructor\\CoursesController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAATAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-04T14:01:38.766Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
               "Title": "ApplicationDbContext.cs",
               "DocumentMoniker": "C:\\Users\\msii\\OneDrive\\Desktop\\asp\\c#\\LMS\\LMS.DAL\\Data\\ApplicationDbContext.cs",
               "RelativeDocumentMoniker": "LMS.DAL\\Data\\ApplicationDbContext.cs",
               "ToolTip": "C:\\Users\\msii\\OneDrive\\Desktop\\asp\\c#\\LMS\\LMS.DAL\\Data\\ApplicationDbContext.cs",
               "RelativeToolTip": "LMS.DAL\\Data\\ApplicationDbContext.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAAwBIAAAAqAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-04T11:06:52.652Z",
               "EditorCaption": ""

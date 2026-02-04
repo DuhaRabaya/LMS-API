@@ -1,11 +1,42 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using LMS.DAL.DTO.Request.LogInRegisterRequests;
+using LMS.BLL.Services.AuthenticationServices;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace LMS.PL.Areas.Identity
 {
-    [Route("api/[controller]")]
+    [Route("api/auth/[controller]")]
     [ApiController]
     public class AccountController : ControllerBase
     {
+
+        private readonly IAuthenticationService _authenticationService;
+
+        public AccountController(IAuthenticationService authenticationService)
+        {
+            _authenticationService = authenticationService;
+        }
+        [HttpPost("Register")]
+        public async Task<IActionResult> Register([FromBody]RegisterRequest request)
+        {
+            var result = await _authenticationService.RegisterAsync(request);    
+            if (!result.Success)
+            {
+                return BadRequest(result);
+            }
+            return Ok(result);
+        }
+        [HttpPost("Login")]
+        public async Task<IActionResult> Login([FromBody]LoginRequest request)
+        {
+            var result = await _authenticationService.LoginAsync(request);
+            if (!result.Success)
+            {
+                return BadRequest(result);
+            }
+            return Ok(result);
+        }
+
     }
 }
+
