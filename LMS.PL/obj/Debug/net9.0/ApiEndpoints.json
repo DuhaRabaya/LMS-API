@@ -1,8 +1,8 @@
 [
   {
-    "ContainingType": "LMS.PL.Areas.Student.TestController",
-    "Method": "Index",
-    "RelativePath": "api/Test",
+    "ContainingType": "LMS.PL.Areas.Instructor.CoursesController",
+    "Method": "GetCourses",
+    "RelativePath": "api/Courses",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,

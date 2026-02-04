@@ -173,3 +173,8 @@ C:\Users\msii\OneDrive\Desktop\asp\c#\LMS\LMS.PL\obj\Debug\net9.0\LMS.PL.Resourc
 C:\Users\msii\OneDrive\Desktop\asp\c#\LMS\LMS.PL\obj\Debug\net9.0\LMS.PL.csproj.GenerateResource.cache
 C:\Users\msii\OneDrive\Desktop\asp\c#\LMS\LMS.PL\obj\Debug\net9.0\LMS.PL.sourcelink.json
 C:\Users\msii\OneDrive\Desktop\asp\c#\LMS\LMS.PL\obj\Debug\net9.0\ar\LMS.PL.resources.dll
+C:\Users\msii\OneDrive\Desktop\asp\c#\LMS\LMS.PL\bin\Debug\net9.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\msii\OneDrive\Desktop\asp\c#\LMS\LMS.PL\bin\Debug\net9.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\msii\OneDrive\Desktop\asp\c#\LMS\LMS.PL\bin\Debug\net9.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\msii\OneDrive\Desktop\asp\c#\LMS\LMS.PL\bin\Debug\net9.0\Microsoft.Extensions.Identity.Core.dll
+C:\Users\msii\OneDrive\Desktop\asp\c#\LMS\LMS.PL\bin\Debug\net9.0\Microsoft.Extensions.Identity.Stores.dll
