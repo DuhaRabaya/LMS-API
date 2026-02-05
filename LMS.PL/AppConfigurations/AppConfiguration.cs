@@ -1,5 +1,6 @@
 ﻿using LMS.BLL.Services.AuthenticationServices;
 using LMS.BLL.Services.EmailServices;
+using LMS.BLL.Services.TokenService;
 using LMS.DAL.Models;
 using LMS.DAL.Utils;
 using LMS.PL.Data;
@@ -41,6 +42,7 @@ namespace LMS.PL.AppConfigurations
 
             services.AddScoped<IAuthenticationService, AuthenticationService>();
             services.AddTransient<IEmailSender, EmailSender>();
+            services.AddScoped<ITokenService, TokenService>();
         }
     }
 }

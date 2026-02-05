@@ -17,6 +17,22 @@
   },
   {
     "ContainingType": "LMS.PL.Areas.Identity.AccountController",
+    "Method": "RefreshToken",
+    "RelativePath": "api/auth/Account/RefreshToken",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "LMS.DAL.DTO.Request.RefreshToken.TokenApiModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LMS.PL.Areas.Identity.AccountController",
     "Method": "Register",
     "RelativePath": "api/auth/Account/Register",
     "HttpMethod": "POST",

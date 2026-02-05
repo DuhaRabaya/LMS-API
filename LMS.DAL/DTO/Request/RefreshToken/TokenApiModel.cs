@@ -4,11 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LMS.DAL.DTO.Response.LogInRegisterResponses
+namespace LMS.DAL.DTO.Request.RefreshToken
 {
-    public class LoginResponse : BaseResponse
+    public class TokenApiModel
     {
         public string? AccessToken { get; set; }
         public string? RefreshToken { get; set; }
+
     }
 }

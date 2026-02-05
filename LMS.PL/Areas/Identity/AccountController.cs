@@ -1,5 +1,6 @@
-﻿using LMS.DAL.DTO.Request.LogInRegisterRequests;
-using LMS.BLL.Services.AuthenticationServices;
+﻿using LMS.BLL.Services.AuthenticationServices;
+using LMS.DAL.DTO.Request.LogInRegisterRequests;
+using LMS.DAL.DTO.Request.RefreshToken;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -46,6 +47,14 @@ namespace LMS.PL.Areas.Identity
         //        return Ok("Email confirmed! You can now log in.");
         //    return BadRequest("Invalid token or user.");
         //}
+
+        [HttpPatch("RefreshToken")]
+        public async Task<IActionResult> RefreshToken(TokenApiModel request)
+        {
+            var result = await _authenticationService.RefreshTokenAsync(request);
+            if (!result.Success) return BadRequest(result);
+            return Ok(result);
+        }
     }
 }
 

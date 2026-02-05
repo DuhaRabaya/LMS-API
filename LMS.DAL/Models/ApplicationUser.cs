@@ -13,5 +13,7 @@ namespace LMS.DAL.Models
         public string? City { get; set; }
         public string? Street { get; set; }
         public bool IsInstructor { get; set; } = false;
+        public string? RefreshToken { get; set; }
+        public DateTime RefreshTokenExpiryTime { get; set; }
     }
 }
