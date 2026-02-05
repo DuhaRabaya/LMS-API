@@ -6,9 +6,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace LMS.PL.Areas.Instructor
 {
-    [Route("api/[controller]")]
+    [Route("api/instructor/[controller]")]
     [ApiController]
-    [Authorize(Roles ="Instructor")]
+    [Authorize(Roles = "Instructor")]
     public class CoursesController : ControllerBase
     {
         private readonly ApplicationDbContext _context;

@@ -34,7 +34,7 @@
   {
     "ContainingType": "LMS.PL.Areas.Instructor.CoursesController",
     "Method": "GetCourses",
-    "RelativePath": "api/Courses",
+    "RelativePath": "api/instructor/Courses",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,

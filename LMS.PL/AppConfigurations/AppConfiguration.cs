@@ -1,4 +1,5 @@
 ﻿using LMS.BLL.Services.AuthenticationServices;
+using LMS.BLL.Services.EmailServices;
 using LMS.DAL.Models;
 using LMS.DAL.Utils;
 using LMS.PL.Data;
@@ -33,16 +34,13 @@ namespace LMS.PL.AppConfigurations
             )
                 .AddEntityFrameworkStores<ApplicationDbContext>()
                 .AddDefaultTokenProviders();
-        
-
+       
             //seed data
             services.AddScoped<ISeedData, RoleSeedData>();
             services.AddScoped<ISeedData, UserSeedData>();
 
             services.AddScoped<IAuthenticationService, AuthenticationService>();
-
-
-
+            services.AddTransient<IEmailSender, EmailSender>();
         }
     }
 }

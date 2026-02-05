@@ -8,5 +8,6 @@ namespace LMS.DAL.DTO.Response.LogInRegisterResponses
 {
     public class LoginResponse : BaseResponse
     {
+        public string? AccessToken { get; set; }
     }
 }

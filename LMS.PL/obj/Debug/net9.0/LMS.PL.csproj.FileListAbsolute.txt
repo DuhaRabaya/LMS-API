@@ -180,3 +180,4 @@ C:\Users\msii\OneDrive\Desktop\asp\c#\LMS\LMS.PL\bin\Debug\net9.0\Microsoft.Exte
 C:\Users\msii\OneDrive\Desktop\asp\c#\LMS\LMS.PL\bin\Debug\net9.0\Microsoft.Extensions.Identity.Stores.dll
 C:\Users\msii\OneDrive\Desktop\asp\c#\LMS\LMS.PL\bin\Debug\net9.0\Mapster.dll
 C:\Users\msii\OneDrive\Desktop\asp\c#\LMS\LMS.PL\bin\Debug\net9.0\Mapster.Core.dll
+C:\Users\msii\OneDrive\Desktop\asp\c#\LMS\LMS.PL\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

@@ -1,0 +1,16 @@
+C:\Users\msii\OneDrive\Desktop\asp\c#\LMS\LMS.BLL\bin\Release\net9.0\LMS.BLL.deps.json
+C:\Users\msii\OneDrive\Desktop\asp\c#\LMS\LMS.BLL\bin\Release\net9.0\LMS.BLL.dll
+C:\Users\msii\OneDrive\Desktop\asp\c#\LMS\LMS.BLL\bin\Release\net9.0\LMS.BLL.pdb
+C:\Users\msii\OneDrive\Desktop\asp\c#\LMS\LMS.BLL\bin\Release\net9.0\LMS.DAL.dll
+C:\Users\msii\OneDrive\Desktop\asp\c#\LMS\LMS.BLL\bin\Release\net9.0\LMS.DAL.pdb
+C:\Users\msii\OneDrive\Desktop\asp\c#\LMS\LMS.BLL\obj\Release\net9.0\LMS.BLL.csproj.AssemblyReference.cache
+C:\Users\msii\OneDrive\Desktop\asp\c#\LMS\LMS.BLL\obj\Release\net9.0\LMS.BLL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\msii\OneDrive\Desktop\asp\c#\LMS\LMS.BLL\obj\Release\net9.0\LMS.BLL.AssemblyInfoInputs.cache
+C:\Users\msii\OneDrive\Desktop\asp\c#\LMS\LMS.BLL\obj\Release\net9.0\LMS.BLL.AssemblyInfo.cs
+C:\Users\msii\OneDrive\Desktop\asp\c#\LMS\LMS.BLL\obj\Release\net9.0\LMS.BLL.csproj.CoreCompileInputs.cache
+C:\Users\msii\OneDrive\Desktop\asp\c#\LMS\LMS.BLL\obj\Release\net9.0\LMS.BLL.sourcelink.json
+C:\Users\msii\OneDrive\Desktop\asp\c#\LMS\LMS.BLL\obj\Release\net9.0\LMS.BLL.csproj.Up2Date
+C:\Users\msii\OneDrive\Desktop\asp\c#\LMS\LMS.BLL\obj\Release\net9.0\LMS.BLL.dll
+C:\Users\msii\OneDrive\Desktop\asp\c#\LMS\LMS.BLL\obj\Release\net9.0\refint\LMS.BLL.dll
+C:\Users\msii\OneDrive\Desktop\asp\c#\LMS\LMS.BLL\obj\Release\net9.0\LMS.BLL.pdb
+C:\Users\msii\OneDrive\Desktop\asp\c#\LMS\LMS.BLL\obj\Release\net9.0\ref\LMS.BLL.dll

@@ -37,6 +37,15 @@ namespace LMS.PL.Areas.Identity
             return Ok(result);
         }
 
+        //[HttpGet("ConfirmEmail")]
+        //public async Task<IActionResult> ConfirmEmail([FromQuery] string token, [FromQuery] string userId)
+        //{
+        //    token = Uri.UnescapeDataString(token);
+        //    var result = await _authenticationService.ConfirmEmailAsync(token, userId);
+        //    if (result)
+        //        return Ok("Email confirmed! You can now log in.");
+        //    return BadRequest("Invalid token or user.");
+        //}
     }
 }
 
