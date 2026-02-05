@@ -14,6 +14,16 @@ namespace LMS.PL
         public static async Task Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+            var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
+
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy(name: MyAllowSpecificOrigins,
+                                  policy =>
+                                  {
+                                      policy.WithOrigins().AllowAnyMethod().AllowAnyHeader();
+                                  });
+            });
 
             builder.Services.AddDbContext<ApplicationDbContext>(options =>
             options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
