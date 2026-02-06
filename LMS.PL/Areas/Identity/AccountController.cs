@@ -2,9 +2,12 @@
 using LMS.DAL.DTO.Request.LogInRegisterRequests;
 using LMS.DAL.DTO.Request.RefreshToken;
 using LMS.DAL.DTO.Request.UpdatePasswordRequests;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.Data;
 using Microsoft.AspNetCore.Mvc;
+using System.Security.Claims;
 
 namespace LMS.PL.Areas.Identity
 {
@@ -71,6 +74,25 @@ namespace LMS.PL.Areas.Identity
             if (!result.Success) return BadRequest(result);
             return Ok(result);
         }
+        //[Authorize(Roles="Admin")]
+        //[HttpPost("upgrade-to-instructor/{id}")]
+        //public async Task<IActionResult> UpgradeToInstructor(string id)
+        //{
+        //    var result=await _authenticationService.UpgradeToInstructor(id);
+        //    if (!result.Success) return BadRequest(result);
+        //    return Ok(result);
+        //}
+
+        //[Authorize(Roles = "Student")]
+        //[HttpPost("request-instructor")]
+        //public async Task<IActionResult> RequestInstructor()
+        //{
+        //    var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+        //    var result = await _authenticationService.RequestInstructorUpgrade(userId);
+        //    if (!result.Success) return BadRequest(result);
+        //    return Ok(result);
+        //}
+
     }
 }
 

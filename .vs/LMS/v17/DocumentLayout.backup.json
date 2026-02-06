@@ -3,16 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\msii\\OneDrive\\Desktop\\asp\\c#\\LMS\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D7A59DB1-3443-4BCF-B0AC-9E200140CFAB}|LMS.PL\\LMS.PL.csproj|c:\\users\\msii\\onedrive\\desktop\\asp\\c#\\lms\\lms.pl\\areas\\identity\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D7A59DB1-3443-4BCF-B0AC-9E200140CFAB}|LMS.PL\\LMS.PL.csproj|solutionrelative:lms.pl\\areas\\identity\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D7A59DB1-3443-4BCF-B0AC-9E200140CFAB}|LMS.PL\\LMS.PL.csproj|c:\\users\\msii\\onedrive\\desktop\\asp\\c#\\lms\\lms.pl\\areas\\instructor\\coursescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D7A59DB1-3443-4BCF-B0AC-9E200140CFAB}|LMS.PL\\LMS.PL.csproj|solutionrelative:lms.pl\\areas\\instructor\\coursescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5B5141DE-FC3D-4B4A-AF80-8FBF09C3FCC0}|LMS.BLL\\LMS.BLL.csproj|c:\\users\\msii\\onedrive\\desktop\\asp\\c#\\lms\\lms.bll\\services\\authenticationservices\\iauthenticationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5B5141DE-FC3D-4B4A-AF80-8FBF09C3FCC0}|LMS.BLL\\LMS.BLL.csproj|solutionrelative:lms.bll\\services\\authenticationservices\\iauthenticationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D7A59DB1-3443-4BCF-B0AC-9E200140CFAB}|LMS.PL\\LMS.PL.csproj|c:\\users\\msii\\onedrive\\desktop\\asp\\c#\\lms\\lms.pl\\areas\\admin\\coursescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D7A59DB1-3443-4BCF-B0AC-9E200140CFAB}|LMS.PL\\LMS.PL.csproj|solutionrelative:lms.pl\\areas\\admin\\coursescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5B5141DE-FC3D-4B4A-AF80-8FBF09C3FCC0}|LMS.BLL\\LMS.BLL.csproj|c:\\users\\msii\\onedrive\\desktop\\asp\\c#\\lms\\lms.bll\\services\\authenticationservices\\authenticationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5B5141DE-FC3D-4B4A-AF80-8FBF09C3FCC0}|LMS.BLL\\LMS.BLL.csproj|solutionrelative:lms.bll\\services\\authenticationservices\\authenticationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2E6062C2-3ED7-4AB0-B92C-65F0D7D01AF9}|LMS.DAL\\LMS.DAL.csproj|c:\\users\\msii\\onedrive\\desktop\\asp\\c#\\lms\\lms.dal\\repository\\courses\\courserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2E6062C2-3ED7-4AB0-B92C-65F0D7D01AF9}|LMS.DAL\\LMS.DAL.csproj|solutionrelative:lms.dal\\repository\\courses\\courserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B5141DE-FC3D-4B4A-AF80-8FBF09C3FCC0}|LMS.BLL\\LMS.BLL.csproj|c:\\users\\msii\\onedrive\\desktop\\asp\\c#\\lms\\lms.bll\\services\\courseservices\\courseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B5141DE-FC3D-4B4A-AF80-8FBF09C3FCC0}|LMS.BLL\\LMS.BLL.csproj|solutionrelative:lms.bll\\services\\courseservices\\courseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B5141DE-FC3D-4B4A-AF80-8FBF09C3FCC0}|LMS.BLL\\LMS.BLL.csproj|c:\\users\\msii\\onedrive\\desktop\\asp\\c#\\lms\\lms.bll\\services\\courseservices\\icourseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B5141DE-FC3D-4B4A-AF80-8FBF09C3FCC0}|LMS.BLL\\LMS.BLL.csproj|solutionrelative:lms.bll\\services\\courseservices\\icourseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2E6062C2-3ED7-4AB0-B92C-65F0D7D01AF9}|LMS.DAL\\LMS.DAL.csproj|c:\\users\\msii\\onedrive\\desktop\\asp\\c#\\lms\\lms.dal\\repository\\courses\\icourserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2E6062C2-3ED7-4AB0-B92C-65F0D7D01AF9}|LMS.DAL\\LMS.DAL.csproj|solutionrelative:lms.dal\\repository\\courses\\icourserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,45 +34,84 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "IAuthenticationService.cs",
-              "DocumentMoniker": "C:\\Users\\msii\\OneDrive\\Desktop\\asp\\c#\\LMS\\LMS.BLL\\Services\\AuthenticationServices\\IAuthenticationService.cs",
-              "RelativeDocumentMoniker": "LMS.BLL\\Services\\AuthenticationServices\\IAuthenticationService.cs",
-              "ToolTip": "C:\\Users\\msii\\OneDrive\\Desktop\\asp\\c#\\LMS\\LMS.BLL\\Services\\AuthenticationServices\\IAuthenticationService.cs",
-              "RelativeToolTip": "LMS.BLL\\Services\\AuthenticationServices\\IAuthenticationService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "ICourseService.cs",
+              "DocumentMoniker": "C:\\Users\\msii\\OneDrive\\Desktop\\asp\\c#\\LMS\\LMS.BLL\\Services\\CourseServices\\ICourseService.cs",
+              "RelativeDocumentMoniker": "LMS.BLL\\Services\\CourseServices\\ICourseService.cs",
+              "ToolTip": "C:\\Users\\msii\\OneDrive\\Desktop\\asp\\c#\\LMS\\LMS.BLL\\Services\\CourseServices\\ICourseService.cs",
+              "RelativeToolTip": "LMS.BLL\\Services\\CourseServices\\ICourseService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-06T12:02:28.456Z",
+              "WhenOpened": "2026-02-06T14:52:51.153Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "AccountController.cs",
-              "DocumentMoniker": "C:\\Users\\msii\\OneDrive\\Desktop\\asp\\c#\\LMS\\LMS.PL\\Areas\\Identity\\AccountController.cs",
-              "RelativeDocumentMoniker": "LMS.PL\\Areas\\Identity\\AccountController.cs",
-              "ToolTip": "C:\\Users\\msii\\OneDrive\\Desktop\\asp\\c#\\LMS\\LMS.PL\\Areas\\Identity\\AccountController.cs",
-              "RelativeToolTip": "LMS.PL\\Areas\\Identity\\AccountController.cs",
-              "ViewState": "AgIAADYAAAAAAAAAAAAowEsAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "ICourseRepository.cs",
+              "DocumentMoniker": "C:\\Users\\msii\\OneDrive\\Desktop\\asp\\c#\\LMS\\LMS.DAL\\Repository\\Courses\\ICourseRepository.cs",
+              "RelativeDocumentMoniker": "LMS.DAL\\Repository\\Courses\\ICourseRepository.cs",
+              "ToolTip": "C:\\Users\\msii\\OneDrive\\Desktop\\asp\\c#\\LMS\\LMS.DAL\\Repository\\Courses\\ICourseRepository.cs",
+              "RelativeToolTip": "LMS.DAL\\Repository\\Courses\\ICourseRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-04T18:23:32.214Z",
+              "WhenOpened": "2026-02-06T14:48:54.332Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "AuthenticationService.cs",
-              "DocumentMoniker": "C:\\Users\\msii\\OneDrive\\Desktop\\asp\\c#\\LMS\\LMS.BLL\\Services\\AuthenticationServices\\AuthenticationService.cs",
-              "RelativeDocumentMoniker": "LMS.BLL\\Services\\AuthenticationServices\\AuthenticationService.cs",
-              "ToolTip": "C:\\Users\\msii\\OneDrive\\Desktop\\asp\\c#\\LMS\\LMS.BLL\\Services\\AuthenticationServices\\AuthenticationService.cs",
-              "RelativeToolTip": "LMS.BLL\\Services\\AuthenticationServices\\AuthenticationService.cs",
-              "ViewState": "AgIAACYAAAAAAAAAAAAAwAkBAAAAAAAAAAAAAA==",
+              "Title": "CourseRepository.cs",
+              "DocumentMoniker": "C:\\Users\\msii\\OneDrive\\Desktop\\asp\\c#\\LMS\\LMS.DAL\\Repository\\Courses\\CourseRepository.cs",
+              "RelativeDocumentMoniker": "LMS.DAL\\Repository\\Courses\\CourseRepository.cs",
+              "ToolTip": "C:\\Users\\msii\\OneDrive\\Desktop\\asp\\c#\\LMS\\LMS.DAL\\Repository\\Courses\\CourseRepository.cs",
+              "RelativeToolTip": "LMS.DAL\\Repository\\Courses\\CourseRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-04T15:33:27.018Z",
+              "WhenOpened": "2026-02-06T14:47:04.789Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CoursesController.cs",
+              "DocumentMoniker": "C:\\Users\\msii\\OneDrive\\Desktop\\asp\\c#\\LMS\\LMS.PL\\Areas\\Admin\\CoursesController.cs",
+              "RelativeDocumentMoniker": "LMS.PL\\Areas\\Admin\\CoursesController.cs",
+              "ToolTip": "C:\\Users\\msii\\OneDrive\\Desktop\\asp\\c#\\LMS\\LMS.PL\\Areas\\Admin\\CoursesController.cs",
+              "RelativeToolTip": "LMS.PL\\Areas\\Admin\\CoursesController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-06T14:42:58.164Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CoursesController.cs",
+              "DocumentMoniker": "C:\\Users\\msii\\OneDrive\\Desktop\\asp\\c#\\LMS\\LMS.PL\\Areas\\Instructor\\CoursesController.cs",
+              "RelativeDocumentMoniker": "LMS.PL\\Areas\\Instructor\\CoursesController.cs",
+              "ToolTip": "C:\\Users\\msii\\OneDrive\\Desktop\\asp\\c#\\LMS\\LMS.PL\\Areas\\Instructor\\CoursesController.cs",
+              "RelativeToolTip": "LMS.PL\\Areas\\Instructor\\CoursesController.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAAwCQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-06T13:19:39.486Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CourseService.cs",
+              "DocumentMoniker": "C:\\Users\\msii\\OneDrive\\Desktop\\asp\\c#\\LMS\\LMS.BLL\\Services\\CourseServices\\CourseService.cs",
+              "RelativeDocumentMoniker": "LMS.BLL\\Services\\CourseServices\\CourseService.cs",
+              "ToolTip": "C:\\Users\\msii\\OneDrive\\Desktop\\asp\\c#\\LMS\\LMS.BLL\\Services\\CourseServices\\CourseService.cs",
+              "RelativeToolTip": "LMS.BLL\\Services\\CourseServices\\CourseService.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAADsAAABUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-06T13:09:30.036Z",
               "EditorCaption": ""
             }
           ]

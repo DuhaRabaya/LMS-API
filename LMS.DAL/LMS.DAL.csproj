@@ -21,10 +21,4 @@
     </PackageReference>
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="DTO\Request\CoursesRequests\" />
-    <Folder Include="DTO\Response\CoursesResponses\" />
-    <Folder Include="Repository\" />
-  </ItemGroup>
-
 </Project>

@@ -3,6 +3,7 @@ using LMS.BLL.Services.TokenService;
 using LMS.DAL.DTO.Request.LogInRegisterRequests;
 using LMS.DAL.DTO.Request.RefreshToken;
 using LMS.DAL.DTO.Request.UpdatePasswordRequests;
+using LMS.DAL.DTO.Response;
 using LMS.DAL.DTO.Response.LogInRegisterResponses;
 using LMS.DAL.DTO.Response.UpdatePasswordResponses;
 using LMS.DAL.Migrations;
@@ -257,6 +258,38 @@ namespace LMS.BLL.Services.AuthenticationServices
                 Message = "password updated successfully"
             };
         }
+
+        //public async Task<BaseResponse> UpgradeToInstructor(string userId)
+        //{
+        //    var user = await _userManager.FindByIdAsync(userId);
+        //    if (user == null)
+        //        return new BaseResponse()
+        //        {
+        //            Success = false,
+        //            Message = "user not found"
+        //        };
+        //    if (await _userManager.IsInRoleAsync(user, "Student"))
+        //        await _userManager.RemoveFromRoleAsync(user, "Student");
+
+        //    else if (await _userManager.IsInRoleAsync(user, "Instructor"))
+        //    {
+        //        return new BaseResponse
+        //        {
+        //            Success = false,
+        //            Message = "User is already an instructor"
+        //        };
+        //    }
+
+        //    await _userManager.AddToRoleAsync(user, "Instructor");
+
+        //    user.IsInstructor = true;
+        //    await _userManager.UpdateAsync(user);
+        //    return new BaseResponse()
+        //    {
+        //        Success = true,
+        //        Message = "Upgraded to instructer successfully"
+        //    };
+        //}
 
     }
 }

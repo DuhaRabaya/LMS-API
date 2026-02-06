@@ -1,3 +1,4 @@
+using LMS.BLL.MapsterConfigurations;
 using LMS.DAL.Utils;
 using LMS.PL.AppConfigurations;
 using LMS.PL.Data;
@@ -30,6 +31,7 @@ namespace LMS.PL
 
             AppConfiguration.Config(builder.Services); 
             LocalizationConfiguration.Config(builder.Services);
+            MapsterConfig.MapsterConfRegister();
 
             //jwt access token
             builder.Services.AddAuthentication(opt =>

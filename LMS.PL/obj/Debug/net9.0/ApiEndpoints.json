@@ -1,5 +1,15 @@
 [
   {
+    "ContainingType": "LMS.PL.Areas.Admin.CoursesController",
+    "Method": "GetCourses",
+    "RelativePath": "api/admin/Courses/all",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "LMS.PL.Areas.Identity.AccountController",
     "Method": "ConfirmEmail",
     "RelativePath": "api/auth/Account/ConfirmEmail",
@@ -102,8 +112,24 @@
   },
   {
     "ContainingType": "LMS.PL.Areas.Instructor.CoursesController",
-    "Method": "GetCourses",
+    "Method": "createCourse",
     "RelativePath": "api/instructor/Courses",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "LMS.DAL.DTO.Request.CoursesRequests.CourseRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LMS.PL.Areas.Instructor.CoursesController",
+    "Method": "GetCourses",
+    "RelativePath": "api/instructor/Courses/all",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,

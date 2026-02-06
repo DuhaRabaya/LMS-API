@@ -1,8 +1,11 @@
-﻿using LMS.PL.Data;
+﻿using LMS.BLL.Services.CourseServices;
+using LMS.DAL.DTO.Request.CoursesRequests;
+using LMS.PL.Data;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Security.Claims;
 
 namespace LMS.PL.Areas.Instructor
 {
@@ -11,16 +14,28 @@ namespace LMS.PL.Areas.Instructor
     [Authorize(Roles = "Instructor")]
     public class CoursesController : ControllerBase
     {
-        private readonly ApplicationDbContext _context;
+        private readonly ICourseService _courseService;
 
-        public CoursesController(ApplicationDbContext context)
+        public CoursesController(ICourseService courseService)
         {
-            _context = context;
+            _courseService = courseService;
         }
-        [HttpGet("")]
+  
+        [HttpGet("all")]
         public async Task<IActionResult> GetCourses()
         {
-            return Ok(await _context.Courses.ToListAsync());
+            var instructorId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            var result =await _courseService.GetCoursesByInstructor(instructorId);
+            return Ok(result);
+        }
+
+        [HttpPost("")]
+        public async Task<IActionResult> createCourse([FromBody] CourseRequest request)
+        {
+            var instructorId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            var result = await _courseService.CreateCourse(request, instructorId);
+            if (!result.Success) return BadRequest(result);
+            return Ok(result);
         }
     }
 }

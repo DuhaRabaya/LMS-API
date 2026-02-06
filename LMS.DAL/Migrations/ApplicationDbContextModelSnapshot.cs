@@ -130,8 +130,8 @@ namespace LMS.DAL.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("InstructorId")
-                        .HasColumnType("int");
+                    b.Property<string>("InstructorId")
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<bool>("IsPublished")
                         .HasColumnType("bit");
@@ -147,6 +147,8 @@ namespace LMS.DAL.Migrations
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("InstructorId");
 
                     b.ToTable("Courses");
                 });
@@ -312,6 +314,15 @@ namespace LMS.DAL.Migrations
                     b.HasKey("UserId", "LoginProvider", "Name");
 
                     b.ToTable("UserTokens", (string)null);
+                });
+
+            modelBuilder.Entity("LMS.DAL.Models.Course", b =>
+                {
+                    b.HasOne("LMS.DAL.Models.ApplicationUser", "Instructor")
+                        .WithMany()
+                        .HasForeignKey("InstructorId");
+
+                    b.Navigation("Instructor");
                 });
 
             modelBuilder.Entity("LMS.DAL.Models.CourseTranslation", b =>
