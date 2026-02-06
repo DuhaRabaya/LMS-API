@@ -30,7 +30,7 @@ namespace LMS.PL.AppConfigurations
                 options.User.RequireUniqueEmail = true;
                 options.Lockout.MaxFailedAccessAttempts = 5;
                 options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(5);
-                options.SignIn.RequireConfirmedEmail = false;
+                options.SignIn.RequireConfirmedEmail = true;
             }
             )
                 .AddEntityFrameworkStores<ApplicationDbContext>()
