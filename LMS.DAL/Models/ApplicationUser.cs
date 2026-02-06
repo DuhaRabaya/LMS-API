@@ -15,5 +15,7 @@ namespace LMS.DAL.Models
         public bool IsInstructor { get; set; } = false;
         public string? RefreshToken { get; set; }
         public DateTime RefreshTokenExpiryTime { get; set; }
+        public string? PasswordResetCode { get; set; }
+        public DateTime? PasswordResetCodeExpired { get; set; }
     }
 }

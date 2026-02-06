@@ -2,7 +2,9 @@
 using LMS.BLL.Services.TokenService;
 using LMS.DAL.DTO.Request.LogInRegisterRequests;
 using LMS.DAL.DTO.Request.RefreshToken;
+using LMS.DAL.DTO.Request.UpdatePasswordRequests;
 using LMS.DAL.DTO.Response.LogInRegisterResponses;
+using LMS.DAL.DTO.Response.UpdatePasswordResponses;
 using LMS.DAL.Migrations;
 using LMS.DAL.Models;
 using Mapster;
@@ -176,6 +178,84 @@ namespace LMS.BLL.Services.AuthenticationServices
             };
 
 
+        }
+
+        public async Task<SendCodeResponse> SendCodeAsync(SendCodeRequest request)
+        {
+            var user = await _userManager.FindByEmailAsync(request.Email);
+            if (user is null)
+            {
+                return new SendCodeResponse()
+                {
+                    Success = false,
+                    Message = "Email not found"
+                };
+            }
+            var random = new Random();
+            var code = random.Next(1000, 9999).ToString();
+            user.PasswordResetCode = code;
+            user.PasswordResetCodeExpired = DateTime.UtcNow.AddMinutes(30);
+
+            await _userManager.UpdateAsync(user);
+
+            await _emailSender.SendEmail(request.Email, "reset password", $"code is {code}</p>");
+
+            return new SendCodeResponse()
+            {
+                Success = true,
+                Message = "code sent successfully"
+            };
+        }
+
+        public async Task<UpdatePasswordResponse> UpdatePasswordAsync(UpdatePasswordRequest request)
+        {
+            var user = await _userManager.FindByEmailAsync(request.Email);
+            if (user is null)
+            {
+                return new UpdatePasswordResponse()
+                {
+                    Success = false,
+                    Message = "Email not found"
+                };
+            }
+            if (user.PasswordResetCode != request.Code)
+            {
+
+                return new UpdatePasswordResponse()
+                {
+                    Success = false,
+                    Message = "invalid code!"
+                };
+
+            }
+            if (user.PasswordResetCodeExpired < DateTime.UtcNow)
+            {
+                return new UpdatePasswordResponse()
+                {
+                    Success = false,
+                    Message = "Code Expired!"
+                };
+            }
+
+            var token = await _userManager.GeneratePasswordResetTokenAsync(user);
+            var result = await _userManager.ResetPasswordAsync(user, token, request.NewPassword);
+
+            if (!result.Succeeded)
+            {
+                return new UpdatePasswordResponse()
+                {
+                    Success = false,
+                    Message = "Password reset failed!",
+                    Errors = result.Errors.Select(e => e.Description).ToList()
+                };
+            }
+            await _emailSender.SendEmail(request.Email, "reset password", $"your password is changed</p>");
+
+            return new UpdatePasswordResponse()
+            {
+                Success = true,
+                Message = "password updated successfully"
+            };
         }
 
     }

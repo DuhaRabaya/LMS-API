@@ -7,11 +7,12 @@
       "RelativeMoniker": "D:0:0:{D7A59DB1-3443-4BCF-B0AC-9E200140CFAB}|LMS.PL\\LMS.PL.csproj|solutionrelative:lms.pl\\areas\\identity\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5B5141DE-FC3D-4B4A-AF80-8FBF09C3FCC0}|LMS.BLL\\LMS.BLL.csproj|c:\\users\\msii\\onedrive\\desktop\\asp\\c#\\lms\\lms.bll\\services\\authenticationservices\\authenticationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5B5141DE-FC3D-4B4A-AF80-8FBF09C3FCC0}|LMS.BLL\\LMS.BLL.csproj|solutionrelative:lms.bll\\services\\authenticationservices\\authenticationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5B5141DE-FC3D-4B4A-AF80-8FBF09C3FCC0}|LMS.BLL\\LMS.BLL.csproj|c:\\users\\msii\\onedrive\\desktop\\asp\\c#\\lms\\lms.bll\\services\\authenticationservices\\iauthenticationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B5141DE-FC3D-4B4A-AF80-8FBF09C3FCC0}|LMS.BLL\\LMS.BLL.csproj|solutionrelative:lms.bll\\services\\authenticationservices\\iauthenticationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/./LMS/True/SqlTable/dbo.Users.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+      "AbsoluteMoniker": "D:0:0:{5B5141DE-FC3D-4B4A-AF80-8FBF09C3FCC0}|LMS.BLL\\LMS.BLL.csproj|c:\\users\\msii\\onedrive\\desktop\\asp\\c#\\lms\\lms.bll\\services\\authenticationservices\\authenticationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B5141DE-FC3D-4B4A-AF80-8FBF09C3FCC0}|LMS.BLL\\LMS.BLL.csproj|solutionrelative:lms.bll\\services\\authenticationservices\\authenticationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -25,12 +26,15 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "dbo.Users [Data]",
-              "DocumentMoniker": "ViewDataWindow_MSSQL__/./LMS/True/SqlTable/dbo.Users.sql",
-              "ToolTip": "dbo.Users [Data]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2026-02-06T10:45:22.771Z",
+              "DocumentIndex": 1,
+              "Title": "IAuthenticationService.cs",
+              "DocumentMoniker": "C:\\Users\\msii\\OneDrive\\Desktop\\asp\\c#\\LMS\\LMS.BLL\\Services\\AuthenticationServices\\IAuthenticationService.cs",
+              "RelativeDocumentMoniker": "LMS.BLL\\Services\\AuthenticationServices\\IAuthenticationService.cs",
+              "ToolTip": "C:\\Users\\msii\\OneDrive\\Desktop\\asp\\c#\\LMS\\LMS.BLL\\Services\\AuthenticationServices\\IAuthenticationService.cs",
+              "RelativeToolTip": "LMS.BLL\\Services\\AuthenticationServices\\IAuthenticationService.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAxwBIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-06T12:02:28.456Z",
               "EditorCaption": ""
             },
             {
@@ -41,20 +45,20 @@
               "RelativeDocumentMoniker": "LMS.PL\\Areas\\Identity\\AccountController.cs",
               "ToolTip": "C:\\Users\\msii\\OneDrive\\Desktop\\asp\\c#\\LMS\\LMS.PL\\Areas\\Identity\\AccountController.cs",
               "RelativeToolTip": "LMS.PL\\Areas\\Identity\\AccountController.cs",
-              "ViewState": "AgIAACAAAAAAAAAAAAAgwDAAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAADYAAAAAAAAAAAAowEEAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-04T18:23:32.214Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "AuthenticationService.cs",
               "DocumentMoniker": "C:\\Users\\msii\\OneDrive\\Desktop\\asp\\c#\\LMS\\LMS.BLL\\Services\\AuthenticationServices\\AuthenticationService.cs",
               "RelativeDocumentMoniker": "LMS.BLL\\Services\\AuthenticationServices\\AuthenticationService.cs",
               "ToolTip": "C:\\Users\\msii\\OneDrive\\Desktop\\asp\\c#\\LMS\\LMS.BLL\\Services\\AuthenticationServices\\AuthenticationService.cs",
               "RelativeToolTip": "LMS.BLL\\Services\\AuthenticationServices\\AuthenticationService.cs",
-              "ViewState": "AgIAACUAAAAAAAAAAAAQwJIAAABRAAAAAAAAAA==",
+              "ViewState": "AgIAACsAAAAAAAAAAAAzwAQBAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-04T15:33:27.018Z",
               "EditorCaption": ""

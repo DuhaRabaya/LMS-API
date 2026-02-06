@@ -69,6 +69,38 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "LMS.PL.Areas.Identity.AccountController",
+    "Method": "SendCode",
+    "RelativePath": "api/auth/Account/SendCode",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "LMS.DAL.DTO.Request.UpdatePasswordRequests.SendCodeRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LMS.PL.Areas.Identity.AccountController",
+    "Method": "UpdatePassword",
+    "RelativePath": "api/auth/Account/UpdatePassword",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "LMS.DAL.DTO.Request.UpdatePasswordRequests.UpdatePasswordRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "LMS.PL.Areas.Instructor.CoursesController",
     "Method": "GetCourses",
     "RelativePath": "api/instructor/Courses",
