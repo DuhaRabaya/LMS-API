@@ -13,5 +13,6 @@ namespace LMS.DAL.DTO.Response.CoursesResponses
         public string? Instructor { get; set; }
         public double Price { get; set; }
         public double AverageRating { get; set; } = 0;
+        public bool IsPublished { get; set; }
     }
 }

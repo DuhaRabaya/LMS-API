@@ -10,7 +10,7 @@ namespace LMS.DAL.Models
     {
         public int Id { get; set; }
         public string? InstructorId { get; set; }
-        public double Price { get; set; }
+        public decimal Price { get; set; }
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
         public DateTime? UpdatedAt { get; set; }
         public bool IsPublished { get; set; } = false;

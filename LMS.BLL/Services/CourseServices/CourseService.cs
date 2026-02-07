@@ -31,14 +31,37 @@ namespace LMS.BLL.Services.CourseServices
             return courses.Adapt<List<CourseResponse>>();
         }
         public async Task<PaginateResponse<CourseResponseForStudent>> GetCoursesForStudent(string lang,int page,int limit
-            , string? search = null)
+            ,string? search = null, string?instructorId=null, decimal? minPrice = null, decimal? maxPrice = null
+            , double? minRating = null,double? maxRating = null)
         {
             var query = _courseRepository.Query();
+            query = query.Where(c => c.IsPublished);
             if (search is not null)
             {
                 query = query.Where(p => p.Translations.Any(t => t.Language == lang &&
-                t.Name.Contains(search) || t.Description.Contains(search)));
+                (t.Name.Contains(search) || t.Description.Contains(search))));
             }
+            if (instructorId is not null)
+            {
+                query = query.Where(c=> c.InstructorId==instructorId);
+            }
+            if (minPrice is not null)
+            {
+                query = query.Where(p => p.Price >= minPrice);
+            }
+            if (maxPrice is not null)
+            {
+                query = query.Where(p => p.Price <= maxPrice);
+            }
+            if (minRating is not null)
+            {
+                query = query.Where(c => c.AverageRating >= minRating);
+            }
+            if (maxRating is not null)
+            {
+                query = query.Where(c => c.AverageRating <= maxRating);
+            }
+
             var total = await query.CountAsync();
 
             query = query.Skip((page - 1) * limit).Take(limit);
@@ -63,10 +86,9 @@ namespace LMS.BLL.Services.CourseServices
         {
             var course = request.Adapt<Course>();
             course.InstructorId = instructorId;
+            course.IsPublished = false;
             await _courseRepository.Add(course);
             return new BaseResponse { Success = true, Message = "course created successfully" };
-        }
-
-       
+        }   
     }
 }
