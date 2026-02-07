@@ -137,6 +137,38 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "LMS.PL.Areas.Instructor.CoursesController",
+    "Method": "PublishCourse",
+    "RelativePath": "api/instructor/Courses/publish/{id}",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LMS.PL.Areas.Instructor.CoursesController",
+    "Method": "UnpublishCourse",
+    "RelativePath": "api/instructor/Courses/unpublish/{id}",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "LMS.PL.Areas.Student.CoursesController",
     "Method": "GetCourses",
     "RelativePath": "api/student/Courses/all",

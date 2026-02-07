@@ -20,5 +20,8 @@ namespace LMS.BLL.Services.CourseServices
              , double? minRating = null, double? maxRating = null
              , string? sortBy = null, bool asc = true);
 
+        Task<BaseResponse> SetCoursePublishStatus(int courseId, string instructorId, bool isPublished);
+
+
     }
 }

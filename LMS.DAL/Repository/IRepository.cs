@@ -9,5 +9,6 @@ namespace LMS.DAL.Repository
         Task<T> Add(T entity);
         Task Remove(T entity);
         IQueryable<T> Query();
+        Task Update(T entity);
     }
 }

@@ -9,6 +9,7 @@ namespace LMS.DAL.DTO.Response.CoursesResponses
 {
     public class CourseResponse : BaseResponse
     {
+        public int Id { get; set; }
         public List<CourseTranslationRequest> Translations { get; set; }
         public string? Instructor { get; set; }
         public double Price { get; set; }

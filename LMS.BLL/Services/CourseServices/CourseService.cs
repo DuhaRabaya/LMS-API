@@ -112,6 +112,18 @@ namespace LMS.BLL.Services.CourseServices
             course.IsPublished = false;
             await _courseRepository.Add(course);
             return new BaseResponse { Success = true, Message = "course created successfully" };
-        }   
+        }
+
+        public async Task<BaseResponse> SetCoursePublishStatus(int courseId, string instructorId, bool isPublished)
+        {
+            var course = await _courseRepository.Get(courseId);
+            if (course == null || course.InstructorId != instructorId)
+                return new BaseResponse { Success = false, Message = "Course not found or access denied" };
+
+            course.IsPublished = isPublished;
+            await _courseRepository.Update(course);
+            return new BaseResponse { Success = true, Message = isPublished ? "Course published" : "Course unpublished" };
+        }
+
     }
 }

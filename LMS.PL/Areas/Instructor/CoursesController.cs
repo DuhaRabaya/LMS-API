@@ -37,5 +37,23 @@ namespace LMS.PL.Areas.Instructor
             if (!result.Success) return BadRequest(result);
             return Ok(result);
         }
+        [HttpPatch("publish/{id}")]
+        public async Task<IActionResult> PublishCourse([FromRoute] int id)
+        {
+            var instructorId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            var result = await _courseService.SetCoursePublishStatus(id, instructorId, true);
+            if (!result.Success) return BadRequest(result);
+            return Ok(result);
+        }
+
+        [HttpPatch("unpublish/{id}")]
+        public async Task<IActionResult> UnpublishCourse([FromRoute] int id)
+        {
+            var instructorId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            var result = await _courseService.SetCoursePublishStatus(id, instructorId, false);
+            if (!result.Success) return BadRequest(result);
+            return Ok(result);
+        }
+
     }
 }
