@@ -30,24 +30,34 @@ namespace LMS.BLL.Services.CourseServices
             var courses = await _courseRepository.GetAllByInstructor(id);        
             return courses.Adapt<List<CourseResponse>>();
         }
-        public async Task<PaginateResponse<CourseResponseForAdminStudent>> GetCourses(string lang,int page,int limit)
+        public async Task<PaginateResponse<CourseResponseForStudent>> GetCoursesForStudent(string lang,int page,int limit
+            , string? search = null)
         {
             var query = _courseRepository.Query();
+            if (search is not null)
+            {
+                query = query.Where(p => p.Translations.Any(t => t.Language == lang &&
+                t.Name.Contains(search) || t.Description.Contains(search)));
+            }
             var total = await query.CountAsync();
 
             query = query.Skip((page - 1) * limit).Take(limit);
             var response= query
                 .BuildAdapter()
                 .AddParameters("lang", lang)
-                .AdaptToType<List<CourseResponseForAdminStudent>>();
+                .AdaptToType<List<CourseResponseForStudent>>();
 
-            return new PaginateResponse<CourseResponseForAdminStudent>()
+            return new PaginateResponse<CourseResponseForStudent>()
             {
                 Total = total,
                 Page = page,
                 Limit = limit,
                 Data = response
             };
+        }
+        public async Task<List<CourseResponse>> GetCoursesForAdmin()
+        {
+            return (await _courseRepository.GetAll()).Adapt<List<CourseResponse>>();
         }
         public async Task<BaseResponse> CreateCourse(CourseRequest request , string instructorId)
         {

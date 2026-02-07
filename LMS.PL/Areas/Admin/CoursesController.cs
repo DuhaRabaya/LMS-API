@@ -18,9 +18,9 @@ namespace LMS.PL.Areas.Admin
             _courseService = courseService;
         }
         [HttpGet("all")]
-        public async Task<IActionResult> GetCourses([FromQuery]string lang="en", [FromQuery] int page = 1, [FromQuery] int limit = 1)
+        public async Task<IActionResult> GetCourses()
         {
-            var result = await _courseService.GetCourses(lang,page,limit);
+            var result = await _courseService.GetCoursesForAdmin();
             return Ok(result);
         }
     }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LMS.DAL.DTO.Response.CoursesResponses
 {
-    public class CourseResponseForAdminStudent
+    public class CourseResponseForStudent
     {
         public string Name { get; set; }
         public string Description { get; set; }

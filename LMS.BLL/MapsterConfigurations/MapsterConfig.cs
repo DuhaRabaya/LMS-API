@@ -16,18 +16,12 @@ namespace LMS.BLL.MapsterConfigurations
             TypeAdapterConfig<Course, CourseResponse>.NewConfig()
               .Map(dest => dest.Instructor, source => source.Instructor.UserName);
 
-            TypeAdapterConfig<Course, CourseResponseForAdminStudent>.NewConfig()
-      .Map(dest => dest.Name,
-         src => src.Translations
-             .FirstOrDefault(t =>
-                 t.Language == MapContext.Current.Parameters["lang"].ToString()
-             ).Name)
+            TypeAdapterConfig<Course, CourseResponseForStudent>.NewConfig()
+            .Map(dest => dest.Name, src => src.Translations.FirstOrDefault(t =>
+                 t.Language == MapContext.Current.Parameters["lang"].ToString()).Name)
 
-    .Map(dest => dest.Description,
-         src => src.Translations
-             .FirstOrDefault(t =>
-                 t.Language == MapContext.Current.Parameters["lang"].ToString()
-             ).Description);
+           .Map(dest => dest.Description,src => src.Translations.FirstOrDefault(t =>
+                 t.Language == MapContext.Current.Parameters["lang"].ToString()).Description);
 
         }
     }

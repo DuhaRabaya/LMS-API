@@ -18,9 +18,9 @@ namespace LMS.PL.Areas.Student
         }
         [HttpGet("all")]
         public async Task<IActionResult> GetCourses([FromQuery] string lang = "en",
-            [FromQuery]int page = 1, [FromQuery]int limit = 1)
+            [FromQuery]int page = 1, [FromQuery]int limit = 1, [FromQuery]string? search=null)
         {
-            var result = await _courseService.GetCourses(lang, page,limit);
+            var result = await _courseService.GetCoursesForStudent(lang, page,limit,search);
             return Ok(result);
         }
     }
