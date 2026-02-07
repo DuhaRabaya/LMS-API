@@ -28,9 +28,14 @@ namespace LMS.BLL.Services.CourseServices
             var courses = await _courseRepository.GetAllByInstructor(id);        
             return courses.Adapt<List<CourseResponse>>();
         }
-        public async Task<List<CourseResponse>> GetCourses()
+        public async Task<List<CourseResponseForAdminStudent>> GetCourses(string lang)
         {
-            return (await _courseRepository.GetAll()).Adapt<List<CourseResponse>>();
+            var courses = await _courseRepository.GetAll();
+
+            return courses
+                .BuildAdapter()
+                .AddParameters("lang", lang)
+                .AdaptToType<List<CourseResponseForAdminStudent>>();
         }
         public async Task<BaseResponse> CreateCourse(CourseRequest request , string instructorId)
         {

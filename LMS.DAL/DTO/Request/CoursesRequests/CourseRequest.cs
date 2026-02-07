@@ -8,8 +8,7 @@ namespace LMS.DAL.DTO.Request.CoursesRequests
 {
     public class CourseRequest
     {
-        public string Name { get; set; }
-        public string Description { get; set; }
+        public List<CourseTranslationRequest> Translations { get; set; }
         public double Price { get; set; }
         public bool IsPublished { get; set; } = false;
 

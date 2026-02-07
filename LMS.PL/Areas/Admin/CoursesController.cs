@@ -7,7 +7,7 @@ namespace LMS.PL.Areas.Admin
 {
     [Route("api/admin/[controller]")]
     [ApiController]
-    [Authorize(Roles = "Admin")]
+    [Authorize(Roles = "Admin,Instructor")]
 
     public class CoursesController : ControllerBase
     {
@@ -18,9 +18,9 @@ namespace LMS.PL.Areas.Admin
             _courseService = courseService;
         }
         [HttpGet("all")]
-        public async Task<IActionResult> GetCourses()
+        public async Task<IActionResult> GetCourses([FromQuery]string lang="en")
         {
-            var result = await _courseService.GetCourses();
+            var result = await _courseService.GetCourses(lang);
             return Ok(result);
         }
     }
