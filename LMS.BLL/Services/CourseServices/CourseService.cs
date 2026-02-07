@@ -31,8 +31,10 @@ namespace LMS.BLL.Services.CourseServices
             return courses.Adapt<List<CourseResponse>>();
         }
         public async Task<PaginateResponse<CourseResponseForStudent>> GetCoursesForStudent(string lang,int page,int limit
-            ,string? search = null, string?instructorId=null, decimal? minPrice = null, decimal? maxPrice = null
-            , double? minRating = null,double? maxRating = null)
+            ,string? search = null, string?instructorId=null, decimal? price=null
+            ,decimal? minPrice = null, decimal? maxPrice = null
+            , double? minRating = null,double? maxRating = null
+            , string? sortBy = null, bool asc = true)
         {
             var query = _courseRepository.Query();
             query = query.Where(c => c.IsPublished);
@@ -45,13 +47,17 @@ namespace LMS.BLL.Services.CourseServices
             {
                 query = query.Where(c=> c.InstructorId==instructorId);
             }
+            if (price is not null)
+            {
+                query = query.Where(c => c.Price == price);
+            }
             if (minPrice is not null)
             {
-                query = query.Where(p => p.Price >= minPrice);
+                query = query.Where(c => c.Price >= minPrice);
             }
             if (maxPrice is not null)
             {
-                query = query.Where(p => p.Price <= maxPrice);
+                query = query.Where(c => c.Price <= maxPrice);
             }
             if (minRating is not null)
             {
@@ -61,7 +67,24 @@ namespace LMS.BLL.Services.CourseServices
             {
                 query = query.Where(c => c.AverageRating <= maxRating);
             }
+            if (sortBy is not null)
+            {
+                sortBy = sortBy.ToLower();
 
+                if (sortBy == "price")
+                {
+                    query = asc ? query.OrderBy(c => c.Price) : query.OrderByDescending(c => c.Price);
+                }
+                else if (sortBy == "name")
+                {
+                    query = asc ? query.OrderBy(c => c.Translations.FirstOrDefault(c => c.Language == lang).Name)
+                        : query.OrderByDescending(c => c.Translations.FirstOrDefault(c => c.Language == lang).Name);
+                }
+                else if (sortBy == "rate")
+                {
+                    query = asc ? query.OrderBy(c=>c.AverageRating) : query.OrderByDescending(c=>c.AverageRating);
+                }
+            }
             var total = await query.CountAsync();
 
             query = query.Skip((page - 1) * limit).Take(limit);

@@ -18,9 +18,14 @@ namespace LMS.PL.Areas.Student
         }
         [HttpGet("all")]
         public async Task<IActionResult> GetCourses([FromQuery] string lang = "en",
-            [FromQuery]int page = 1, [FromQuery]int limit = 1, [FromQuery]string? search=null)
+            [FromQuery]int page = 1, [FromQuery]int limit = 1, [FromQuery]string? search=null
+            , [FromQuery] string? instructorId = null, [FromQuery]decimal? price=null,
+             [FromQuery] decimal? minPrice = null,
+             [FromQuery] decimal? maxPrice = null
+            , [FromQuery] double? minRating = null, [FromQuery] double? maxRating = null
+            , [FromQuery]string? sortBy = null,[FromQuery]bool asc = true)
         {
-            var result = await _courseService.GetCoursesForStudent(lang, page,limit,search);
+            var result = await _courseService.GetCoursesForStudent(lang, page,limit,search,instructorId,price,minPrice,maxPrice,minRating,maxRating,sortBy,asc);
             return Ok(result);
         }
     }

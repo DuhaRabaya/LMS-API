@@ -15,8 +15,10 @@ namespace LMS.BLL.Services.CourseServices
         Task<List<CourseResponse>> GetCoursesByInstructor(string id);
         Task<List<CourseResponse>> GetCoursesForAdmin();
         Task<PaginateResponse<CourseResponseForStudent>> GetCoursesForStudent(string lang, int page, int limit
-             , string? search = null, string? instructorId = null, decimal? minPrice = null, decimal? maxPrice = null
-             , double? minRating = null, double? maxRating = null);
+             , string? search = null, string? instructorId = null, decimal? price = null
+             , decimal? minPrice = null, decimal? maxPrice = null
+             , double? minRating = null, double? maxRating = null
+             , string? sortBy = null, bool asc = true);
 
     }
 }
