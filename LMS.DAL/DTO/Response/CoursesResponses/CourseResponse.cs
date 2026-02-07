@@ -12,6 +12,7 @@ namespace LMS.DAL.DTO.Response.CoursesResponses
         public int Id { get; set; }
         public List<CourseTranslationRequest> Translations { get; set; }
         public string? Instructor { get; set; }
+        public string InstructorId { get; set; }
         public double Price { get; set; }
         public double AverageRating { get; set; } = 0;
         public bool IsPublished { get; set; }

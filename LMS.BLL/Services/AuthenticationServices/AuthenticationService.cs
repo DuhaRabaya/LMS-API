@@ -259,37 +259,30 @@ namespace LMS.BLL.Services.AuthenticationServices
             };
         }
 
-        //public async Task<BaseResponse> UpgradeToInstructor(string userId)
-        //{
-        //    var user = await _userManager.FindByIdAsync(userId);
-        //    if (user == null)
-        //        return new BaseResponse()
-        //        {
-        //            Success = false,
-        //            Message = "user not found"
-        //        };
-        //    if (await _userManager.IsInRoleAsync(user, "Student"))
-        //        await _userManager.RemoveFromRoleAsync(user, "Student");
+        public async Task<BaseResponse> ApproveInstructor(string userId)
+        {
+            var user = await _userManager.FindByIdAsync(userId);
+            if (user == null) return new BaseResponse { Success = false, Message = "User not found" };
 
-        //    else if (await _userManager.IsInRoleAsync(user, "Instructor"))
-        //    {
-        //        return new BaseResponse
-        //        {
-        //            Success = false,
-        //            Message = "User is already an instructor"
-        //        };
-        //    }
+            if (user.IsInstructor)
+                return new BaseResponse { Success = false, Message = "User is already an instructor" };
 
-        //    await _userManager.AddToRoleAsync(user, "Instructor");
+            user.UpgradeToInstructorRequest = false;
+            user.IsInstructor = true;
 
-        //    user.IsInstructor = true;
-        //    await _userManager.UpdateAsync(user);
-        //    return new BaseResponse()
-        //    {
-        //        Success = true,
-        //        Message = "Upgraded to instructer successfully"
-        //    };
-        //}
+           
+            await _userManager.AddToRoleAsync(user, "Instructor");
+            await _userManager.UpdateAsync(user);
+
+            return new BaseResponse { Success = true, Message = "Instructor approved" };
+        }
+        public async Task<List<ApplicationUser>> GetPendingInstructors()
+        {
+            var instructors = await _userManager.GetUsersInRoleAsync("Student");
+            var pending = instructors.Where(u =>u.UpgradeToInstructorRequest).ToList();
+
+            return pending;
+        }
 
     }
 }

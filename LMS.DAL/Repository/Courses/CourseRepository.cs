@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace LMS.DAL.Repository.Courses
 {
-    public class CourseRepository : Repository<Course> , ICourseRepository
+    public class CourseRepository : Repository<Course>, ICourseRepository
     {
         private readonly ApplicationDbContext _context;
 
@@ -22,18 +22,17 @@ namespace LMS.DAL.Repository.Courses
         public async Task<List<Course>> GetAll()
         {
             return await _context.Courses
-                .Include(c => c.Instructor).Include(c=>c.Translations)
+                .Include(c => c.Instructor).Include(c => c.Translations)
                 .ToListAsync();
         }
         public async Task<List<Course>> GetAllByInstructor(string instructorId)
         {
-            return await _context.Courses.Include(c => c.Instructor).Include(c=>c.Translations)
-                .Where(c=>c.InstructorId==instructorId).ToListAsync();
+            return await _context.Courses.Include(c => c.Instructor).Include(c => c.Translations)
+                .Where(c => c.InstructorId == instructorId).ToListAsync();
         }
         public IQueryable<Course> Query()
         {
-            return _context.Courses.Include(c => c.Translations).Include(c=>c.Instructor).AsQueryable();
+            return _context.Courses.Include(c => c.Translations).Include(c => c.Instructor).AsQueryable();
         }
     }
 }
-  

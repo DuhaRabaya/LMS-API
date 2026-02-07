@@ -7,7 +7,8 @@ namespace LMS.PL.Areas.Student
 {
     [Route("api/student/[controller]")]
     [ApiController]
-    [Authorize]
+    [Authorize(Roles ="Student")]
+    
     public class CoursesController : ControllerBase
     {
         private readonly ICourseService _courseService;

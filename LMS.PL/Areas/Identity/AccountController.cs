@@ -74,24 +74,7 @@ namespace LMS.PL.Areas.Identity
             if (!result.Success) return BadRequest(result);
             return Ok(result);
         }
-        //[Authorize(Roles="Admin")]
-        //[HttpPost("upgrade-to-instructor/{id}")]
-        //public async Task<IActionResult> UpgradeToInstructor(string id)
-        //{
-        //    var result=await _authenticationService.UpgradeToInstructor(id);
-        //    if (!result.Success) return BadRequest(result);
-        //    return Ok(result);
-        //}
 
-        //[Authorize(Roles = "Student")]
-        //[HttpPost("request-instructor")]
-        //public async Task<IActionResult> RequestInstructor()
-        //{
-        //    var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-        //    var result = await _authenticationService.RequestInstructorUpgrade(userId);
-        //    if (!result.Success) return BadRequest(result);
-        //    return Ok(result);
-        //}
 
     }
 }

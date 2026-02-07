@@ -4,6 +4,7 @@ using LMS.DAL.DTO.Request.UpdatePasswordRequests;
 using LMS.DAL.DTO.Response;
 using LMS.DAL.DTO.Response.LogInRegisterResponses;
 using LMS.DAL.DTO.Response.UpdatePasswordResponses;
+using LMS.DAL.Models;
 
 namespace LMS.BLL.Services.AuthenticationServices
 {
@@ -15,6 +16,7 @@ namespace LMS.BLL.Services.AuthenticationServices
         Task<LoginResponse> RefreshTokenAsync(TokenApiModel request);
         Task<SendCodeResponse> SendCodeAsync(SendCodeRequest request);
         Task<UpdatePasswordResponse> UpdatePasswordAsync(UpdatePasswordRequest request);
-       // Task<BaseResponse> UpgradeToInstructor(string userId);
+        Task<List<ApplicationUser>> GetPendingInstructors();
+        Task<BaseResponse> ApproveInstructor(string userId);
     }
 }
