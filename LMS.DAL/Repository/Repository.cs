@@ -1,4 +1,5 @@
-﻿using LMS.PL.Data;
+﻿using LMS.DAL.Models;
+using LMS.PL.Data;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -36,6 +37,10 @@ namespace LMS.DAL.Repository
         {
             _context.Set<T>().Remove(entity);
             await _context.SaveChangesAsync();
+        }
+        public IQueryable<T> Query()
+        {
+            return _context.Set<T>().AsQueryable();
         }
 
     }

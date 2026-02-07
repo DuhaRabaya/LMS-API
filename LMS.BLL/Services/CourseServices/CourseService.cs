@@ -1,4 +1,5 @@
-﻿using LMS.DAL.DTO.Request.CoursesRequests;
+﻿using Azure;
+using LMS.DAL.DTO.Request.CoursesRequests;
 using LMS.DAL.DTO.Response;
 using LMS.DAL.DTO.Response.CoursesResponses;
 using LMS.DAL.Migrations;
@@ -6,6 +7,7 @@ using LMS.DAL.Models;
 using LMS.DAL.Repository;
 using LMS.DAL.Repository.Courses;
 using Mapster;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,14 +30,24 @@ namespace LMS.BLL.Services.CourseServices
             var courses = await _courseRepository.GetAllByInstructor(id);        
             return courses.Adapt<List<CourseResponse>>();
         }
-        public async Task<List<CourseResponseForAdminStudent>> GetCourses(string lang)
+        public async Task<PaginateResponse<CourseResponseForAdminStudent>> GetCourses(string lang,int page,int limit)
         {
-            var courses = await _courseRepository.GetAll();
+            var query = _courseRepository.Query();
+            var total = await query.CountAsync();
 
-            return courses
+            query = query.Skip((page - 1) * limit).Take(limit);
+            var response= query
                 .BuildAdapter()
                 .AddParameters("lang", lang)
                 .AdaptToType<List<CourseResponseForAdminStudent>>();
+
+            return new PaginateResponse<CourseResponseForAdminStudent>()
+            {
+                Total = total,
+                Page = page,
+                Limit = limit,
+                Data = response
+            };
         }
         public async Task<BaseResponse> CreateCourse(CourseRequest request , string instructorId)
         {

@@ -13,7 +13,7 @@ namespace LMS.BLL.Services.CourseServices
     {
         Task<BaseResponse> CreateCourse(CourseRequest request, string instructorId);
         Task<List<CourseResponse>> GetCoursesByInstructor(string id);
-        Task<List<CourseResponseForAdminStudent>> GetCourses(string lang);
+        Task<PaginateResponse<CourseResponseForAdminStudent>> GetCourses(string lang, int page, int limit);
 
     }
 }

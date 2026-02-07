@@ -30,6 +30,10 @@ namespace LMS.DAL.Repository.Courses
             return await _context.Courses.Include(c => c.Instructor).Include(c=>c.Translations)
                 .Where(c=>c.InstructorId==instructorId).ToListAsync();
         }
+        public IQueryable<Course> Query()
+        {
+            return _context.Courses.Include(c => c.Translations).Include(c=>c.Instructor).AsQueryable();
+        }
     }
 }
   

@@ -1,4 +1,6 @@
-﻿namespace LMS.DAL.Repository
+﻿using LMS.DAL.Models;
+
+namespace LMS.DAL.Repository
 {
     public interface IRepository<T> where T : class
     {
@@ -6,5 +8,6 @@
         Task<T> Get(Object id);
         Task<T> Add(T entity);
         Task Remove(T entity);
+        IQueryable<T> Query();
     }
 }
