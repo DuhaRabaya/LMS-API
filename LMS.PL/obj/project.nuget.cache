@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "fGZtbkXXRfM=",
+  "dgSpecHash": "AugFkCnRjZI=",
   "success": true,
   "projectFilePath": "C:\\Users\\msii\\OneDrive\\Desktop\\asp\\c#\\LMS\\LMS.PL\\LMS.PL.csproj",
   "expectedPackageFiles": [
@@ -21,7 +21,7 @@
     "C:\\Users\\msii\\.nuget\\packages\\microsoft.aspnetcore.hosting.abstractions\\2.3.0\\microsoft.aspnetcore.hosting.abstractions.2.3.0.nupkg.sha512",
     "C:\\Users\\msii\\.nuget\\packages\\microsoft.aspnetcore.hosting.server.abstractions\\2.3.0\\microsoft.aspnetcore.hosting.server.abstractions.2.3.0.nupkg.sha512",
     "C:\\Users\\msii\\.nuget\\packages\\microsoft.aspnetcore.http\\2.3.0\\microsoft.aspnetcore.http.2.3.0.nupkg.sha512",
-    "C:\\Users\\msii\\.nuget\\packages\\microsoft.aspnetcore.http.abstractions\\2.3.0\\microsoft.aspnetcore.http.abstractions.2.3.0.nupkg.sha512",
+    "C:\\Users\\msii\\.nuget\\packages\\microsoft.aspnetcore.http.abstractions\\2.3.9\\microsoft.aspnetcore.http.abstractions.2.3.9.nupkg.sha512",
     "C:\\Users\\msii\\.nuget\\packages\\microsoft.aspnetcore.http.extensions\\2.3.0\\microsoft.aspnetcore.http.extensions.2.3.0.nupkg.sha512",
     "C:\\Users\\msii\\.nuget\\packages\\microsoft.aspnetcore.http.features\\2.3.0\\microsoft.aspnetcore.http.features.2.3.0.nupkg.sha512",
     "C:\\Users\\msii\\.nuget\\packages\\microsoft.aspnetcore.identity\\2.3.9\\microsoft.aspnetcore.identity.2.3.9.nupkg.sha512",

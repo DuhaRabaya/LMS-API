@@ -3,20 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\msii\\OneDrive\\Desktop\\asp\\c#\\LMS\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D7A59DB1-3443-4BCF-B0AC-9E200140CFAB}|LMS.PL\\LMS.PL.csproj|c:\\users\\msii\\onedrive\\desktop\\asp\\c#\\lms\\lms.pl\\areas\\instructor\\coursescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D7A59DB1-3443-4BCF-B0AC-9E200140CFAB}|LMS.PL\\LMS.PL.csproj|solutionrelative:lms.pl\\areas\\instructor\\coursescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2E6062C2-3ED7-4AB0-B92C-65F0D7D01AF9}|LMS.DAL\\LMS.DAL.csproj|c:\\users\\msii\\onedrive\\desktop\\asp\\c#\\lms\\lms.dal\\models\\basemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2E6062C2-3ED7-4AB0-B92C-65F0D7D01AF9}|LMS.DAL\\LMS.DAL.csproj|solutionrelative:lms.dal\\models\\basemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2E6062C2-3ED7-4AB0-B92C-65F0D7D01AF9}|LMS.DAL\\LMS.DAL.csproj|c:\\users\\msii\\onedrive\\desktop\\asp\\c#\\lms\\lms.dal\\dto\\request\\coursesrequests\\courserequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2E6062C2-3ED7-4AB0-B92C-65F0D7D01AF9}|LMS.DAL\\LMS.DAL.csproj|solutionrelative:lms.dal\\dto\\request\\coursesrequests\\courserequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2E6062C2-3ED7-4AB0-B92C-65F0D7D01AF9}|LMS.DAL\\LMS.DAL.csproj|c:\\users\\msii\\onedrive\\desktop\\asp\\c#\\lms\\lms.dal\\models\\course.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2E6062C2-3ED7-4AB0-B92C-65F0D7D01AF9}|LMS.DAL\\LMS.DAL.csproj|solutionrelative:lms.dal\\models\\course.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5B5141DE-FC3D-4B4A-AF80-8FBF09C3FCC0}|LMS.BLL\\LMS.BLL.csproj|c:\\users\\msii\\onedrive\\desktop\\asp\\c#\\lms\\lms.bll\\services\\courseservices\\courseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5B5141DE-FC3D-4B4A-AF80-8FBF09C3FCC0}|LMS.BLL\\LMS.BLL.csproj|solutionrelative:lms.bll\\services\\courseservices\\courseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5B5141DE-FC3D-4B4A-AF80-8FBF09C3FCC0}|LMS.BLL\\LMS.BLL.csproj|c:\\users\\msii\\onedrive\\desktop\\asp\\c#\\lms\\lms.bll\\services\\courseservices\\icourseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5B5141DE-FC3D-4B4A-AF80-8FBF09C3FCC0}|LMS.BLL\\LMS.BLL.csproj|solutionrelative:lms.bll\\services\\courseservices\\icourseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2E6062C2-3ED7-4AB0-B92C-65F0D7D01AF9}|LMS.DAL\\LMS.DAL.csproj|c:\\users\\msii\\onedrive\\desktop\\asp\\c#\\lms\\lms.dal\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2E6062C2-3ED7-4AB0-B92C-65F0D7D01AF9}|LMS.DAL\\LMS.DAL.csproj|solutionrelative:lms.dal\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,58 +22,45 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ICourseService.cs",
-              "DocumentMoniker": "C:\\Users\\msii\\OneDrive\\Desktop\\asp\\c#\\LMS\\LMS.BLL\\Services\\CourseServices\\ICourseService.cs",
-              "RelativeDocumentMoniker": "LMS.BLL\\Services\\CourseServices\\ICourseService.cs",
-              "ToolTip": "C:\\Users\\msii\\OneDrive\\Desktop\\asp\\c#\\LMS\\LMS.BLL\\Services\\CourseServices\\ICourseService.cs",
-              "RelativeToolTip": "LMS.BLL\\Services\\CourseServices\\ICourseService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAABAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\msii\\OneDrive\\Desktop\\asp\\c#\\LMS\\LMS.DAL\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "LMS.DAL\\Data\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\msii\\OneDrive\\Desktop\\asp\\c#\\LMS\\LMS.DAL\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "LMS.DAL\\Data\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAiwE4AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-08T11:24:37.157Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "CoursesController.cs",
-              "DocumentMoniker": "C:\\Users\\msii\\OneDrive\\Desktop\\asp\\c#\\LMS\\LMS.PL\\Areas\\Instructor\\CoursesController.cs",
-              "RelativeDocumentMoniker": "LMS.PL\\Areas\\Instructor\\CoursesController.cs",
-              "ToolTip": "C:\\Users\\msii\\OneDrive\\Desktop\\asp\\c#\\LMS\\LMS.PL\\Areas\\Instructor\\CoursesController.cs",
-              "RelativeToolTip": "LMS.PL\\Areas\\Instructor\\CoursesController.cs",
-              "ViewState": "AgIAADEAAAAAAAAAAAAAwEsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-08T11:24:16.786Z",
+              "WhenOpened": "2026-02-08T13:49:13.06Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "CourseRequest.cs",
-              "DocumentMoniker": "C:\\Users\\msii\\OneDrive\\Desktop\\asp\\c#\\LMS\\LMS.DAL\\DTO\\Request\\CoursesRequests\\CourseRequest.cs",
-              "RelativeDocumentMoniker": "LMS.DAL\\DTO\\Request\\CoursesRequests\\CourseRequest.cs",
-              "ToolTip": "C:\\Users\\msii\\OneDrive\\Desktop\\asp\\c#\\LMS\\LMS.DAL\\DTO\\Request\\CoursesRequests\\CourseRequest.cs",
-              "RelativeToolTip": "LMS.DAL\\DTO\\Request\\CoursesRequests\\CourseRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
+              "Title": "Course.cs",
+              "DocumentMoniker": "C:\\Users\\msii\\OneDrive\\Desktop\\asp\\c#\\LMS\\LMS.DAL\\Models\\Course.cs",
+              "RelativeDocumentMoniker": "LMS.DAL\\Models\\Course.cs",
+              "ToolTip": "C:\\Users\\msii\\OneDrive\\Desktop\\asp\\c#\\LMS\\LMS.DAL\\Models\\Course.cs",
+              "RelativeToolTip": "LMS.DAL\\Models\\Course.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-08T11:20:17.092Z",
+              "WhenOpened": "2026-02-08T13:43:52.404Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "CourseService.cs",
-              "DocumentMoniker": "C:\\Users\\msii\\OneDrive\\Desktop\\asp\\c#\\LMS\\LMS.BLL\\Services\\CourseServices\\CourseService.cs",
-              "RelativeDocumentMoniker": "LMS.BLL\\Services\\CourseServices\\CourseService.cs",
-              "ToolTip": "C:\\Users\\msii\\OneDrive\\Desktop\\asp\\c#\\LMS\\LMS.BLL\\Services\\CourseServices\\CourseService.cs",
-              "RelativeToolTip": "LMS.BLL\\Services\\CourseServices\\CourseService.cs",
-              "ViewState": "AgIAABcAAAAAAAAAAAA1wKgAAAAJAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "BaseModel.cs",
+              "DocumentMoniker": "C:\\Users\\msii\\OneDrive\\Desktop\\asp\\c#\\LMS\\LMS.DAL\\Models\\BaseModel.cs",
+              "RelativeDocumentMoniker": "LMS.DAL\\Models\\BaseModel.cs",
+              "ToolTip": "C:\\Users\\msii\\OneDrive\\Desktop\\asp\\c#\\LMS\\LMS.DAL\\Models\\BaseModel.cs",
+              "RelativeToolTip": "LMS.DAL\\Models\\BaseModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-08T11:17:32.718Z",
+              "WhenOpened": "2026-02-08T13:44:26.52Z",
               "EditorCaption": ""
             }
           ]

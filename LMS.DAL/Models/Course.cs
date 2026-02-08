@@ -6,13 +6,10 @@ using System.Threading.Tasks;
 
 namespace LMS.DAL.Models
 {
-    public class Course
+    public class Course :BaseModel
     {
-        public int Id { get; set; }
         public string? InstructorId { get; set; }
         public decimal Price { get; set; }
-        public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
-        public DateTime? UpdatedAt { get; set; }
         public bool IsPublished { get; set; } = false;
         public double AverageRating { get; set; } = 0;
         public List<CourseTranslation> Translations { get; set; }   
