@@ -1,4 +1,5 @@
-﻿using LMS.DAL.Models;
+﻿using LMS.DAL.Migrations;
+using LMS.DAL.Models;
 using LMS.PL.Data;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -19,6 +20,11 @@ namespace LMS.DAL.Repository.Courses
             _context = context;
         }
 
+        public async Task<Course> Get(int id)
+        {
+            return await _context.Courses.Include(c => c.Translations)
+                        .FirstOrDefaultAsync(c => c.Id == id);
+        }
         public async Task<List<Course>> GetAll()
         {
             return await _context.Courses

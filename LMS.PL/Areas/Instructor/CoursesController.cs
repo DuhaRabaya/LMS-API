@@ -55,5 +55,21 @@ namespace LMS.PL.Areas.Instructor
             return Ok(result);
         }
 
+        [HttpPut("update/{id}")]
+        public async Task<IActionResult> UpdateCourse([FromRoute] int id,[FromBody] CourseRequest request)
+        {
+            var instructorId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            var result = await _courseService.UpdateCourse(id, request, instructorId);
+            if (!result.Success)return BadRequest(result);
+            return Ok(result);
+        }
+        [HttpDelete("delete/{id}")]
+        public async Task<IActionResult> DeleteCourse([FromRoute] int id)
+        {
+            var instructorId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            var result = await _courseService.DeleteCourse(id, instructorId);
+            if (!result.Success) return BadRequest(result);
+            return Ok(result);
+        }
     }
 }

@@ -125,5 +125,47 @@ namespace LMS.BLL.Services.CourseServices
             return new BaseResponse { Success = true, Message = isPublished ? "Course published" : "Course unpublished" };
         }
 
+        public async Task<BaseResponse> UpdateCourse(int courseId, CourseRequest request, string instructorId)
+        {
+            var course = await _courseRepository.Get(courseId);
+
+            if (course == null || course.InstructorId != instructorId)
+                return new BaseResponse
+                {
+                    Success = false,
+                    Message = "Course not found or access denied"
+                };
+            course.Price = request.Price;
+            course.Translations.Clear();
+            course.Translations = request.Translations
+                .Adapt<List<CourseTranslation>>();
+
+            await _courseRepository.Update(course);
+
+            return new BaseResponse
+            {
+                Success = true,
+                Message = "Course updated successfully"
+            };
+        }
+        public async Task<BaseResponse>  DeleteCourse(int courseId, string instructorId)
+        {
+            var course = await _courseRepository.Get(courseId);
+
+            if (course == null || course.InstructorId != instructorId)
+                return new BaseResponse
+                {
+                    Success = false,
+                    Message = "Course not found or access denied"
+                };
+
+            await _courseRepository.Remove(course);
+
+            return new BaseResponse
+            {
+                Success = true,
+                Message = "Course deleted successfully"
+            };
+        }
     }
 }

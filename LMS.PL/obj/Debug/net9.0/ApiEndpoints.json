@@ -164,6 +164,22 @@
   },
   {
     "ContainingType": "LMS.PL.Areas.Instructor.CoursesController",
+    "Method": "DeleteCourse",
+    "RelativePath": "api/instructor/Courses/delete/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LMS.PL.Areas.Instructor.CoursesController",
     "Method": "PublishCourse",
     "RelativePath": "api/instructor/Courses/publish/{id}",
     "HttpMethod": "PATCH",
@@ -189,6 +205,27 @@
       {
         "Name": "id",
         "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LMS.PL.Areas.Instructor.CoursesController",
+    "Method": "UpdateCourse",
+    "RelativePath": "api/instructor/Courses/update/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "LMS.DAL.DTO.Request.CoursesRequests.CourseRequest",
         "IsRequired": true
       }
     ],

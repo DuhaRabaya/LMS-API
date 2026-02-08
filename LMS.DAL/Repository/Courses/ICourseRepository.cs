@@ -6,5 +6,6 @@ namespace LMS.DAL.Repository.Courses
     {
         Task<List<Course>> GetAllByInstructor(string instructorId);
         IQueryable<Course> Query();
+        Task<Course> Get(int id);
     }
 }

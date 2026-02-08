@@ -21,7 +21,8 @@ namespace LMS.BLL.Services.CourseServices
              , string? sortBy = null, bool asc = true);
 
         Task<BaseResponse> SetCoursePublishStatus(int courseId, string instructorId, bool isPublished);
-
+        Task<BaseResponse> UpdateCourse(int courseId, CourseRequest request, string instructorId);
+        Task<BaseResponse> DeleteCourse(int courseId, string instructorId);
 
     }
 }
