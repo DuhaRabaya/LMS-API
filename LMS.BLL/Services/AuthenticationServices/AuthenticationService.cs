@@ -259,31 +259,6 @@ namespace LMS.BLL.Services.AuthenticationServices
             };
         }
 
-        public async Task<BaseResponse> ApproveInstructor(string userId)
-        {
-            var user = await _userManager.FindByIdAsync(userId);
-            if (user == null) return new BaseResponse { Success = false, Message = "User not found" };
-
-            if (user.IsInstructor)
-                return new BaseResponse { Success = false, Message = "User is already an instructor" };
-
-            user.UpgradeToInstructorRequest = false;
-            user.IsInstructor = true;
-
-           
-            await _userManager.AddToRoleAsync(user, "Instructor");
-            await _userManager.UpdateAsync(user);
-
-            return new BaseResponse { Success = true, Message = "Instructor approved" };
-        }
-        public async Task<List<ApplicationUser>> GetPendingInstructors()
-        {
-            var instructors = await _userManager.GetUsersInRoleAsync("Student");
-            var pending = instructors.Where(u =>u.UpgradeToInstructorRequest).ToList();
-
-            return pending;
-        }
-
     }
 }
 

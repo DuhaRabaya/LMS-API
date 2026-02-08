@@ -11,8 +11,50 @@
   },
   {
     "ContainingType": "LMS.PL.Areas.Admin.ManagerController",
+    "Method": "GetUsers",
+    "RelativePath": "api/admin/Manager",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LMS.PL.Areas.Admin.ManagerController",
+    "Method": "GetUserDetails",
+    "RelativePath": "api/admin/Manager/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LMS.PL.Areas.Admin.ManagerController",
     "Method": "ApproveInstructor",
     "RelativePath": "api/admin/Manager/approve/{id}",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LMS.PL.Areas.Admin.ManagerController",
+    "Method": "BlockUser",
+    "RelativePath": "api/admin/Manager/block/{id}",
     "HttpMethod": "PATCH",
     "IsController": true,
     "Order": 0,
@@ -33,6 +75,22 @@
     "IsController": true,
     "Order": 0,
     "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LMS.PL.Areas.Admin.ManagerController",
+    "Method": "UnBlockUser",
+    "RelativePath": "api/admin/Manager/unblock/{id}",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
     "ReturnTypes": []
   },
   {

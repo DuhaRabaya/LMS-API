@@ -1,6 +1,7 @@
 ﻿using LMS.BLL.Services.AuthenticationServices;
 using LMS.BLL.Services.CourseServices;
 using LMS.BLL.Services.EmailServices;
+using LMS.BLL.Services.ManagerServices;
 using LMS.BLL.Services.TokenService;
 using LMS.DAL.Models;
 using LMS.DAL.Repository;
@@ -50,6 +51,7 @@ namespace LMS.PL.AppConfigurations
             services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
 
             services.AddScoped<ICourseRepository, CourseRepository>();
+            services.AddScoped<IManageUserService, ManageUserService>();
 
         }
     }

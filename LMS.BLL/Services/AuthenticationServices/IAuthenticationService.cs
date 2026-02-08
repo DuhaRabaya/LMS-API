@@ -16,7 +16,6 @@ namespace LMS.BLL.Services.AuthenticationServices
         Task<LoginResponse> RefreshTokenAsync(TokenApiModel request);
         Task<SendCodeResponse> SendCodeAsync(SendCodeRequest request);
         Task<UpdatePasswordResponse> UpdatePasswordAsync(UpdatePasswordRequest request);
-        Task<List<ApplicationUser>> GetPendingInstructors();
-        Task<BaseResponse> ApproveInstructor(string userId);
+        
     }
 }

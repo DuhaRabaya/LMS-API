@@ -18,5 +18,6 @@ namespace LMS.DAL.Models
         public DateTime RefreshTokenExpiryTime { get; set; }
         public string? PasswordResetCode { get; set; }
         public DateTime? PasswordResetCodeExpired { get; set; }
+        public bool IsBlocked { get; set; }
     }
 }
