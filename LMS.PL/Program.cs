@@ -63,7 +63,10 @@ namespace LMS.PL
             {
                 app.MapOpenApi();
             }
-          
+
+            //for the course thumnail
+            app.UseStaticFiles();
+
             app.UseHttpsRedirection();
             app.UseExceptionHandler();
             app.UseAuthentication();

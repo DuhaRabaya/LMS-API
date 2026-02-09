@@ -30,7 +30,7 @@ namespace LMS.PL.Areas.Instructor
         }
 
         [HttpPost("")]
-        public async Task<IActionResult> createCourse([FromBody] CourseRequest request)
+        public async Task<IActionResult> createCourse([FromForm] CourseRequest request)
         {
             var instructorId = User.FindFirstValue(ClaimTypes.NameIdentifier);
             var result = await _courseService.CreateCourse(request, instructorId);
@@ -56,7 +56,7 @@ namespace LMS.PL.Areas.Instructor
         }
 
         [HttpPut("update/{id}")]
-        public async Task<IActionResult> UpdateCourse([FromRoute] int id,[FromBody] CourseRequest request)
+        public async Task<IActionResult> UpdateCourse([FromRoute] int id,[FromForm] CourseRequest request)
         {
             var instructorId = User.FindFirstValue(ClaimTypes.NameIdentifier);
             var result = await _courseService.UpdateCourse(id, request, instructorId);

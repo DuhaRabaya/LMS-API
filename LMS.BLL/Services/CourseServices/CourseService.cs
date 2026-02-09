@@ -1,4 +1,5 @@
 ﻿using Azure;
+using LMS.BLL.Services.FileServices;
 using LMS.DAL.DTO.Request.CoursesRequests;
 using LMS.DAL.DTO.Response;
 using LMS.DAL.DTO.Response.CoursesResponses;
@@ -20,10 +21,12 @@ namespace LMS.BLL.Services.CourseServices
     public class CourseService : ICourseService
     {
         private readonly ICourseRepository _courseRepository;
+        private readonly IFileService _fileService;
 
-        public CourseService(ICourseRepository courseRepository)
+        public CourseService(ICourseRepository courseRepository , IFileService fileService)
         {
             _courseRepository = courseRepository;
+            _fileService = fileService;
         }
         public async Task<List<CourseResponse>> GetCoursesByInstructor(string id)
         {
@@ -108,6 +111,11 @@ namespace LMS.BLL.Services.CourseServices
         public async Task<BaseResponse> CreateCourse(CourseRequest request , string instructorId)
         {
             var course = request.Adapt<Course>();
+            if (request.Thumbnail != null)
+            {
+                var path = await _fileService.UploadFile(request.Thumbnail);
+                course.Thumbnail = path;
+            }
             course.InstructorId = instructorId;
             course.IsPublished = false;
             await _courseRepository.Add(course);
@@ -139,7 +147,11 @@ namespace LMS.BLL.Services.CourseServices
             course.Translations.Clear();
             course.Translations = request.Translations
                 .Adapt<List<CourseTranslation>>();
-
+            if (request.Thumbnail != null)
+            {
+                var path = await _fileService.UploadFile(request.Thumbnail);
+                course.Thumbnail = path;
+            }
             await _courseRepository.Update(course);
 
             return new BaseResponse

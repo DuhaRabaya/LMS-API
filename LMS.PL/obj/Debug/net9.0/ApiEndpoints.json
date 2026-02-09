@@ -203,9 +203,19 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "request",
-        "Type": "LMS.DAL.DTO.Request.CoursesRequests.CourseRequest",
-        "IsRequired": true
+        "Name": "Translations",
+        "Type": "System.Collections.Generic.List\u00601[[LMS.DAL.DTO.Request.CoursesRequests.CourseTranslationRequest, LMS.DAL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Price",
+        "Type": "System.Decimal",
+        "IsRequired": false
+      },
+      {
+        "Name": "Thumbnail",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []
@@ -282,9 +292,19 @@
         "IsRequired": true
       },
       {
-        "Name": "request",
-        "Type": "LMS.DAL.DTO.Request.CoursesRequests.CourseRequest",
-        "IsRequired": true
+        "Name": "Translations",
+        "Type": "System.Collections.Generic.List\u00601[[LMS.DAL.DTO.Request.CoursesRequests.CourseTranslationRequest, LMS.DAL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Price",
+        "Type": "System.Decimal",
+        "IsRequired": false
+      },
+      {
+        "Name": "Thumbnail",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []

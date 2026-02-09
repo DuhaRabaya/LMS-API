@@ -16,5 +16,10 @@ namespace LMS.DAL.DTO.Response.CoursesResponses
         public double Price { get; set; }
         public double AverageRating { get; set; } = 0;
         public bool IsPublished { get; set; }
+        public string Thumbnail { get; set; }
+        public DateTime CreatedAt { get; set; }
+        public DateTime? UpdatedAt { get; set; }
+
+
     }
 }

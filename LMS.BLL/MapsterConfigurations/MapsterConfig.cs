@@ -19,9 +19,12 @@ namespace LMS.BLL.MapsterConfigurations
             TypeAdapterConfig<Course, CourseResponseForStudent>.NewConfig()
             .Map(dest => dest.Name, src => src.Translations.FirstOrDefault(t =>
                  t.Language == MapContext.Current.Parameters["lang"].ToString()).Name)
-
            .Map(dest => dest.Description,src => src.Translations.FirstOrDefault(t =>
-                 t.Language == MapContext.Current.Parameters["lang"].ToString()).Description);
+                 t.Language == MapContext.Current.Parameters["lang"].ToString()).Description)
+           .Map(dest => dest.Instructor, source => source.Instructor.UserName); ;
+
+            TypeAdapterConfig<Course, CourseResponse>.NewConfig()
+                .Map(dest => dest.Thumbnail, source => $"http://localhost:5165/Images/{source.Thumbnail}");
 
         }
     }

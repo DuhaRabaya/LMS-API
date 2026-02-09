@@ -1,6 +1,7 @@
 ﻿using LMS.BLL.Services.AuthenticationServices;
 using LMS.BLL.Services.CourseServices;
 using LMS.BLL.Services.EmailServices;
+using LMS.BLL.Services.FileServices;
 using LMS.BLL.Services.ManagerServices;
 using LMS.BLL.Services.TokenService;
 using LMS.DAL.Models;
@@ -52,6 +53,7 @@ namespace LMS.PL.AppConfigurations
 
             services.AddScoped<ICourseRepository, CourseRepository>();
             services.AddScoped<IManageUserService, ManageUserService>();
+            services.AddScoped<IFileService, FileService>();
 
         }
     }
