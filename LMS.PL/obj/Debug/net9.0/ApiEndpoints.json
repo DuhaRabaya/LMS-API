@@ -379,5 +379,37 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LMS.PL.Areas.Student.CoursesController",
+    "Method": "Enroll",
+    "RelativePath": "api/student/Courses/enroll/{courseId}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "courseId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LMS.PL.Areas.Student.CoursesController",
+    "Method": "GetEnrollments",
+    "RelativePath": "api/student/Courses/enrollments",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "lang",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
   }
 ]

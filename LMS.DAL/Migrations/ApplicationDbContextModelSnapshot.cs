@@ -142,6 +142,7 @@ namespace LMS.DAL.Migrations
                         .HasColumnType("bit");
 
                     b.Property<decimal>("Price")
+                        .HasPrecision(18, 2)
                         .HasColumnType("decimal(18,2)");
 
                     b.Property<string>("Thumbnail")
@@ -189,6 +190,33 @@ namespace LMS.DAL.Migrations
                     b.HasIndex("CourseId");
 
                     b.ToTable("CourseTranslations");
+                });
+
+            modelBuilder.Entity("LMS.DAL.Models.Enrollment", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("CourseId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("EnrolledAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("StudentId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CourseId");
+
+                    b.HasIndex("StudentId");
+
+                    b.ToTable("Enrollments");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -344,6 +372,25 @@ namespace LMS.DAL.Migrations
                     b.Navigation("Course");
                 });
 
+            modelBuilder.Entity("LMS.DAL.Models.Enrollment", b =>
+                {
+                    b.HasOne("LMS.DAL.Models.Course", "Course")
+                        .WithMany("Enrollments")
+                        .HasForeignKey("CourseId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("LMS.DAL.Models.ApplicationUser", "Student")
+                        .WithMany("Enrollments")
+                        .HasForeignKey("StudentId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Course");
+
+                    b.Navigation("Student");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
@@ -395,8 +442,15 @@ namespace LMS.DAL.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("LMS.DAL.Models.ApplicationUser", b =>
+                {
+                    b.Navigation("Enrollments");
+                });
+
             modelBuilder.Entity("LMS.DAL.Models.Course", b =>
                 {
+                    b.Navigation("Enrollments");
+
                     b.Navigation("Translations");
                 });
 #pragma warning restore 612, 618

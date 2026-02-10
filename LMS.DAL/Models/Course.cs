@@ -15,5 +15,6 @@ namespace LMS.DAL.Models
         public List<CourseTranslation> Translations { get; set; }   
         public ApplicationUser Instructor { get; set; }
         public string Thumbnail { get; set; }
+        public ICollection<Enrollment> Enrollments { get; set; }
     }
 }

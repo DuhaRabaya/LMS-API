@@ -21,11 +21,11 @@ namespace LMS.BLL.MapsterConfigurations
                  t.Language == MapContext.Current.Parameters["lang"].ToString()).Name)
            .Map(dest => dest.Description,src => src.Translations.FirstOrDefault(t =>
                  t.Language == MapContext.Current.Parameters["lang"].ToString()).Description)
-           .Map(dest => dest.Instructor, source => source.Instructor.UserName); ;
+           .Map(dest => dest.Instructor, source => source.Instructor.UserName)
+           .Map(dest => dest.Thumbnail, source => $"http://localhost:5165/Images/{source.Thumbnail}");
 
             TypeAdapterConfig<Course, CourseResponse>.NewConfig()
                 .Map(dest => dest.Thumbnail, source => $"http://localhost:5165/Images/{source.Thumbnail}");
-
         }
     }
 }

@@ -14,6 +14,5 @@ namespace LMS.DAL.DTO.Response.CoursesResponses
         public decimal Price { get; set; }
         public string Instructor { get; set; }
         public DateTime CreatedAt { get; set; }
-
     }
 }

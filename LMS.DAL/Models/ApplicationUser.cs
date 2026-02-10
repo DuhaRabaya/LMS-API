@@ -19,5 +19,6 @@ namespace LMS.DAL.Models
         public string? PasswordResetCode { get; set; }
         public DateTime? PasswordResetCodeExpired { get; set; }
         public bool IsBlocked { get; set; }
+        public List<Enrollment> Enrollments { get; set; }
     }
 }

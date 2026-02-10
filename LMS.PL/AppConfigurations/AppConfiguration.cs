@@ -1,12 +1,14 @@
 ﻿using LMS.BLL.Services.AuthenticationServices;
 using LMS.BLL.Services.CourseServices;
 using LMS.BLL.Services.EmailServices;
+using LMS.BLL.Services.EnrollmentsServices;
 using LMS.BLL.Services.FileServices;
 using LMS.BLL.Services.ManagerServices;
 using LMS.BLL.Services.TokenService;
 using LMS.DAL.Models;
 using LMS.DAL.Repository;
 using LMS.DAL.Repository.Courses;
+using LMS.DAL.Repository.Enrollments;
 using LMS.DAL.Utils;
 using LMS.PL.Data;
 using Microsoft.AspNetCore.Identity;
@@ -54,6 +56,9 @@ namespace LMS.PL.AppConfigurations
             services.AddScoped<ICourseRepository, CourseRepository>();
             services.AddScoped<IManageUserService, ManageUserService>();
             services.AddScoped<IFileService, FileService>();
+            services.AddScoped<IEnrollmentService, EnrollmentService>();
+            services.AddScoped<IEnrollmentRepository, EnrollmentRepository>();
+
 
         }
     }

@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using System.Reflection.Emit;
 using System.Security.Claims;
 
 namespace LMS.PL.Data
@@ -13,12 +14,12 @@ namespace LMS.PL.Data
 
         public DbSet<Course> Courses { get; set; }
         public DbSet<CourseTranslation> CourseTranslations { get; set; }
+        public DbSet<Enrollment> Enrollments { get; set; }
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options, IHttpContextAccessor httpContextAccessor)
         : base(options)
         { 
             _httpContextAccessor = httpContextAccessor;
         }
-
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
@@ -30,6 +31,10 @@ namespace LMS.PL.Data
             builder.Entity<IdentityRoleClaim<string>>().ToTable("RoleClaims");
             builder.Entity<IdentityUserLogin<string>>().ToTable("UserLogins");
             builder.Entity<IdentityUserToken<string>>().ToTable("UserTokens");
+
+            builder.Entity<Course>()
+           .Property(c => c.Price)
+           .HasPrecision(18, 2);
         }
 
         public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
