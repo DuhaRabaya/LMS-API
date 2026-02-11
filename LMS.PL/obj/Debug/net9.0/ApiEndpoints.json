@@ -412,6 +412,26 @@
   },
   {
     "ContainingType": "LMS.PL.Areas.Student.CoursesController",
+    "Method": "Cancel",
+    "RelativePath": "api/student/Courses/cancel",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "LMS.DAL.DTO.Response.BaseResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "LMS.PL.Areas.Student.CoursesController",
     "Method": "Enroll",
     "RelativePath": "api/student/Courses/enroll/{courseId}",
     "HttpMethod": "POST",
@@ -436,6 +456,22 @@
     "Parameters": [
       {
         "Name": "lang",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LMS.PL.Areas.Student.CoursesController",
+    "Method": "Success",
+    "RelativePath": "api/student/Courses/success",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "session_id",
         "Type": "System.String",
         "IsRequired": false
       }

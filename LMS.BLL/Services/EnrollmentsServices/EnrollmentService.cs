@@ -16,9 +16,9 @@ namespace LMS.BLL.Services.EnrollmentsServices
 {
     public class EnrollmentService : IEnrollmentService
     {
-        private readonly IEnrollmentRepository _enrollmentRepository;
+        private readonly ICheckoutRepository _enrollmentRepository;
 
-        public EnrollmentService(IEnrollmentRepository enrollmentRepository)
+        public EnrollmentService(ICheckoutRepository enrollmentRepository)
         {
             _enrollmentRepository = enrollmentRepository;
         }

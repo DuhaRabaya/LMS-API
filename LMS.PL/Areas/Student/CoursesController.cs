@@ -1,5 +1,7 @@
-﻿using LMS.BLL.Services.CourseServices;
+﻿using LMS.BLL.Services.CheckoutServices;
+using LMS.BLL.Services.CourseServices;
 using LMS.BLL.Services.EnrollmentsServices;
+using LMS.DAL.DTO.Response;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -15,11 +17,13 @@ namespace LMS.PL.Areas.Student
     {
         private readonly ICourseService _courseService;
         private readonly IEnrollmentService _enrollmentService;
+        private readonly ICheckoutService _checkoutService;
 
-        public CoursesController(ICourseService courseService, IEnrollmentService enrollmentService)
+        public CoursesController(ICourseService courseService, IEnrollmentService enrollmentService,ICheckoutService checkoutService)
         {
             _courseService = courseService;
             _enrollmentService = enrollmentService;
+            _checkoutService = checkoutService;
         }
         [HttpGet("all")]
         public async Task<IActionResult> GetCourses([FromQuery] string lang = "en",
@@ -35,13 +39,40 @@ namespace LMS.PL.Areas.Student
         }
 
         [HttpPost("enroll/{courseId}")]
-        public async Task<IActionResult> Enroll([FromRoute]int courseId)
+        public async Task<IActionResult> Enroll([FromRoute] int courseId)
         {
             var studentId = User.FindFirstValue(ClaimTypes.NameIdentifier);
 
-            var result = await _enrollmentService.Enroll(studentId, courseId);
-            return Ok(result);
+            var response = await _checkoutService.CreateEnrollmentPaymentSession(studentId, courseId);
+            if (!response.Success)
+                return BadRequest(response);
+
+            return Ok(response);
         }
+
+        [HttpGet("success")]
+        [AllowAnonymous]
+        public async Task<IActionResult> Success([FromQuery] string session_id)
+        {
+            var response = await _checkoutService.ConfirmEnrollment(session_id);
+
+            if (!response.Success)
+            {
+                return BadRequest(response);
+            }
+            return Ok(response);
+        }
+
+        [HttpGet("cancel")]
+        public ActionResult<BaseResponse> Cancel()
+        {
+            return Ok(new BaseResponse
+            {
+                Success = false,
+                Message = "Payment canceled, enrollment failed"
+            });
+        }
+
         [HttpGet("enrollments")]
         public async Task<IActionResult> GetEnrollments([FromQuery] string lang="en")
         {

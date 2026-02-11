@@ -60,6 +60,10 @@
             "Microsoft.AspNetCore.Identity": {
               "target": "Package",
               "version": "[2.3.9, )"
+            },
+            "Stripe.net": {
+              "target": "Package",
+              "version": "[50.3.0, )"
             }
           },
           "imports": [

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace LMS.DAL.Repository.Enrollments
 {
-    public class EnrollmentRepository : Repository<Enrollment>, IEnrollmentRepository
+    public class EnrollmentRepository : Repository<Enrollment>, ICheckoutRepository
     {
         private readonly ApplicationDbContext _context;
 

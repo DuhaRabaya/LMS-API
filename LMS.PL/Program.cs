@@ -1,3 +1,4 @@
+using LMS.BLL;
 using LMS.BLL.MapsterConfigurations;
 using LMS.DAL.Utils;
 using LMS.PL.AppConfigurations;
@@ -6,6 +7,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
+using Stripe;
 using System.Text;
 using System.Threading.Tasks;
 namespace LMS.PL
@@ -32,6 +34,11 @@ namespace LMS.PL
             AppConfiguration.Config(builder.Services); 
             LocalizationConfiguration.Config(builder.Services);
             MapsterConfig.MapsterConfRegister();
+
+            //strip config
+            builder.Services.Configure<StripeSettings>(builder.Configuration.GetSection("Stripe"));
+            StripeConfiguration.ApiKey = builder.Configuration["Stripe:SecretKey"];
+
 
             //jwt access token
             builder.Services.AddAuthentication(opt =>

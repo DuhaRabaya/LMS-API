@@ -1,4 +1,5 @@
 ﻿using LMS.BLL.Services.AuthenticationServices;
+using LMS.BLL.Services.CheckoutServices;
 using LMS.BLL.Services.CourseServices;
 using LMS.BLL.Services.EmailServices;
 using LMS.BLL.Services.EnrollmentsServices;
@@ -57,9 +58,8 @@ namespace LMS.PL.AppConfigurations
             services.AddScoped<IManageUserService, ManageUserService>();
             services.AddScoped<IFileService, FileService>();
             services.AddScoped<IEnrollmentService, EnrollmentService>();
-            services.AddScoped<IEnrollmentRepository, EnrollmentRepository>();
-
-
+            services.AddScoped<ICheckoutRepository, EnrollmentRepository>();
+            services.AddScoped<ICheckoutService, CheckoutService>();
         }
     }
 }
