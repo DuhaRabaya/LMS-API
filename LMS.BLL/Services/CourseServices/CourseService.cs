@@ -118,6 +118,7 @@ namespace LMS.BLL.Services.CourseServices
             }
             course.InstructorId = instructorId;
             course.IsPublished = false;
+
             await _courseRepository.Add(course);
             return new BaseResponse { Success = true, Message = "course created successfully" };
         }
@@ -152,6 +153,11 @@ namespace LMS.BLL.Services.CourseServices
                 var path = await _fileService.UploadFile(request.Thumbnail);
                 course.Thumbnail = path;
             }
+
+            course.DiscountPercentage = request.DiscountPercentage;
+            course.DiscountStartAt = request.DiscountStartAt;
+            course.DiscountEndAt = request.DiscountEndAt;
+
             await _courseRepository.Update(course);
 
             return new BaseResponse

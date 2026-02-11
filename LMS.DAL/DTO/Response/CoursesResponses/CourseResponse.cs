@@ -13,13 +13,14 @@ namespace LMS.DAL.DTO.Response.CoursesResponses
         public List<CourseTranslationRequest> Translations { get; set; }
         public string? Instructor { get; set; }
         public string InstructorId { get; set; }
-        public double Price { get; set; }
+        public decimal FinalPrice { get; set; }
         public double AverageRating { get; set; } = 0;
         public bool IsPublished { get; set; }
         public string Thumbnail { get; set; }
         public DateTime CreatedAt { get; set; }
         public DateTime? UpdatedAt { get; set; }
-
-
+        public decimal DiscountPercentage { get; set; } = 0;
+        public DateTime? DiscountStartAt { get; set; }
+        public DateTime? DiscountEndAt { get; set; }
     }
 }

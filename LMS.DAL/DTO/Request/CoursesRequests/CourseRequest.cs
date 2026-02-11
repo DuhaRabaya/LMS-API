@@ -12,6 +12,9 @@ namespace LMS.DAL.DTO.Request.CoursesRequests
         public List<CourseTranslationRequest> Translations { get; set; }
         public decimal Price { get; set; }
         public IFormFile Thumbnail { get; set; }
+        public decimal DiscountPercentage { get; set; } = 0;
+        public DateTime? DiscountStartAt { get; set; }
+        public DateTime? DiscountEndAt { get; set; }
 
     }
 }

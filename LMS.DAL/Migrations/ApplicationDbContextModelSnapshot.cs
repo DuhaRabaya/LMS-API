@@ -135,6 +135,15 @@ namespace LMS.DAL.Migrations
                     b.Property<string>("CreatedBy")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<DateTime?>("DiscountEndAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<decimal>("DiscountPercentage")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<DateTime?>("DiscountStartAt")
+                        .HasColumnType("datetime2");
+
                     b.Property<string>("InstructorId")
                         .HasColumnType("nvarchar(450)");
 

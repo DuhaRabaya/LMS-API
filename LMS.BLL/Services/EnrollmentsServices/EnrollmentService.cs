@@ -57,7 +57,7 @@ namespace LMS.BLL.Services.EnrollmentsServices
                     Name = e.Course.Translations.FirstOrDefault()?.Name ?? "No Name",
                     Description = e.Course.Translations.FirstOrDefault()?.Description ?? "No Description",
                     Thumbnail = $"http://localhost:5165/Images/{e.Course.Thumbnail}",
-                    Price = e.Course.Price,
+                    FinalPrice = e.Course.FinalPrice,
                     Instructor = e.Course.Instructor.UserName,
                     CreatedAt = e.Course.CreatedAt
                 }
