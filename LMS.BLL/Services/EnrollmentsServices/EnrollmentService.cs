@@ -16,35 +16,13 @@ namespace LMS.BLL.Services.EnrollmentsServices
 {
     public class EnrollmentService : IEnrollmentService
     {
-        private readonly ICheckoutRepository _enrollmentRepository;
+        private readonly IEnrollmentRepository _enrollmentRepository;
 
-        public EnrollmentService(ICheckoutRepository enrollmentRepository)
+        public EnrollmentService(IEnrollmentRepository enrollmentRepository)
         {
             _enrollmentRepository = enrollmentRepository;
         }
-        public async Task<BaseResponse> Enroll(string studentId, int courseId)
-        {
-            var exists = await _enrollmentRepository.IsEnrolled(studentId, courseId);
-
-            if(exists)
-                return new BaseResponse
-                {
-                    Success = false,
-                    Message = "Already enrolled"
-                };
-
-            var enrollment = new Enrollment
-            {
-                StudentId = studentId,
-                CourseId = courseId
-            };
-            await _enrollmentRepository.Add(enrollment);
-            return new BaseResponse
-            {
-                Success = true,
-                Message = "Enrolled successfully"
-            };
-        }
+        
 
         public async Task<List<EnrollmentResponse>> GetStudentEnrollments(string studentId, string lang)
         {

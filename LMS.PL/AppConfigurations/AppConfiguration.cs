@@ -5,6 +5,7 @@ using LMS.BLL.Services.EmailServices;
 using LMS.BLL.Services.EnrollmentsServices;
 using LMS.BLL.Services.FileServices;
 using LMS.BLL.Services.ManagerServices;
+using LMS.BLL.Services.RefundServices;
 using LMS.BLL.Services.TokenService;
 using LMS.DAL.Models;
 using LMS.DAL.Repository;
@@ -58,8 +59,10 @@ namespace LMS.PL.AppConfigurations
             services.AddScoped<IManageUserService, ManageUserService>();
             services.AddScoped<IFileService, FileService>();
             services.AddScoped<IEnrollmentService, EnrollmentService>();
-            services.AddScoped<ICheckoutRepository, EnrollmentRepository>();
+            services.AddScoped<IEnrollmentRepository, EnrollmentRepository>();
             services.AddScoped<ICheckoutService, CheckoutService>();
+            services.AddScoped<IStripeRefundService, StripeRefundService>();
+
         }
     }
 }

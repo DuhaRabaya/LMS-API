@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace LMS.DAL.Repository.Enrollments
 {
-    public class EnrollmentRepository : Repository<Enrollment>, ICheckoutRepository
+    public class EnrollmentRepository : Repository<Enrollment>, IEnrollmentRepository
     {
         private readonly ApplicationDbContext _context;
 
@@ -26,6 +26,10 @@ namespace LMS.DAL.Repository.Enrollments
             .Include(e => e.Course)
             .ThenInclude(c => c.Instructor)
             .ToListAsync();
+        }
+        public async Task<Enrollment> GetEnrollment(string studentId, int courseId)
+        {
+            return await _context.Enrollments.FirstOrDefaultAsync(e=>e.StudentId==studentId && e.CourseId==courseId);
         }
         public async Task<bool> IsEnrolled(string studentId, int courseId)
         {

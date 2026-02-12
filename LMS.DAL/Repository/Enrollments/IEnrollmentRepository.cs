@@ -7,9 +7,10 @@ using System.Threading.Tasks;
 
 namespace LMS.DAL.Repository.Enrollments
 {
-    public interface ICheckoutRepository : IRepository<Enrollment>
+    public interface IEnrollmentRepository : IRepository<Enrollment>
     {
         Task<List<Enrollment>> GetStudentEnrollments(string studentId, string lang);
         Task<bool> IsEnrolled(string studentId, int courseId);
+        Task<Enrollment> GetEnrollment(string studentId, int courseId);
     }
 }

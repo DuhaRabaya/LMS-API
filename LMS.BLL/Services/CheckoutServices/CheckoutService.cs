@@ -15,12 +15,12 @@ namespace LMS.BLL.Services.CheckoutServices
 {
     public class CheckoutService : ICheckoutService
     {
-        private readonly ICheckoutRepository _enrollmentRepository;
+        private readonly IEnrollmentRepository _enrollmentRepository;
         private readonly ICourseRepository _courseRepository;
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly IEmailSender _emailSender;
 
-        public CheckoutService(ICheckoutRepository enrollmentRepository, ICourseRepository courseRepository,
+        public CheckoutService(IEnrollmentRepository enrollmentRepository, ICourseRepository courseRepository,
             UserManager<ApplicationUser> userManager,
             IEmailSender emailSender)
         {
@@ -111,7 +111,8 @@ namespace LMS.BLL.Services.CheckoutServices
             {
                 StudentId = studentId,
                 CourseId = courseId,
-                EnrolledAt = DateTime.UtcNow
+                EnrolledAt = DateTime.UtcNow,
+                PaymentId = session.PaymentIntentId
             };
             await _enrollmentRepository.Add(enrollment);
 
@@ -125,5 +126,6 @@ namespace LMS.BLL.Services.CheckoutServices
                 Message = "Enrollment successful!"
             };
         }
+
     }
 }

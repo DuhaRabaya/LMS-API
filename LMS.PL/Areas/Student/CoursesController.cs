@@ -1,6 +1,7 @@
 ﻿using LMS.BLL.Services.CheckoutServices;
 using LMS.BLL.Services.CourseServices;
 using LMS.BLL.Services.EnrollmentsServices;
+using LMS.BLL.Services.RefundServices;
 using LMS.DAL.DTO.Response;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
@@ -18,12 +19,17 @@ namespace LMS.PL.Areas.Student
         private readonly ICourseService _courseService;
         private readonly IEnrollmentService _enrollmentService;
         private readonly ICheckoutService _checkoutService;
+        private readonly IStripeRefundService _stripeRefundService;
 
-        public CoursesController(ICourseService courseService, IEnrollmentService enrollmentService,ICheckoutService checkoutService)
+        public CoursesController(ICourseService courseService,
+            IEnrollmentService enrollmentService,
+            ICheckoutService checkoutService,
+            IStripeRefundService stripeRefundService)
         {
             _courseService = courseService;
             _enrollmentService = enrollmentService;
             _checkoutService = checkoutService;
+            _stripeRefundService = stripeRefundService;
         }
         [HttpGet("all")]
         public async Task<IActionResult> GetCourses([FromQuery] string lang = "en",
@@ -49,6 +55,16 @@ namespace LMS.PL.Areas.Student
 
             return Ok(response);
         }
+
+        [HttpPost("refund/{courseId}")]
+        public async Task<IActionResult> Refund([FromRoute]int courseId)
+        {
+            var studentId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            var response = await _stripeRefundService.RefundEnrollment(studentId, courseId);
+            if (!response.Success) return BadRequest(response);
+            return Ok(response);
+        }
+
 
         [HttpGet("success")]
         [AllowAnonymous]

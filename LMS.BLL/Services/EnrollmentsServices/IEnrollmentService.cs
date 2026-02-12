@@ -10,7 +10,6 @@ namespace LMS.BLL.Services.EnrollmentsServices
 {
     public interface IEnrollmentService
     {
-        Task<BaseResponse> Enroll(string studentId, int courseId);
         Task<List<EnrollmentResponse>> GetStudentEnrollments(string studentId, string lang);
     }
 }

@@ -464,6 +464,22 @@
   },
   {
     "ContainingType": "LMS.PL.Areas.Student.CoursesController",
+    "Method": "Refund",
+    "RelativePath": "api/student/Courses/refund/{courseId}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "courseId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LMS.PL.Areas.Student.CoursesController",
     "Method": "Success",
     "RelativePath": "api/student/Courses/success",
     "HttpMethod": "GET",
