@@ -20,6 +20,7 @@ namespace LMS.DAL.Models
         public decimal DiscountPercentage { get; set; } = 0; 
         public DateTime? DiscountStartAt { get; set; }
         public DateTime? DiscountEndAt { get; set; }
+        public List<TaskItem> Tasks { get; set; }
 
         [NotMapped]
         public decimal FinalPrice

@@ -113,7 +113,7 @@ namespace LMS.BLL.Services.CourseServices
             var course = request.Adapt<Course>();
             if (request.Thumbnail != null)
             {
-                var path = await _fileService.UploadFile(request.Thumbnail);
+                var path = await _fileService.UploadFile(request.Thumbnail,"Images");
                 course.Thumbnail = path;
             }
             course.InstructorId = instructorId;
@@ -150,10 +150,15 @@ namespace LMS.BLL.Services.CourseServices
                 .Adapt<List<CourseTranslation>>();
             if (request.Thumbnail != null)
             {
-                var path = await _fileService.UploadFile(request.Thumbnail);
+                if (!string.IsNullOrEmpty(course.Thumbnail))
+                {
+                    var oldPath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "Images", course.Thumbnail);
+                    if (System.IO.File.Exists(oldPath))
+                        System.IO.File.Delete(oldPath);
+                }
+                var path = await _fileService.UploadFile(request.Thumbnail, "Images");
                 course.Thumbnail = path;
             }
-
             course.DiscountPercentage = request.DiscountPercentage;
             course.DiscountStartAt = request.DiscountStartAt;
             course.DiscountEndAt = request.DiscountEndAt;

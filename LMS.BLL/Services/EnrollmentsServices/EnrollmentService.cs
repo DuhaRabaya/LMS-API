@@ -22,8 +22,6 @@ namespace LMS.BLL.Services.EnrollmentsServices
         {
             _enrollmentRepository = enrollmentRepository;
         }
-        
-
         public async Task<List<EnrollmentResponse>> GetStudentEnrollments(string studentId, string lang)
         {
             var enrollments = await _enrollmentRepository.GetStudentEnrollments(studentId, lang);

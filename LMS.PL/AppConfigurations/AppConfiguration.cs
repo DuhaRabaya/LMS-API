@@ -6,11 +6,13 @@ using LMS.BLL.Services.EnrollmentsServices;
 using LMS.BLL.Services.FileServices;
 using LMS.BLL.Services.ManagerServices;
 using LMS.BLL.Services.RefundServices;
+using LMS.BLL.Services.TaskServices;
 using LMS.BLL.Services.TokenService;
 using LMS.DAL.Models;
 using LMS.DAL.Repository;
 using LMS.DAL.Repository.Courses;
 using LMS.DAL.Repository.Enrollments;
+using LMS.DAL.Repository.Tasks;
 using LMS.DAL.Utils;
 using LMS.PL.Data;
 using Microsoft.AspNetCore.Identity;
@@ -62,7 +64,8 @@ namespace LMS.PL.AppConfigurations
             services.AddScoped<IEnrollmentRepository, EnrollmentRepository>();
             services.AddScoped<ICheckoutService, CheckoutService>();
             services.AddScoped<IStripeRefundService, StripeRefundService>();
-
+            services.AddScoped<ITaskRepository, TaskRepository>();
+            services.AddScoped<ITaskService, TaskService>();
         }
     }
 }

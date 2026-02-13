@@ -15,6 +15,8 @@ namespace LMS.PL.Data
         public DbSet<Course> Courses { get; set; }
         public DbSet<CourseTranslation> CourseTranslations { get; set; }
         public DbSet<Enrollment> Enrollments { get; set; }
+        public DbSet<TaskItem> TaskItems { get; set; }
+        public DbSet<TaskTranslation> TaskTranslations { get; set; }
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options, IHttpContextAccessor httpContextAccessor)
         : base(options)
         { 

@@ -4,7 +4,11 @@ wwwroot\Images\84d31fe0-92e6-49d8-a309-08837ba9a500.jpg
 wwwroot\Images\8bc4df47-2739-433c-b6ae-3939d3747e13.jpg
 wwwroot\Images\8fde7aa0-de26-4d88-a855-fad2249f8dc9.jpg
 wwwroot\Images\9e2ad2ab-5678-489a-8d7f-50a712b2b4f8.jpg
+wwwroot\Images\a84c21c3-d0eb-433b-b99b-1ded50b6ab09.jpg
 wwwroot\Images\ae30e0be-9b4d-497b-a12e-720788bd18a8.jpg
 wwwroot\Images\af446fa7-dbb5-43c4-b4b5-a4f81fbf2baf.jpg
 wwwroot\Images\b1dfe25e-a6d2-4cf6-8a6f-6aa9e152574d.jpg
 wwwroot\Images\c26f0889-08a2-4415-90c1-c26a42705d12.jpg
+wwwroot\Tasks\41ddefbd-8863-4a36-bd73-a8a5d0e5d399.docx
+wwwroot\Tasks\8072b0b2-af1c-455c-a05c-55de00984e61.docx
+wwwroot\Tasks\94e97843-3c17-49c1-91a1-28d95c807f79.docx

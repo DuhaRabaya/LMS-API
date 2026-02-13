@@ -19,7 +19,6 @@ namespace LMS.DAL.Repository.Courses
         {
             _context = context;
         }
-
         public async Task<Course> Get(int id)
         {
             return await _context.Courses.Include(c => c.Translations)

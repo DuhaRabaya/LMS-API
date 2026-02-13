@@ -9,12 +9,12 @@ namespace LMS.BLL.Services.FileServices
 {
     public class FileService :IFileService
     {
-        public async Task<string?> UploadFile(IFormFile file)
+        public async Task<string?> UploadFile(IFormFile file , string folderName)
         {
             if (file != null && file.Length > 0)
             {
                 var fileName = Guid.NewGuid().ToString() + Path.GetExtension(file.FileName);
-                var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "Images", fileName);
+                var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", folderName, fileName);
 
                 using (var stream = File.Create(path))
                 {

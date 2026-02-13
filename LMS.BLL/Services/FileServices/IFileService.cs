@@ -9,6 +9,6 @@ namespace LMS.BLL.Services.FileServices
 {
     public interface IFileService
     {
-        public Task<string?> UploadFile(IFormFile file);
+        Task<string?> UploadFile(IFormFile file, string folderName);
     }
 }
