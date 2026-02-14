@@ -12,5 +12,7 @@ namespace LMS.BLL.Services.RefundServices
     {
         Task<Refund> RefundPaymentAsync(string paymentId);
         Task<BaseResponse> RefundEnrollment(string studentId, int courseId);
+        Task<BaseResponse> RewardTopStudentAsync(string studentId, int courseId);
+
     }
 }

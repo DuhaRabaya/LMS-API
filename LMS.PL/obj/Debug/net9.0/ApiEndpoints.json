@@ -340,6 +340,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "LMS.PL.Areas.Instructor.RewardsController",
+    "Method": "RewardStudent",
+    "RelativePath": "api/instructor/Rewards/reward/{courseId}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "courseId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "LMS.PL.Areas.Instructor.SubmissionsController",
     "Method": "GetTaskSubmissions",
     "RelativePath": "api/instructor/Submissions/{taskId}",

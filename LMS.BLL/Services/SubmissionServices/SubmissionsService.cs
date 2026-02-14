@@ -1,8 +1,12 @@
-﻿using LMS.BLL.Services.FileServices;
+﻿using LMS.BLL.Services.EmailServices;
+using LMS.BLL.Services.FileServices;
+using LMS.BLL.Services.RefundServices;
 using LMS.DAL.DTO.Request.SubmissionRequests;
 using LMS.DAL.DTO.Response;
 using LMS.DAL.DTO.Response.SubmissionResponses;
+using LMS.DAL.Migrations;
 using LMS.DAL.Models;
+using LMS.DAL.Repository.Courses;
 using LMS.DAL.Repository.Enrollments;
 using LMS.DAL.Repository.Submissions;
 using LMS.DAL.Repository.Tasks;
@@ -21,16 +25,25 @@ namespace LMS.BLL.Services.SubmissionServices
         private readonly IEnrollmentRepository _enrollmentRepository;
         private readonly ISubmissionRepository _submissionRepository;
         private readonly IFileService _fileService;
+        private readonly IStripeRefundService _stripeRefundService;
+        private readonly ICourseRepository _courseRepository;
+        private readonly IEmailSender _emailSender;
 
         public SubmissionsService(ITaskRepository taskRepository , 
             IEnrollmentRepository enrollmentRepository,
             ISubmissionRepository submissionRepository,
-            IFileService fileService)
+            IFileService fileService,
+            IStripeRefundService stripeRefundService,
+            ICourseRepository courseRepository,
+            IEmailSender emailSender)
         {
             _taskRepository = taskRepository;
             _enrollmentRepository = enrollmentRepository;
             _submissionRepository = submissionRepository;
             _fileService = fileService;
+            _stripeRefundService = stripeRefundService;
+            _courseRepository = courseRepository;
+            _emailSender = emailSender;
         }
         public async Task<BaseResponse> SubmitTask(string studentId, SubmissionRequest request)
         {
@@ -255,5 +268,55 @@ namespace LMS.BLL.Services.SubmissionServices
                 Message = "Submission graded successfully"
             };
         }
+
+        public async Task<BaseResponse> RewardTopStudent(int courseId)
+        {
+            var course = await _courseRepository.Get(courseId);
+            if (course == null)
+                return new BaseResponse { Success = false, Message = "Course not found" };
+
+            var tasks = await _taskRepository.GetTasksByCourse(courseId);
+            if (!tasks.Any())
+                return new BaseResponse { Success = false, Message = "No tasks in this course" };
+
+            var students = await _courseRepository.GetStudentsInCourse(courseId);
+            if (!students.Any())
+                return new BaseResponse { Success = false, Message = "No students enrolled" };
+
+            string topStudentId = null;
+            ApplicationUser topStudent= null;
+            decimal maxTotalGrade = -1;
+            foreach (var student in students)
+            {
+                var submissions = await _submissionRepository.GetStudentSubmissionsForCourse(student.Id, courseId);         
+                if (submissions.Count != tasks.Count) continue;
+                var totalGrade = submissions.Sum(s => s.Grade ?? 0);
+                if (totalGrade > maxTotalGrade)
+                {
+                    maxTotalGrade = totalGrade;
+                    topStudentId = student.Id;
+                    topStudent= student;
+                    
+                }
+            }
+            if (topStudentId == null)
+                return new BaseResponse { Success = false, Message = "No eligible top student" };
+
+            var refundResult = await _stripeRefundService.RewardTopStudentAsync(topStudentId, courseId);
+            if (!refundResult.Success)
+                return refundResult;
+
+            await _emailSender.SendEmail(
+              "duharabaya4@gmail.com",
+               "Congratulations! You got a reward",
+               $"You have received a refund for excelling in the course {course.Translations .FirstOrDefault(c => c.Language == "en").Name}."
+           );
+            return new BaseResponse
+            {
+                Success = true,
+                Message = $"Top student rewarded! Refund processed for student {topStudentId}.",
+            };
+        }
+
     }
 }

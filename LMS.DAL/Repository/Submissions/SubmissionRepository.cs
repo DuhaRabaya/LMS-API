@@ -40,6 +40,15 @@ namespace LMS.DAL.Repository.Submissions
                     .ThenInclude(t => t.Course)
                 .FirstOrDefaultAsync(s => s.Id == submissionId);
         }
+
+        public async Task<List<Submission>> GetStudentSubmissionsForCourse(string studentId, int courseId)
+        {
+            return await _context.Submissions
+                .Include(s => s.TaskItem)
+                .Where(s => s.StudentId == studentId && s.TaskItem.CourseId == courseId)
+                .ToListAsync();
+        }
+
     }
 
 }

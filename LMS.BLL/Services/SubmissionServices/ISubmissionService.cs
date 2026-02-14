@@ -17,5 +17,7 @@ namespace LMS.BLL.Services.SubmissionServices
         Task<BaseResponse> UpdateSubmission(int submissionId, string studentId, SubmissionRequest request);
         Task<BaseResponse> GradeSubmission(int submissionId, GradeSubmissionRequest request,
         string instructorId);
+
+        Task<BaseResponse> RewardTopStudent(int courseId);
     }
 }

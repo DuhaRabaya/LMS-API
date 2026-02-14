@@ -1,4 +1,5 @@
-﻿using LMS.DAL.Models;
+﻿using LMS.DAL.DTO.Response;
+using LMS.DAL.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,5 +13,6 @@ namespace LMS.DAL.Repository.Submissions
         Task<Submission?> GetStudentSubmission(string studentId, int taskItemId);
         Task<List<Submission>> GetTaskSubmissions(int taskItemId);
         Task<Submission> GetSubmission(int submissionId);
+        Task<List<Submission>> GetStudentSubmissionsForCourse(string studentId, int courseId);
     }
 }

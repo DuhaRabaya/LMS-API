@@ -39,5 +39,13 @@ namespace LMS.DAL.Repository.Courses
         {
             return _context.Courses.Include(c => c.Translations).Include(c => c.Instructor).AsQueryable();
         }
+        public async Task<List<ApplicationUser>> GetStudentsInCourse(int courseId)
+        {
+            return await _context.Enrollments
+                .Where(e => e.CourseId == courseId)
+                .Include(e => e.Student)
+                .Select(e => e.Student)
+                .ToListAsync();
+        }
     }
 }

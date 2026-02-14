@@ -74,5 +74,31 @@ namespace LMS.BLL.Services.RefundServices
                 Status = refund.Status
             };
         }
+        public async Task<BaseResponse> RewardTopStudentAsync(string studentId, int courseId)
+        {
+            var enrollment = await _enrollmentRepository.GetEnrollment(studentId, courseId);
+            if (enrollment == null)
+                return new BaseResponse { Success = false, Message = "Enrollment not found" };
+
+            if (string.IsNullOrEmpty(enrollment.PaymentId))
+                return new BaseResponse { Success = false, Message = "Payment info missing" };
+
+         
+            var refund = await RefundPaymentAsync(enrollment.PaymentId);
+
+            if (refund.Status != "succeeded")
+                return new BaseResponse { Success = false, Message = "Refund failed" };
+
+            return new RefundResponse
+            {
+                Success = true,
+                Message = "Reward refund processed successfully",
+                RefundId = refund.Id,
+                Status = refund.Status,
+                Currency = refund.Currency,
+                Amount = enrollment.Course.Price,
+            };
+        }
+
     }
 }
