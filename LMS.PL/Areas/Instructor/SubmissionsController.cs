@@ -1,4 +1,5 @@
 ﻿using LMS.BLL.Services.SubmissionServices;
+using LMS.DAL.DTO.Request.SubmissionRequests;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -23,6 +24,15 @@ namespace LMS.PL.Areas.Instructor
             var instructorId = User.FindFirstValue(ClaimTypes.NameIdentifier);
             var response = await _submissionService.GetTaskSubmissions(taskId, instructorId);
             if (!response.Success) return BadRequest(response);
+            return Ok(response);
+        }
+        [HttpPost("grade/{submissionId}")]
+        public async Task<IActionResult> GradeSubmission (int submissionId,[FromBody] GradeSubmissionRequest request)
+        {
+            var instructorId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            var response = await _submissionService.GradeSubmission(submissionId, request, instructorId);
+            if (!response.Success)return BadRequest(response);
+
             return Ok(response);
         }
     }

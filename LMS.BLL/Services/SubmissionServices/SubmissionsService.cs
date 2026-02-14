@@ -217,28 +217,43 @@ namespace LMS.BLL.Services.SubmissionServices
             return response;
         }
 
-        //public async Task<BaseResponse> GradeSubmission(int submissionId, decimal grade, string instructorId)
-        //{
-        //    var submission = await _submissionRepository.Get(submissionId);
+        public async Task<BaseResponse> GradeSubmission(int submissionId, GradeSubmissionRequest request,
+        string instructorId)
+        {
+            var submission = await _submissionRepository.GetSubmission(submissionId);
 
-        //    if (submission == null)
-        //        return new BaseResponse(false, "Submission not found");
+            if (submission == null)
+                return new BaseResponse
+                {
+                    Success = false,
+                    Message = "Submission not found"
+                };
 
-        //    var task = await _taskRepository.GetTask(submission.TaskItemId);
+            if (submission.TaskItem.Course.InstructorId != instructorId)
+                return new BaseResponse
+                {
+                    Success = false,
+                    Message = "instructor not allowed"
+                };
 
-        //    if (task.Course.InstructorId != instructorId)
-        //        return new BaseResponse(false, "Unauthorized");
+            if (request.Grade < 0 || request.Grade > submission.TaskItem.MaxGrade)
+                return new BaseResponse
+                {
+                    Success = false,
+                    Message = $"Grade must be between 0 and {submission.TaskItem.MaxGrade}"
+                };
 
-        //    if (grade < 0 || grade > task.MaxGrade)
-        //        return new BaseResponse(false, "Invalid grade");
+            submission.Grade = request.Grade;
+            submission.Feedback = request.Feedback;
+            submission.GradedAt = DateTime.UtcNow;
 
-        //    submission.Grade = grade;
+            await _submissionRepository.Update(submission);
 
-        //    await _submissionRepository.Update(submission);
-
-        //    return new BaseResponse(true, "Submission graded");
-        //}
-
-
+            return new BaseResponse
+            {
+                Success = true,
+                Message = "Submission graded successfully"
+            };
+        }
     }
 }

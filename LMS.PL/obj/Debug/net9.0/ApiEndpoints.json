@@ -356,6 +356,27 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "LMS.PL.Areas.Instructor.SubmissionsController",
+    "Method": "GradeSubmission",
+    "RelativePath": "api/instructor/Submissions/grade/{submissionId}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "submissionId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "LMS.DAL.DTO.Request.SubmissionRequests.GradeSubmissionRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "LMS.PL.Areas.Instructor.TasksController",
     "Method": "CreateTask",
     "RelativePath": "api/instructor/Tasks",

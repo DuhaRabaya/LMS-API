@@ -33,6 +33,13 @@ namespace LMS.DAL.Repository.Submissions
                 .Where(s => s.TaskItemId == taskItemId)
                 .ToListAsync();
         }
+        public async Task<Submission> GetSubmission(int submissionId)
+        {
+            return await _context.Submissions
+                .Include(s => s.TaskItem)
+                    .ThenInclude(t => t.Course)
+                .FirstOrDefaultAsync(s => s.Id == submissionId);
+        }
     }
 
 }

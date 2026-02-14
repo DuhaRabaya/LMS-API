@@ -14,6 +14,7 @@ namespace LMS.DAL.DTO.Response.SubmissionResponses
         public DateTime SubmittedAt { get; set; }
         public string? AttachmentUrl { get; set; }
         public decimal? Grade { get; set; }
+        public string? Feedback { get; set; }
         public bool IsLate { get; set; }
     }
 }

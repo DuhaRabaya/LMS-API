@@ -15,7 +15,9 @@ namespace LMS.DAL.Models
         public TaskItem TaskItem { get; set; }
         public DateTime SubmittedAt { get; set; } = DateTime.UtcNow;
         public string? AttachmentUrl { get; set; }
-        public decimal? Grade { get; set; }
         public bool IsLate { get; set; }
+        public decimal? Grade { get; set; }
+        public string? Feedback { get; set; }
+        public DateTime? GradedAt { get; set; }
     }
 }
