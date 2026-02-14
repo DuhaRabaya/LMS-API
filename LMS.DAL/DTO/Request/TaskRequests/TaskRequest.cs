@@ -15,6 +15,5 @@ namespace LMS.DAL.DTO.Request.TaskRequests
         public decimal MaxGrade { get; set; }
         public int CourseId { get; set; }
         public bool IsActive { get; set; } = true;
-
     }
 }

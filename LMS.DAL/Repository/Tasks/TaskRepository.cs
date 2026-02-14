@@ -29,7 +29,7 @@ namespace LMS.DAL.Repository.Tasks
         public async Task<List<TaskItem>> GetActiveTasksByCourse(int courseId)
         {
             return await _context.TaskItems
-                 .Where(t => t.CourseId == courseId)
+                 .Where(t => t.CourseId == courseId && t.IsActive)
                  .Include(t => t.Translations)
                  .ToListAsync();
         }

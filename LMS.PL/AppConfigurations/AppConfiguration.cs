@@ -6,12 +6,14 @@ using LMS.BLL.Services.EnrollmentsServices;
 using LMS.BLL.Services.FileServices;
 using LMS.BLL.Services.ManagerServices;
 using LMS.BLL.Services.RefundServices;
+using LMS.BLL.Services.SubmissionServices;
 using LMS.BLL.Services.TaskServices;
 using LMS.BLL.Services.TokenService;
 using LMS.DAL.Models;
 using LMS.DAL.Repository;
 using LMS.DAL.Repository.Courses;
 using LMS.DAL.Repository.Enrollments;
+using LMS.DAL.Repository.Submissions;
 using LMS.DAL.Repository.Tasks;
 using LMS.DAL.Utils;
 using LMS.PL.Data;
@@ -66,6 +68,9 @@ namespace LMS.PL.AppConfigurations
             services.AddScoped<IStripeRefundService, StripeRefundService>();
             services.AddScoped<ITaskRepository, TaskRepository>();
             services.AddScoped<ITaskService, TaskService>();
+            services.AddScoped<ISubmissionService, SubmissionsService>();
+            services.AddScoped<ISubmissionRepository, SubmissionRepository>();
+
         }
     }
 }

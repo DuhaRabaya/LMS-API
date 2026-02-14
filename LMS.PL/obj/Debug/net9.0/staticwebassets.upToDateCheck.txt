@@ -9,6 +9,8 @@ wwwroot\Images\ae30e0be-9b4d-497b-a12e-720788bd18a8.jpg
 wwwroot\Images\af446fa7-dbb5-43c4-b4b5-a4f81fbf2baf.jpg
 wwwroot\Images\b1dfe25e-a6d2-4cf6-8a6f-6aa9e152574d.jpg
 wwwroot\Images\c26f0889-08a2-4415-90c1-c26a42705d12.jpg
+wwwroot\Submissions\4076c0cb-5db4-454e-9b56-1d2e6ca655bb.docx
+wwwroot\Submissions\bde186c0-7082-485b-b0a9-f56d86249241.pdf
 wwwroot\Tasks\41ddefbd-8863-4a36-bd73-a8a5d0e5d399.docx
 wwwroot\Tasks\8072b0b2-af1c-455c-a05c-55de00984e61.docx
 wwwroot\Tasks\94e97843-3c17-49c1-91a1-28d95c807f79.docx

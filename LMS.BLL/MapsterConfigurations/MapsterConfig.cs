@@ -1,4 +1,5 @@
 ﻿using LMS.DAL.DTO.Response.CoursesResponses;
+using LMS.DAL.DTO.Response.SubmissionResponses;
 using LMS.DAL.DTO.Response.TaskResponse;
 using LMS.DAL.Models;
 using Mapster;
@@ -38,7 +39,8 @@ namespace LMS.BLL.MapsterConfigurations
                  t.Language == MapContext.Current.Parameters["lang"].ToString()).Description)
            .Map(dest => dest.AttachmentUrl, source => $"http://localhost:5165/Tasks/{source.AttachmentUrl}");
 
-            
+            TypeAdapterConfig<Submission, SubmissionResponse>.NewConfig()
+              .Map(dest => dest.StudentName, source => source.Student.UserName);
         }
     }
 }
