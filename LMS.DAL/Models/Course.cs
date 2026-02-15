@@ -21,6 +21,7 @@ namespace LMS.DAL.Models
         public DateTime? DiscountStartAt { get; set; }
         public DateTime? DiscountEndAt { get; set; }
         public List<TaskItem> Tasks { get; set; }
+        public List<CourseContent> CourseContents { get; set; }
 
         [NotMapped]
         public decimal FinalPrice

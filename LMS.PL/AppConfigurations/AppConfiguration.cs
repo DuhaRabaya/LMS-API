@@ -1,5 +1,6 @@
 ﻿using LMS.BLL.Services.AuthenticationServices;
 using LMS.BLL.Services.CheckoutServices;
+using LMS.BLL.Services.CourseContentServices;
 using LMS.BLL.Services.CourseServices;
 using LMS.BLL.Services.EmailServices;
 using LMS.BLL.Services.EnrollmentsServices;
@@ -11,6 +12,7 @@ using LMS.BLL.Services.TaskServices;
 using LMS.BLL.Services.TokenService;
 using LMS.DAL.Models;
 using LMS.DAL.Repository;
+using LMS.DAL.Repository.CourseContents;
 using LMS.DAL.Repository.Courses;
 using LMS.DAL.Repository.Enrollments;
 using LMS.DAL.Repository.Submissions;
@@ -48,7 +50,7 @@ namespace LMS.PL.AppConfigurations
             )
                 .AddEntityFrameworkStores<ApplicationDbContext>()
                 .AddDefaultTokenProviders();
-       
+
             //seed data
             services.AddScoped<ISeedData, RoleSeedData>();
             services.AddScoped<ISeedData, UserSeedData>();
@@ -70,6 +72,8 @@ namespace LMS.PL.AppConfigurations
             services.AddScoped<ITaskService, TaskService>();
             services.AddScoped<ISubmissionService, SubmissionsService>();
             services.AddScoped<ISubmissionRepository, SubmissionRepository>();
+            services.AddScoped < ICourseContentService, CourseContentService>();
+            services.AddScoped<ICourseContentRepository, CourseContentRepository>();
 
         }
     }

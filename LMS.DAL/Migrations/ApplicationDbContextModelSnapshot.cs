@@ -171,6 +171,90 @@ namespace LMS.DAL.Migrations
                     b.ToTable("Courses");
                 });
 
+            modelBuilder.Entity("LMS.DAL.Models.CourseContent", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("AttachmentUrl")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("CourseId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("CreatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("Order")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime?>("UpdatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("UpdatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("VideoUrl")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CourseId");
+
+                    b.ToTable("CourseContents");
+                });
+
+            modelBuilder.Entity("LMS.DAL.Models.CourseContentTranslation", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int?>("CourseContentId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("CreatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Language")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("UpdatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("UpdatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CourseContentId");
+
+                    b.ToTable("CourseContentTranslations");
+                });
+
             modelBuilder.Entity("LMS.DAL.Models.CourseTranslation", b =>
                 {
                     b.Property<int>("Id")
@@ -511,6 +595,24 @@ namespace LMS.DAL.Migrations
                     b.Navigation("Instructor");
                 });
 
+            modelBuilder.Entity("LMS.DAL.Models.CourseContent", b =>
+                {
+                    b.HasOne("LMS.DAL.Models.Course", "Course")
+                        .WithMany("CourseContents")
+                        .HasForeignKey("CourseId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Course");
+                });
+
+            modelBuilder.Entity("LMS.DAL.Models.CourseContentTranslation", b =>
+                {
+                    b.HasOne("LMS.DAL.Models.CourseContent", null)
+                        .WithMany("Translations")
+                        .HasForeignKey("CourseContentId");
+                });
+
             modelBuilder.Entity("LMS.DAL.Models.CourseTranslation", b =>
                 {
                     b.HasOne("LMS.DAL.Models.Course", "Course")
@@ -640,10 +742,17 @@ namespace LMS.DAL.Migrations
 
             modelBuilder.Entity("LMS.DAL.Models.Course", b =>
                 {
+                    b.Navigation("CourseContents");
+
                     b.Navigation("Enrollments");
 
                     b.Navigation("Tasks");
 
+                    b.Navigation("Translations");
+                });
+
+            modelBuilder.Entity("LMS.DAL.Models.CourseContent", b =>
+                {
                     b.Navigation("Translations");
                 });
 

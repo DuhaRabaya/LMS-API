@@ -1,3 +1,5 @@
+wwwroot\CourseContents\b6f7e6f2-f806-4b55-abad-b69e8ac74781.docx
+wwwroot\CourseContents\e17a4163-b0b9-4ae5-965c-b0310000fc91.docx
 wwwroot\Images\05c7c88f-73be-49f4-9c6b-3de4e0096577.jpg
 wwwroot\Images\246281fb-45ec-45e1-99b3-14e71cb99921.jpg
 wwwroot\Images\84d31fe0-92e6-49d8-a309-08837ba9a500.jpg

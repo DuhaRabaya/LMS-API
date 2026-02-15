@@ -1,4 +1,5 @@
-﻿using LMS.DAL.DTO.Response.CoursesResponses;
+﻿using LMS.DAL.DTO.Response.CourseContentResponses;
+using LMS.DAL.DTO.Response.CoursesResponses;
 using LMS.DAL.DTO.Response.SubmissionResponses;
 using LMS.DAL.DTO.Response.TaskResponse;
 using LMS.DAL.Models;
@@ -41,6 +42,13 @@ namespace LMS.BLL.MapsterConfigurations
 
             TypeAdapterConfig<Submission, SubmissionResponse>.NewConfig()
               .Map(dest => dest.StudentName, source => source.Student.UserName);
+
+            TypeAdapterConfig<CourseContent, CourseContentResponse>.NewConfig()
+          .Map(dest => dest.Title, src => src.Translations.FirstOrDefault(t =>
+               t.Language == MapContext.Current.Parameters["lang"].ToString()).Title)
+         .Map(dest => dest.Description, src => src.Translations.FirstOrDefault(t =>
+               t.Language == MapContext.Current.Parameters["lang"].ToString()).Description)
+         .Map(dest => dest.AttachmentUrl, source => $"http://localhost:5165/Tasks/{source.AttachmentUrl}");
         }
     }
 }

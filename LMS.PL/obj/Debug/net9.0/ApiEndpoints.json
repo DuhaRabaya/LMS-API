@@ -195,6 +195,151 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "LMS.PL.Areas.Instructor.CourseContentController",
+    "Method": "AddContent",
+    "RelativePath": "api/instructor/CourseContent",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "CourseId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Order",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "VideoUrl",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "AttachmentUrl",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "IsActive",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "Translations",
+        "Type": "System.Collections.Generic.List\u00601[[LMS.DAL.DTO.Request.CourseContentRequests.CourseContentTranslationRequest, LMS.DAL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LMS.PL.Areas.Instructor.CourseContentController",
+    "Method": "UpdateContent",
+    "RelativePath": "api/instructor/CourseContent/{contentId}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "contentId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "CourseId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Order",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "VideoUrl",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "AttachmentUrl",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "IsActive",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "Translations",
+        "Type": "System.Collections.Generic.List\u00601[[LMS.DAL.DTO.Request.CourseContentRequests.CourseContentTranslationRequest, LMS.DAL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LMS.PL.Areas.Instructor.CourseContentController",
+    "Method": "DeleteContent",
+    "RelativePath": "api/instructor/CourseContent/{contentId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "contentId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LMS.PL.Areas.Instructor.CourseContentController",
+    "Method": "GetAllCourseContents",
+    "RelativePath": "api/instructor/CourseContent/{courseId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "courseId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "lang",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LMS.PL.Areas.Instructor.CourseContentController",
+    "Method": "GetContent",
+    "RelativePath": "api/instructor/CourseContent/content/{contentId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "contentId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "lang",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "LMS.PL.Areas.Instructor.CoursesController",
     "Method": "createCourse",
     "RelativePath": "api/instructor/Courses",
@@ -526,6 +671,90 @@
     "Parameters": [
       {
         "Name": "courseId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "lang",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LMS.PL.Areas.Student.CourseContentsController",
+    "Method": "GetAllCourseContents",
+    "RelativePath": "api/student/CourseContents/{courseId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "courseId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "lang",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LMS.PL.Areas.Student.CourseContentsController",
+    "Method": "GetContent",
+    "RelativePath": "api/student/CourseContents/content/{contentId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "contentId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "lang",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LMS.PL.Areas.Student.CourseContentsController",
+    "Method": "GetNextContent",
+    "RelativePath": "api/student/CourseContents/next/{contentId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "contentId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "lang",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LMS.PL.Areas.Student.CourseContentsController",
+    "Method": "GetPreviousContent",
+    "RelativePath": "api/student/CourseContents/previous/{contentId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "contentId",
         "Type": "System.Int32",
         "IsRequired": true
       },
