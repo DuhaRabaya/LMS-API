@@ -47,7 +47,7 @@ namespace LMS.BLL.Services.SubmissionServices
         }
         public async Task<BaseResponse> SubmitTask(string studentId, SubmissionRequest request)
         {
-            var task = await _taskRepository.GetTask(request.TaskItemId);
+            var task = await _taskRepository.Get(request.TaskItemId);
 
             if (task == null)
                 return new BaseResponse()
@@ -92,7 +92,7 @@ namespace LMS.BLL.Services.SubmissionServices
                 submission.AttachmentUrl = await _fileService.UploadFile(request.Attachment, "Submissions");
 
             await _submissionRepository.Add(submission);
-
+            await _taskRepository.Update(task);
             return new BaseResponse()
             {
                 Success = true,
@@ -116,7 +116,12 @@ namespace LMS.BLL.Services.SubmissionServices
                     Message = "submission not found"
                 };
             }
+
             await _submissionRepository.Remove(submission);
+
+            var task=await _taskRepository.Get(submission.TaskItemId);
+            await _taskRepository.Update(task);
+
             return new BaseResponse()
             {
                 Success = true,
@@ -164,7 +169,6 @@ namespace LMS.BLL.Services.SubmissionServices
                     Message = "submission not found"
                 };
             }
-
             if (request.Attachment != null)
             {
                 if (!string.IsNullOrEmpty(submission.AttachmentUrl))
@@ -182,6 +186,8 @@ namespace LMS.BLL.Services.SubmissionServices
                 submission.AttachmentUrl = await _fileService.UploadFile(request.Attachment, "Submissions");
             }
             await _submissionRepository.Update(submission);
+            await _taskRepository.Update(task);
+
             return new BaseResponse()
             {
                 Success = true,
@@ -190,7 +196,7 @@ namespace LMS.BLL.Services.SubmissionServices
         }
         public async Task<BaseResponse> GetTaskSubmissions(int taskId , string instructorId)
         {
-            var task =await _taskRepository.GetTask(taskId);
+            var task =await _taskRepository.Get(taskId);
             if (task == null)
                 return new BaseResponse()
                 {

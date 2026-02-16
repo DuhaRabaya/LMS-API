@@ -1,5 +1,6 @@
-﻿using LMS.PL.Data;
+﻿using LMS.DAL.Migrations;
 using LMS.DAL.Models;
+using LMS.PL.Data;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -33,6 +34,14 @@ namespace LMS.DAL.Repository.Tasks
                  .Include(t => t.Translations)
                  .ToListAsync();
         }
+        public async Task<List<TaskItem>> GetPendingTasksByCourse(int courseId, string studentId)
+        {
+            return await _context.TaskItems
+                 .Where(t => t.CourseId == courseId && t.IsActive)
+                 .Where(t => !t.Submissions.Any(s => s.StudentId == studentId))
+                 .Include(t => t.Translations)
+                 .ToListAsync();
+        }
         public async Task<TaskItem> GetTask(int taskId)
         {
             return await _context.TaskItems
@@ -40,5 +49,11 @@ namespace LMS.DAL.Repository.Tasks
                 .Include(t => t.Translations)
                 .FirstOrDefaultAsync(t=>t.Id==taskId);
         }
+        public async Task<bool> IsTaskCompletedByStudent(int taskId, string studentId)
+        {
+            return await _context.Submissions
+                .AnyAsync(s => s.TaskItemId == taskId && s.StudentId == studentId);
+        }
+
     }
 }

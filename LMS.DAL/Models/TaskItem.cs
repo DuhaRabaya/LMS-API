@@ -16,6 +16,7 @@ namespace LMS.DAL.Models
         public bool IsActive { get; set; } = true;
         public string? AttachmentUrl { get; set; }
         public List<TaskTranslation> Translations { get; set; }
+
         public List<Submission> Submissions { get; set; }
     }
 }

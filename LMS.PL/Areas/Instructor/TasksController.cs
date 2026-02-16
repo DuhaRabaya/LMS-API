@@ -1,4 +1,5 @@
-﻿using LMS.BLL.Services.TaskServices;
+﻿using LMS.BLL.Services.TaskProgressServices;
+using LMS.BLL.Services.TaskServices;
 using LMS.DAL.DTO.Request.TaskRequests;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Authorization.Infrastructure;
@@ -14,10 +15,12 @@ namespace LMS.PL.Areas.Instructor
     public class TasksController : ControllerBase
     {
         private readonly ITaskService _taskService;
+        private readonly ITaskProgressService _taskProgressService;
 
-        public TasksController(ITaskService taskService)
+        public TasksController(ITaskService taskService, ITaskProgressService taskProgressService)
         {
             _taskService = taskService;
+            _taskProgressService = taskProgressService;
         }
 
         [HttpPost]
@@ -46,18 +49,20 @@ namespace LMS.PL.Areas.Instructor
             return Ok(response);
         }
 
-        [HttpGet("{taskId}")]
-        public async Task<IActionResult> GetTask([FromRoute]int taskId, [FromQuery] string lang = "en")
-        {
-            var response = await _taskService.GetTask(taskId, lang);
-            if (!response.Success) return BadRequest(response);
-            return Ok(response);
-        }
         [HttpGet("course/{courseId}")]
         public async Task<IActionResult> GetCourseTasks([FromRoute]int courseId, [FromQuery] string lang = "en")
         {
             var response = await _taskService.GetCourseTasks(courseId, lang);
             return Ok(response);
-        }    
+        }
+
+        [HttpGet("students/progress/{courseId}")]
+        public async Task<IActionResult> GetCourseStudentsTaskProgress([FromRoute] int courseId)
+        {
+            var instructorId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            var response = await _taskProgressService.GetCourseStudentsTaskProgress(courseId, instructorId);
+            if (!response.Success) return BadRequest(response);
+            return Ok(response);
+        }
     }
 }

@@ -658,27 +658,6 @@
   },
   {
     "ContainingType": "LMS.PL.Areas.Instructor.TasksController",
-    "Method": "GetTask",
-    "RelativePath": "api/instructor/Tasks/{taskId}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "taskId",
-        "Type": "System.Int32",
-        "IsRequired": true
-      },
-      {
-        "Name": "lang",
-        "Type": "System.String",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "LMS.PL.Areas.Instructor.TasksController",
     "Method": "GetCourseTasks",
     "RelativePath": "api/instructor/Tasks/course/{courseId}",
     "HttpMethod": "GET",
@@ -694,6 +673,22 @@
         "Name": "lang",
         "Type": "System.String",
         "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LMS.PL.Areas.Instructor.TasksController",
+    "Method": "GetCourseStudentsTaskProgress",
+    "RelativePath": "api/instructor/Tasks/students/progress/{courseId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "courseId",
+        "Type": "System.Int32",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []
@@ -1102,6 +1097,22 @@
         "Name": "lang",
         "Type": "System.String",
         "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LMS.PL.Areas.Student.TasksController",
+    "Method": "GetMyCourseTaskProgress",
+    "RelativePath": "api/student/Tasks/progress/{courseId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "courseId",
+        "Type": "System.Int32",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []

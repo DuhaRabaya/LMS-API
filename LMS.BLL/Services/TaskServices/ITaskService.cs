@@ -16,7 +16,7 @@ namespace LMS.BLL.Services.TaskServices
         Task<BaseResponse> DeleteTask(int taskId, string instructorId);
         Task<List<TaskResponse>> GetCourseTasks(int courseId ,string lang="en");
         Task<BaseResponse> GetActiveCourseTasksForStudent(int courseId, string studentId, string lang = "en");
-        Task<BaseResponse> GetTask(int taskId , string lang="en");
+        Task<BaseResponse> GetTask(int taskId, string studentId, string lang = "en");
         Task<List<StudentTasksResponse>> GetAllPendingTasksForStudent(string studentId, string lang = "en");
     }
 }

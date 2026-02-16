@@ -11,7 +11,8 @@ namespace LMS.DAL.Repository.Tasks
     {
         Task<List<TaskItem>> GetTasksByCourse(int courseId);
         Task<List<TaskItem>> GetActiveTasksByCourse(int courseId);
-        Task<TaskItem> GetTask(int taskId); 
-
+        Task<List<TaskItem>> GetPendingTasksByCourse(int courseId, string studentId);
+        Task<TaskItem> GetTask(int taskId);
+        Task<bool> IsTaskCompletedByStudent(int taskId, string studentId);
     }
 }

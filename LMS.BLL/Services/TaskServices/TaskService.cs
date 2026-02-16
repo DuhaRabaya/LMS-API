@@ -144,6 +144,11 @@ namespace LMS.BLL.Services.TaskServices
                .AddParameters("lang", lang)
                .AdaptToType<List<TaskResponse>>();
 
+            foreach (var t in tasks)
+            {
+                t.IsComplete = await _taskRepository.IsTaskCompletedByStudent(t.Id, studentId);
+            }
+
             var response = new StudentTasksResponse()
             {
                 CourseId = courseId,
@@ -153,7 +158,7 @@ namespace LMS.BLL.Services.TaskServices
             return response;
         }
 
-        public async Task<BaseResponse> GetTask(int taskId,string lang="en")
+        public async Task<BaseResponse> GetTask(int taskId, string studentId ,string lang="en")
         {
             var task = await _taskRepository.GetTask(taskId);
             if (task == null) return new BaseResponse()
@@ -166,8 +171,8 @@ namespace LMS.BLL.Services.TaskServices
                .AddParameters("lang", lang)
                .AdaptToType<TaskResponse>();
             response.Success = true;
+            response.IsComplete = await _taskRepository.IsTaskCompletedByStudent(taskId,studentId);
             return response;
-           
         }
         public async Task<List<StudentTasksResponse>> GetAllPendingTasksForStudent(string studentId, string lang = "en")
         {        
@@ -177,10 +182,16 @@ namespace LMS.BLL.Services.TaskServices
             foreach (var enrollment in enrolledCourses)
             {
                 var courseId = enrollment.Course.Id;
-                var tasks= (await _taskRepository.GetActiveTasksByCourse(courseId))
+                var tasks= (await _taskRepository.GetPendingTasksByCourse(courseId,studentId))
                 .BuildAdapter()
                 .AddParameters("lang", lang)
                 .AdaptToType<List<TaskResponse>>();
+
+                foreach (var t in tasks)
+                {
+                    t.IsComplete = await _taskRepository.IsTaskCompletedByStudent(t.Id, studentId);
+                }
+
                 var response = new StudentTasksResponse()
                 {
                     CourseId = courseId,

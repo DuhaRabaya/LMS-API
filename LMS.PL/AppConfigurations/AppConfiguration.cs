@@ -9,6 +9,7 @@ using LMS.BLL.Services.FileServices;
 using LMS.BLL.Services.ManagerServices;
 using LMS.BLL.Services.RefundServices;
 using LMS.BLL.Services.SubmissionServices;
+using LMS.BLL.Services.TaskProgressServices;
 using LMS.BLL.Services.TaskServices;
 using LMS.BLL.Services.TokenService;
 using LMS.DAL.Models;
@@ -89,6 +90,7 @@ namespace LMS.PL.AppConfigurations
 
             services.AddScoped<IContentProgressService, ContentProgressService>();
             services.AddScoped<IContentProgressRepository, ContentProgressRepository>();
+            services.AddScoped<ITaskProgressService, TaskProgressService>();
         }
     }
 }

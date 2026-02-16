@@ -16,6 +16,7 @@ namespace LMS.DAL.DTO.Response.TaskResponse
         public decimal MaxGrade { get; set; }
         public int CourseId { get; set; }
         public bool IsActive { get; set; } = true;
+        public bool IsComplete { get; set; } = false;
         public string? AttachmentUrl { get; set; }
     }
 }
