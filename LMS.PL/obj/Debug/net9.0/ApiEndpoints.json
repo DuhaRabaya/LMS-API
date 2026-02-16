@@ -340,6 +340,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "LMS.PL.Areas.Instructor.CourseContentController",
+    "Method": "GetCourseStudentProgress",
+    "RelativePath": "api/instructor/CourseContent/progress/{courseId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "courseId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "LMS.PL.Areas.Instructor.CoursesController",
     "Method": "createCourse",
     "RelativePath": "api/instructor/Courses",
@@ -705,6 +721,22 @@
   },
   {
     "ContainingType": "LMS.PL.Areas.Student.CourseContentsController",
+    "Method": "CompleteContent",
+    "RelativePath": "api/student/CourseContents/complete/{contentId}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "contentId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LMS.PL.Areas.Student.CourseContentsController",
     "Method": "GetContent",
     "RelativePath": "api/student/CourseContents/content/{contentId}",
     "HttpMethod": "GET",
@@ -762,6 +794,22 @@
         "Name": "lang",
         "Type": "System.String",
         "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LMS.PL.Areas.Student.CourseContentsController",
+    "Method": "GetProgress",
+    "RelativePath": "api/student/CourseContents/progress/{courseId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "courseId",
+        "Type": "System.Int32",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []

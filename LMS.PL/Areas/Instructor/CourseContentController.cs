@@ -1,4 +1,5 @@
-﻿using LMS.BLL.Services.CourseContentServices;
+﻿using LMS.BLL.Services.ContentProgressServices;
+using LMS.BLL.Services.CourseContentServices;
 using LMS.DAL.DTO.Request.CourseContentRequests;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Authorization.Infrastructure;
@@ -14,10 +15,13 @@ namespace LMS.PL.Areas.Instructor
     public class CourseContentController : ControllerBase
     {
         private readonly ICourseContentService _courseContentService;
+        private readonly IContentProgressService _progressService;
 
-        public CourseContentController(ICourseContentService courseContentService)
+        public CourseContentController(ICourseContentService courseContentService,
+            IContentProgressService progressService)
         {
             _courseContentService = courseContentService;
+            _progressService = progressService;
         }
         [HttpPost("")]
         public async Task<IActionResult> AddContent([FromForm] CourseContentRequest request)
@@ -60,7 +64,14 @@ namespace LMS.PL.Areas.Instructor
             if (!response.Success) return BadRequest(response);
             return Ok(response);
         }
-
+        [HttpGet("progress/{courseId}")]
+        public async Task<IActionResult> GetCourseStudentProgress([FromRoute] int courseId)
+        {
+            var instructorId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            var response = await _progressService.GetCourseStudentsProgress(courseId,instructorId);   
+            if (!response.Success) return BadRequest(response);
+            return Ok(response);
+        }
 
     }
 }

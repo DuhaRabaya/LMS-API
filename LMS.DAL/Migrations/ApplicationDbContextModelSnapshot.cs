@@ -118,6 +118,48 @@ namespace LMS.DAL.Migrations
                     b.ToTable("Users", (string)null);
                 });
 
+            modelBuilder.Entity("LMS.DAL.Models.ContentProgress", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime?>("CompletedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("CourseContentId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("CreatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsCompleted")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("StudentId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<DateTime?>("UpdatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("UpdatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CourseContentId");
+
+                    b.HasIndex("StudentId");
+
+                    b.ToTable("ContentProgresses");
+                });
+
             modelBuilder.Entity("LMS.DAL.Models.Course", b =>
                 {
                     b.Property<int>("Id")
@@ -584,6 +626,25 @@ namespace LMS.DAL.Migrations
                     b.HasKey("UserId", "LoginProvider", "Name");
 
                     b.ToTable("UserTokens", (string)null);
+                });
+
+            modelBuilder.Entity("LMS.DAL.Models.ContentProgress", b =>
+                {
+                    b.HasOne("LMS.DAL.Models.CourseContent", "CourseContent")
+                        .WithMany()
+                        .HasForeignKey("CourseContentId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("LMS.DAL.Models.ApplicationUser", "Student")
+                        .WithMany()
+                        .HasForeignKey("StudentId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("CourseContent");
+
+                    b.Navigation("Student");
                 });
 
             modelBuilder.Entity("LMS.DAL.Models.Course", b =>

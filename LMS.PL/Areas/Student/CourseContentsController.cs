@@ -1,4 +1,5 @@
-﻿using LMS.BLL.Services.CourseContentServices;
+﻿using LMS.BLL.Services.ContentProgressServices;
+using LMS.BLL.Services.CourseContentServices;
 using LMS.DAL.DTO.Request.CourseContentRequests;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
@@ -13,10 +14,13 @@ namespace LMS.PL.Areas.Student
     public class CourseContentsController : ControllerBase
     {
         private readonly ICourseContentService _courseContentService;
+        private readonly IContentProgressService _progressService;
 
-        public CourseContentsController(ICourseContentService courseContentService)
+        public CourseContentsController(ICourseContentService courseContentService,
+            IContentProgressService progressService)
         {
             _courseContentService = courseContentService;
+            _progressService = progressService;
         }
        
         [HttpGet("{courseId}")]
@@ -37,7 +41,7 @@ namespace LMS.PL.Areas.Student
         }
         [Authorize(Roles = "Student,Instructor")]
         [HttpGet("next/{contentId}")]
-        public async Task<IActionResult> GetNextContent(int contentId, [FromQuery] string lang = "en")
+        public async Task<IActionResult> GetNextContent([FromRoute] int contentId, [FromQuery] string lang = "en")
         {
             var response = await _courseContentService.GetNextContent(contentId, lang);
             if (!response.Success) return BadRequest(response);
@@ -45,9 +49,27 @@ namespace LMS.PL.Areas.Student
         }
         [Authorize(Roles = "Student,Instructor")]
         [HttpGet("previous/{contentId}")]
-        public async Task<IActionResult> GetPreviousContent(int contentId, [FromQuery] string lang = "en")
+        public async Task<IActionResult> GetPreviousContent([FromRoute] int contentId, [FromQuery] string lang = "en")
         {
             var response = await _courseContentService.GetPreviousContent(contentId, lang);
+            if (!response.Success) return BadRequest(response);
+            return Ok(response);
+        }
+
+        [HttpPost("complete/{contentId}")]
+        public async Task<IActionResult> CompleteContent([FromRoute]int contentId)
+        {
+            var studentId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            var response = await _progressService.CompleteContent(contentId, studentId);
+            if (!response.Success) return BadRequest(response);
+            return Ok(response);
+        }
+
+        [HttpGet("progress/{courseId}")]
+        public async Task<IActionResult> GetProgress([FromRoute]int courseId)
+        {
+            var studentId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            var response = await _progressService.GetCourseProgress(courseId, studentId);
             if (!response.Success) return BadRequest(response);
             return Ok(response);
         }

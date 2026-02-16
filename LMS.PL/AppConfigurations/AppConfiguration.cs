@@ -1,5 +1,6 @@
 ﻿using LMS.BLL.Services.AuthenticationServices;
 using LMS.BLL.Services.CheckoutServices;
+using LMS.BLL.Services.ContentProgressServices;
 using LMS.BLL.Services.CourseContentServices;
 using LMS.BLL.Services.CourseServices;
 using LMS.BLL.Services.EmailServices;
@@ -12,6 +13,7 @@ using LMS.BLL.Services.TaskServices;
 using LMS.BLL.Services.TokenService;
 using LMS.DAL.Models;
 using LMS.DAL.Repository;
+using LMS.DAL.Repository.ContentProgresses;
 using LMS.DAL.Repository.CourseContents;
 using LMS.DAL.Repository.Courses;
 using LMS.DAL.Repository.Enrollments;
@@ -62,19 +64,31 @@ namespace LMS.PL.AppConfigurations
             services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
 
             services.AddScoped<ICourseRepository, CourseRepository>();
+
             services.AddScoped<IManageUserService, ManageUserService>();
+
             services.AddScoped<IFileService, FileService>();
+
             services.AddScoped<IEnrollmentService, EnrollmentService>();
             services.AddScoped<IEnrollmentRepository, EnrollmentRepository>();
+
             services.AddScoped<ICheckoutService, CheckoutService>();
             services.AddScoped<IStripeRefundService, StripeRefundService>();
+
             services.AddScoped<ITaskRepository, TaskRepository>();
             services.AddScoped<ITaskService, TaskService>();
+
             services.AddScoped<ISubmissionService, SubmissionsService>();
             services.AddScoped<ISubmissionRepository, SubmissionRepository>();
+
             services.AddScoped < ICourseContentService, CourseContentService>();
             services.AddScoped<ICourseContentRepository, CourseContentRepository>();
 
+            services.AddScoped<ICourseContentService, CourseContentService>();
+            services.AddScoped<ICourseContentRepository, CourseContentRepository>();
+
+            services.AddScoped<IContentProgressService, ContentProgressService>();
+            services.AddScoped<IContentProgressRepository, ContentProgressRepository>();
         }
     }
 }

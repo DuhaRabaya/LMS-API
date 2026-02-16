@@ -20,6 +20,8 @@ namespace LMS.PL.Data
         public DbSet<Submission> Submissions { get; set; }
         public DbSet<CourseContent> CourseContents { get; set; }
         public DbSet<CourseContentTranslation> CourseContentTranslations { get; set; }
+        public DbSet<ContentProgress> ContentProgresses { get; set; }
+
 
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options, IHttpContextAccessor httpContextAccessor)
         : base(options)
