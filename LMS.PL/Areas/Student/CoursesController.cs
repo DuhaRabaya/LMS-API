@@ -5,6 +5,7 @@ using LMS.BLL.Services.RefundServices;
 using LMS.DAL.DTO.Response;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
 
@@ -96,6 +97,14 @@ namespace LMS.PL.Areas.Student
             var enrollments = await _enrollmentService.GetStudentEnrollments(studentId, lang);
 
             return Ok(enrollments);
+        }
+        [HttpGet("totalmark/{courseId}")]
+        public async Task<IActionResult> GetFinalMark([FromRoute]int courseId)
+        {
+            var studentId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            var mark = await _courseService.GetFinalMark(courseId,studentId);
+            if(!mark.Success) return BadRequest(mark);
+            return Ok(mark);
         }
     }
 }

@@ -23,6 +23,8 @@ namespace LMS.BLL.Services.CourseServices
         Task<BaseResponse> SetCoursePublishStatus(int courseId, string instructorId, bool isPublished);
         Task<BaseResponse> UpdateCourse(int courseId, CourseRequest request, string instructorId);
         Task<BaseResponse> DeleteCourse(int courseId, string instructorId);
+        Task<BaseResponse> GetFinalMark(int courseId, string studentId);
+        Task<BaseResponse> GetCourseStudentsFinalMarks(int courseId, string instructorId);
 
     }
 }

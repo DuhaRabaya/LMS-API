@@ -71,5 +71,14 @@ namespace LMS.PL.Areas.Instructor
             if (!result.Success) return BadRequest(result);
             return Ok(result);
         }
+
+        [HttpGet("students/final-marks/{courseId}")]
+        public async Task<IActionResult> GetStudentsFinalMarks(int courseId)
+        {
+            var instructorId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+            var response = await _courseService.GetCourseStudentsFinalMarks(courseId, instructorId);
+
+            return response.Success ? Ok(response) : BadRequest(response);
+        }
     }
 }

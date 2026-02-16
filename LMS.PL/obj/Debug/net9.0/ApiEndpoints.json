@@ -440,6 +440,22 @@
   },
   {
     "ContainingType": "LMS.PL.Areas.Instructor.CoursesController",
+    "Method": "GetStudentsFinalMarks",
+    "RelativePath": "api/instructor/Courses/students/final-marks/{courseId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "courseId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LMS.PL.Areas.Instructor.CoursesController",
     "Method": "UnpublishCourse",
     "RelativePath": "api/instructor/Courses/unpublish/{id}",
     "HttpMethod": "PATCH",
@@ -976,6 +992,22 @@
         "Name": "session_id",
         "Type": "System.String",
         "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LMS.PL.Areas.Student.CoursesController",
+    "Method": "GetFinalMark",
+    "RelativePath": "api/student/Courses/totalmark/{courseId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "courseId",
+        "Type": "System.Int32",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []

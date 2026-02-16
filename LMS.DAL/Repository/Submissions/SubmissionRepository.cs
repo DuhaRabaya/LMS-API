@@ -49,6 +49,13 @@ namespace LMS.DAL.Repository.Submissions
                 .ToListAsync();
         }
 
+        public async Task<List<decimal?>> GetStudentGradesForCourse(string studentId, int courseId)
+        {
+            return await _context.Submissions
+                .Where(s => s.StudentId == studentId && s.TaskItem.CourseId == courseId)
+                .Select(s => s.Grade)
+                .ToListAsync();
+        }
     }
 
 }

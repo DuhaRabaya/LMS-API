@@ -11,5 +11,6 @@ namespace LMS.DAL.DTO.Response.DashboardResponses
         public int CourseId { get; set; }
         public string CourseName { get; set; }
         public List<StudentProgressForInstructor> Students { get; set; }
+        public decimal PassingPercentage { get; set; } = 0;
     }
 }

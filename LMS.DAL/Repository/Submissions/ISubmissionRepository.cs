@@ -14,5 +14,6 @@ namespace LMS.DAL.Repository.Submissions
         Task<List<Submission>> GetTaskSubmissions(int taskItemId);
         Task<Submission> GetSubmission(int submissionId);
         Task<List<Submission>> GetStudentSubmissionsForCourse(string studentId, int courseId);
+        Task<List<decimal?>> GetStudentGradesForCourse(string studentId, int courseId);
     }
 }

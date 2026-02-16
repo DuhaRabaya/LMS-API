@@ -3,10 +3,13 @@ using LMS.BLL.Services.FileServices;
 using LMS.DAL.DTO.Request.CoursesRequests;
 using LMS.DAL.DTO.Response;
 using LMS.DAL.DTO.Response.CoursesResponses;
+using LMS.DAL.DTO.Response.StudentFinalMarkResponses;
 using LMS.DAL.Migrations;
 using LMS.DAL.Models;
 using LMS.DAL.Repository;
 using LMS.DAL.Repository.Courses;
+using LMS.DAL.Repository.Enrollments;
+using LMS.DAL.Repository.Submissions;
 using Mapster;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -22,11 +25,17 @@ namespace LMS.BLL.Services.CourseServices
     {
         private readonly ICourseRepository _courseRepository;
         private readonly IFileService _fileService;
+        private readonly ISubmissionRepository _submissionRepository;
+        private readonly IEnrollmentRepository _enrollmentRepository;
 
-        public CourseService(ICourseRepository courseRepository , IFileService fileService)
+        public CourseService(ICourseRepository courseRepository , IFileService fileService
+            ,ISubmissionRepository submissionRepository,
+            IEnrollmentRepository enrollmentRepository)
         {
             _courseRepository = courseRepository;
             _fileService = fileService;
+            _submissionRepository = submissionRepository;
+            _enrollmentRepository = enrollmentRepository;
         }
         public async Task<List<CourseResponse>> GetCoursesByInstructor(string id)
         {
@@ -190,5 +199,78 @@ namespace LMS.BLL.Services.CourseServices
                 Message = "Course deleted successfully"
             };
         }
+        public async Task<BaseResponse> GetFinalMark(int courseId, string studentId)
+        {
+            var course = await _courseRepository.Get(courseId);
+            if(course is null)
+            {
+                return new BaseResponse()
+                {
+                    Success = false,
+                    Message = "course not found"
+                };
+            }
+            var enrolled=await _enrollmentRepository.IsEnrolled(studentId, courseId);
+            if (!enrolled)
+            {
+                return new BaseResponse()
+                {
+                    Success = false,
+                    Message = "student is not enrolled in this course"
+                };
+            }
+            var grades = await _submissionRepository.GetStudentGradesForCourse(studentId, courseId);
+            decimal total = (decimal)grades.Sum();
+
+            return new FinalGradeResponse
+            {
+                Success = true,
+                TotalMark = total,
+                Passed= total >= 50
+            };
+        }
+
+        public async Task<BaseResponse> GetCourseStudentsFinalMarks(int courseId, string instructorId)
+        {
+            var course = await _courseRepository.Get(courseId);
+
+            if (course == null || course.InstructorId != instructorId)
+                return new BaseResponse
+                {
+                    Success = false,
+                    Message = "Course not found"
+                };
+
+            var students = await _courseRepository.GetStudentsInCourse(courseId);
+
+            var result = new List<StudentFinalMarkResponse>();
+
+            foreach (var student in students)
+            {
+                var grades = await _submissionRepository
+                    .GetStudentGradesForCourse(student.Id, courseId);
+
+                decimal totalMark = grades.Any() ? (decimal)grades.Sum() : 0;
+
+                result.Add(new StudentFinalMarkResponse
+                {
+                    StudentId = student.Id,
+                    StudentName = student.UserName,
+                    FinalMark = totalMark
+                });
+            }
+
+            var ordered = result
+                .OrderByDescending(s => s.FinalMark)
+                .ToList();
+
+            return new CourseStudentsFinalMarksResponse
+            {
+                Success = true,
+                CourseId = courseId,
+                Students = ordered
+            };
+        }
+
     }
 }
