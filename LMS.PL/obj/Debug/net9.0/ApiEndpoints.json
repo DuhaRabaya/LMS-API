@@ -501,6 +501,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "LMS.PL.Areas.Instructor.DashboardController",
+    "Method": "GetActiveCourseTasks",
+    "RelativePath": "api/instructor/Dashboard",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "lang",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "LMS.PL.Areas.Instructor.RewardsController",
     "Method": "RewardStudent",
     "RelativePath": "api/instructor/Rewards/reward/{courseId}",
@@ -958,6 +974,22 @@
     "Parameters": [
       {
         "Name": "session_id",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LMS.PL.Areas.Student.DashboardController",
+    "Method": "GetActiveCourseTasks",
+    "RelativePath": "api/student/Dashboard",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "lang",
         "Type": "System.String",
         "IsRequired": false
       }

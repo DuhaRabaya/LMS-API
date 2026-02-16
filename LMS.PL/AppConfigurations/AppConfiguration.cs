@@ -3,6 +3,7 @@ using LMS.BLL.Services.CheckoutServices;
 using LMS.BLL.Services.ContentProgressServices;
 using LMS.BLL.Services.CourseContentServices;
 using LMS.BLL.Services.CourseServices;
+using LMS.BLL.Services.DashboardServices;
 using LMS.BLL.Services.EmailServices;
 using LMS.BLL.Services.EnrollmentsServices;
 using LMS.BLL.Services.FileServices;
@@ -91,6 +92,10 @@ namespace LMS.PL.AppConfigurations
             services.AddScoped<IContentProgressService, ContentProgressService>();
             services.AddScoped<IContentProgressRepository, ContentProgressRepository>();
             services.AddScoped<ITaskProgressService, TaskProgressService>();
+
+            services.AddScoped<IStudentDashboardService, StudentDashboardService>();
+            services.AddScoped<IInstructorDashboardService, InstructorDashboardService>();
+
         }
     }
 }
