@@ -313,7 +313,7 @@ namespace LMS.BLL.Services.SubmissionServices
                 return refundResult;
 
             await _emailSender.SendEmail(
-              "duharabaya4@gmail.com",
+               topStudent.Email,
                "Congratulations! You got a reward",
                $"You have received a refund for excelling in the course {course.Translations .FirstOrDefault(c => c.Language == "en").Name}."
            );

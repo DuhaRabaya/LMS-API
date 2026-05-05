@@ -14,7 +14,7 @@ namespace LMS.BLL.Services.FileServices
             if (file != null && file.Length > 0)
             {
                 var fileName = Guid.NewGuid().ToString() + Path.GetExtension(file.FileName);
-                var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", folderName, fileName);
+                var path = Path.Combine(Directory.GetCurrentDirectory(),"wwwroot", folderName, fileName);
 
                 using (var stream = File.Create(path))
                 {

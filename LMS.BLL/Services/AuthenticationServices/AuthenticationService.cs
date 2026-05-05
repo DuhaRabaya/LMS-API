@@ -122,11 +122,8 @@ namespace LMS.BLL.Services.AuthenticationServices
             var token = await _userManager.GenerateEmailConfirmationTokenAsync(user);
             token = Uri.EscapeDataString(token);
 
-            var baseUrl = _configuration["ASPNETCORE_ENVIRONMENT"] == "Development"
-             ? "http://localhost:5165"
-             : "https://learningmanagementsystem.runasp.net";
-
-            var email = $"{baseUrl}/api/auth/Account/ConfirmEmail?token={token}&userId={user.Id}";
+          
+            var email = $"https://learningmanagementsystem.runasp.net/api/auth/Account/ConfirmEmail?token={token}&userId={user.Id}";
 
             await _emailSender.SendEmail(user.Email, "welcome",
             $"<h1>Welcom .. {user.FullName}</h1> <br> <a href='{email}'>Confirm Email</a>");

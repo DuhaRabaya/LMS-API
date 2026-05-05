@@ -25,20 +25,19 @@ namespace LMS.BLL.MapsterConfigurations
            .Map(dest => dest.Description, src => src.Translations.FirstOrDefault(t =>
                  t.Language == MapContext.Current.Parameters["lang"].ToString()).Description)
            .Map(dest => dest.Instructor, source => source.Instructor.UserName)
-           .Map(dest => dest.Thumbnail, source => $"http://localhost:5165/Images/{source.Thumbnail}")
+           .Map(dest => dest.Thumbnail, source => $"https://learningmanagementsystem.runasp.net/Images/{source.Thumbnail}")
             .Map(dest => dest.FinalPrice, src => src.FinalPrice);
 
             TypeAdapterConfig<Course, CourseResponse>.NewConfig()
-                .Map(dest => dest.Thumbnail, source => $"http://localhost:5165/Images/{source.Thumbnail}")
+                .Map(dest => dest.Thumbnail, source => $"https://learningmanagementsystem.runasp.net/Images/{source.Thumbnail}")
                 .Map(dest => dest.FinalPrice, src => src.FinalPrice);
-
 
             TypeAdapterConfig<TaskItem, TaskResponse>.NewConfig()
             .Map(dest => dest.Title, src => src.Translations.FirstOrDefault(t =>
                  t.Language == MapContext.Current.Parameters["lang"].ToString()).Title)
            .Map(dest => dest.Description, src => src.Translations.FirstOrDefault(t =>
                  t.Language == MapContext.Current.Parameters["lang"].ToString()).Description)
-           .Map(dest => dest.AttachmentUrl, source => $"http://localhost:5165/Tasks/{source.AttachmentUrl}");
+           .Map(dest => dest.AttachmentUrl, source => $"https://learningmanagementsystem.runasp.net/Tasks/{source.AttachmentUrl}");
 
             TypeAdapterConfig<Submission, SubmissionResponse>.NewConfig()
               .Map(dest => dest.StudentName, source => source.Student.UserName);
@@ -48,7 +47,7 @@ namespace LMS.BLL.MapsterConfigurations
                t.Language == MapContext.Current.Parameters["lang"].ToString()).Title)
          .Map(dest => dest.Description, src => src.Translations.FirstOrDefault(t =>
                t.Language == MapContext.Current.Parameters["lang"].ToString()).Description)
-         .Map(dest => dest.AttachmentUrl, source => $"http://localhost:5165/Tasks/{source.AttachmentUrl}");
+         .Map(dest => dest.AttachmentUrl, source => $"https://learningmanagementsystem.runasp.net/Tasks/{source.AttachmentUrl}");
         }
     }
 }
